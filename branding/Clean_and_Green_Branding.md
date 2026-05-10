@@ -88,19 +88,26 @@ Greens dominate. Yellow appears sparingly, only where attention is required.
 - **Headings:** A geometric sans (e.g., Montserrat, Poppins) in 600/700 weight.
 - **Body:** A clean humanist sans (e.g., Open Sans, Inter) at 16px minimum for proposals and 14px minimum for legal/footer.
 
-### 5.3 Logo Direction
+### 5.3 Logo Direction (LOCKED)
 
-**Concept A — "Mark + Wordmark" (Recommended)**
-A stylized blade-of-grass mark formed from two interlocking leaves (representing "Clean" + "Green") next to a stacked wordmark. Works at favicon size, on truck doors, and embroidered on polos.
+**Primary lockup — "Mow Stripe Wordmark"**
+Stacked Helvetica-900 wordmark — "CLEAN AND" in Deep Forest above an oversized "GREEN" in Fairway Green — anchored by a three-band mow-stripe baseline (Fresh Cut / Fairway / Deep Forest). Locked descriptor underneath: **TURF CARE AND RENOVATION**. Optional italic tagline ("A cleaner cut. A greener lawn.") sits below the descriptor and may be dropped at small sizes.
 
-**Concept B — "Crest"**
-A circular badge with the company name arching over a single grass blade. More heritage / craftsman feel.
+Reference file: `branding/logos/FINAL_logo_lockup.svg`
+
+**Why this lockup**
+- The mow-stripe band is an ownable, instantly readable visual cue tied directly to what we do
+- The heavy sans wordmark reads at any scale — favicon to truck wrap
+- "TURF CARE AND RENOVATION" positions us above generic "lawn guys" and makes the renovation hero service explicit on every customer touchpoint
+- Two-tone green hierarchy uses the brand palette directly (no new colors)
 
 **Usage rules**
-- Minimum clear space = height of the "C" in "Clean" on all sides
-- Never on photographic backgrounds without a contrast bar
+- Minimum clear space = height of the "C" in "CLEAN" on all sides
+- Never on photographic backgrounds without a contrast bar or solid plate
 - Never recolored outside the approved palette
-- One-color version (Fairway Green or White) required for embroidery, signage, vehicle wraps
+- At sizes below ~150px wide, drop the italic tagline; below ~80px wide, drop the descriptor too
+- One-color versions (Fairway Green on light, White on dark) required for embroidery, signage, vehicle wraps
+- Stripe order is invariant: Fresh Cut on top, Fairway Green middle, Deep Forest bottom (light → dark = depth)
 
 ### 5.4 Imagery
 
