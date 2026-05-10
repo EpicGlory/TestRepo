@@ -1,0 +1,12 @@
+<svg viewBox="0 0 480 260" xmlns="http://www.w3.org/2000/svg">
+  <rect width="480" height="260" fill="#F4F4EF"/>
+  <!-- Mow stripes on top as a banner -->
+  <rect x="60" y="35" width="360" height="9" fill="#A5D6A7"/>
+  <rect x="60" y="44" width="360" height="9" fill="#2E7D32"/>
+  <rect x="60" y="53" width="360" height="9" fill="#1B4D1F"/>
+  <!-- Stacked wordmark -->
+  <text x="240" y="115" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="40" font-weight="900" fill="#1B4D1F" letter-spacing="-1">CLEAN AND</text>
+  <text x="240" y="175" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="68" font-weight="900" fill="#2E7D32" letter-spacing="-2">GREEN</text>
+  <!-- Bottom tagline -->
+  <text x="240" y="220" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" letter-spacing="6" fill="#2C2C2C">LAWN CARE</text>
+</svg>

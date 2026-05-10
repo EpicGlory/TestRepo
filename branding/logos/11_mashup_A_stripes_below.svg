@@ -1,0 +1,12 @@
+<svg viewBox="0 0 480 260" xmlns="http://www.w3.org/2000/svg">
+  <rect width="480" height="260" fill="#F4F4EF"/>
+  <!-- Stacked wordmark, #7 typography -->
+  <text x="240" y="80" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="40" font-weight="900" fill="#1B4D1F" letter-spacing="-1">CLEAN AND</text>
+  <text x="240" y="135" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="64" font-weight="900" fill="#2E7D32" letter-spacing="-2">GREEN</text>
+  <!-- Three mow stripes as the new baseline (replacing the diagonal cut) -->
+  <rect x="60" y="155" width="360" height="10" fill="#A5D6A7"/>
+  <rect x="60" y="167" width="360" height="10" fill="#2E7D32"/>
+  <rect x="60" y="179" width="360" height="10" fill="#1B4D1F"/>
+  <!-- Tagline -->
+  <text x="240" y="215" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" letter-spacing="6" fill="#2C2C2C">LAWN CARE  ·  LOCALLY OWNED  ·  SCIENCE-BACKED</text>
+</svg>
