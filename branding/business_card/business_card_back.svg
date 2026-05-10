@@ -1,0 +1,30 @@
+<!-- Standard US business card: 3.5" x 2" (700 x 400 @ 200dpi). Add 1/8" bleed at print. -->
+<svg viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Card background -->
+  <rect width="700" height="400" fill="#F4F4EF"/>
+
+  <!-- Top corner: small brand mark for recognizability when card is stacked -->
+  <g transform="translate(40,40)">
+    <text x="0" y="0" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="900" fill="#1B4D1F" letter-spacing="-0.5">CLEAN AND GREEN</text>
+    <text x="0" y="16" font-family="Helvetica, Arial, sans-serif" font-size="8" letter-spacing="3" fill="#2E7D32">TURF CARE AND RENOVATION</text>
+  </g>
+
+  <!-- Top right: tagline as a small italic anchor -->
+  <text x="660" y="50" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-style="italic" font-size="12" font-weight="700" letter-spacing="2" fill="#2E7D32">Seed.  Feed.  Succeed.</text>
+
+  <!-- Name -->
+  <text x="350" y="160" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="48" font-weight="900" fill="#1B4D1F" letter-spacing="-1">Ryan Tucker</text>
+
+  <!-- Title -->
+  <text x="350" y="190" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="6" fill="#2E7D32">OWNER</text>
+
+  <!-- Mow stripes under the name (per your spec) -->
+  <rect x="200" y="210" width="300" height="9" fill="#A5D6A7"/>
+  <rect x="200" y="219" width="300" height="9" fill="#2E7D32"/>
+  <rect x="200" y="228" width="300" height="9" fill="#1B4D1F"/>
+
+  <!-- Contact stack -->
+  <text x="350" y="280" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#2C2C2C" letter-spacing="2">801.358.7820</text>
+  <text x="350" y="310" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="16" fill="#2C2C2C">rptucker@gmail.com</text>
+  <text x="350" y="340" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" letter-spacing="4" fill="#666">KAYSVILLE,  UTAH</text>
+</svg>
