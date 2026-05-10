@@ -1,0 +1,13 @@
+<svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg">
+  <rect width="480" height="220" fill="#F4F4EF"/>
+  <!-- Water drop -->
+  <path d="M 110 175 Q 65 140 90 95 Q 110 60 130 95 Q 155 140 110 175 Z" fill="#2E7D32"/>
+  <!-- White highlight -->
+  <ellipse cx="100" cy="120" rx="10" ry="20" fill="#A5D6A7" opacity="0.5"/>
+  <!-- Grass blade growing from top -->
+  <path d="M 110 95 Q 105 60 115 30 Q 122 55 118 92 Z" fill="#1B4D1F"/>
+  <path d="M 118 60 Q 130 55 138 45" stroke="#1B4D1F" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Wordmark -->
+  <text x="200" y="105" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="800" fill="#1B4D1F">CLEAN+GREEN</text>
+  <text x="200" y="135" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="6" fill="#2E7D32">LAWN CARE CO.</text>
+</svg>

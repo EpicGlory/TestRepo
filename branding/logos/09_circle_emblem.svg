@@ -1,0 +1,25 @@
+<svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg">
+  <rect width="480" height="220" fill="#F4F4EF"/>
+  <!-- Outer ring text path setup -->
+  <defs>
+    <path id="topArc" d="M 50 110 A 60 60 0 0 1 170 110"/>
+    <path id="botArc" d="M 50 110 A 60 60 0 0 0 170 110"/>
+  </defs>
+  <!-- Solid disc -->
+  <circle cx="110" cy="110" r="78" fill="#1B4D1F"/>
+  <circle cx="110" cy="110" r="60" fill="#2E7D32"/>
+  <!-- Single grass blade silhouette -->
+  <path d="M 110 150 Q 95 110 105 70 Q 115 95 113 145 Z" fill="#F4F4EF"/>
+  <path d="M 113 90 Q 125 85 132 75" stroke="#F4F4EF" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Top arc text -->
+  <text font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="3" fill="#F4F4EF">
+    <textPath href="#topArc" startOffset="50%" text-anchor="middle">CLEAN AND GREEN LAWN CARE</textPath>
+  </text>
+  <!-- Bottom arc text -->
+  <text font-family="Helvetica, Arial, sans-serif" font-size="9" letter-spacing="4" fill="#A5D6A7">
+    <textPath href="#botArc" startOffset="50%" text-anchor="middle">A CLEANER CUT  ·  A GREENER LAWN</textPath>
+  </text>
+  <!-- Wordmark to right -->
+  <text x="220" y="100" font-family="'Roboto Slab', Georgia, serif" font-size="26" font-weight="700" fill="#1B4D1F">Clean and Green</text>
+  <text x="220" y="125" font-family="Helvetica, Arial, sans-serif" font-size="13" letter-spacing="5" fill="#2E7D32">LAWN CARE</text>
+</svg>

@@ -1,0 +1,23 @@
+<svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg">
+  <rect width="480" height="220" fill="#F4F4EF"/>
+  <!-- Outer ring -->
+  <circle cx="110" cy="110" r="85" fill="none" stroke="#1B4D1F" stroke-width="3"/>
+  <circle cx="110" cy="110" r="74" fill="#2E7D32"/>
+  <!-- Single tall grass blade -->
+  <path d="M 110 165 Q 95 130 100 80 Q 110 65 120 80 Q 125 130 110 165 Z" fill="#A5D6A7"/>
+  <path d="M 110 165 Q 110 120 110 75" stroke="#1B4D1F" stroke-width="2" fill="none"/>
+  <!-- Curved text top -->
+  <defs>
+    <path id="ctop" d="M 40 110 A 70 70 0 0 1 180 110"/>
+    <path id="cbot" d="M 50 110 A 60 60 0 0 0 170 110"/>
+  </defs>
+  <text font-family="Georgia, serif" font-size="11" font-weight="700" fill="#F4F4EF" letter-spacing="2">
+    <textPath href="#ctop" startOffset="50%" text-anchor="middle">CLEAN AND GREEN</textPath>
+  </text>
+  <text font-family="Georgia, serif" font-size="9" fill="#F4F4EF" letter-spacing="3">
+    <textPath href="#cbot" startOffset="50%" text-anchor="middle">EST · LAWN CARE · 2026</textPath>
+  </text>
+  <!-- Wordmark -->
+  <text x="220" y="100" font-family="Georgia, serif" font-size="26" font-weight="700" fill="#1B4D1F">CLEAN AND GREEN</text>
+  <text x="220" y="135" font-family="Georgia, serif" font-size="16" letter-spacing="8" fill="#2E7D32">LAWN CARE</text>
+</svg>

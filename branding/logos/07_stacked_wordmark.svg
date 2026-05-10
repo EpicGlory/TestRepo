@@ -1,0 +1,10 @@
+<svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg">
+  <rect width="480" height="220" fill="#F4F4EF"/>
+  <!-- Stacked typography -->
+  <text x="240" y="80" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="44" font-weight="900" fill="#1B4D1F" letter-spacing="-1">CLEAN AND</text>
+  <text x="240" y="130" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="62" font-weight="900" fill="#2E7D32" letter-spacing="-2">GREEN</text>
+  <!-- Underline accent with diagonal cut (mower angle) -->
+  <polygon points="120,148 360,148 350,158 110,158" fill="#A5D6A7"/>
+  <!-- Tagline -->
+  <text x="240" y="180" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" letter-spacing="6" fill="#2C2C2C">LAWN CARE  ·  LOCALLY OWNED  ·  SCIENCE-BACKED</text>
+</svg>

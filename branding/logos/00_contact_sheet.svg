@@ -1,0 +1,118 @@
+<svg viewBox="0 0 1000 1200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1000" height="1200" fill="#FFFFFF"/>
+  <text x="500" y="40" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#1B4D1F">Clean and Green Lawn Care  ·  10 Logo Concepts</text>
+  <text x="500" y="62" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#666">v1 — explorations against brand v1.0 palette</text>
+
+  <!-- Helper: each tile is 480x220 with a 20px label band -->
+  <!-- Row layout: 2 columns x 5 rows, 480 wide tiles, padding 20 -->
+  <g font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#2C2C2C">
+    <!-- 01 -->
+    <g transform="translate(20,90)">
+      <rect width="460" height="200" fill="#F4F4EF" stroke="#DDD"/>
+      <g transform="scale(0.96)">
+        <path d="M 90 175 Q 70 100 110 55 Q 140 80 130 145 Q 125 170 90 175 Z" fill="#2E7D32"/>
+        <path d="M 135 175 Q 130 95 165 55 Q 200 95 175 150 Q 160 172 135 175 Z" fill="#1B4D1F"/>
+        <text x="220" y="100" font-family="Georgia, serif" font-size="26" font-weight="700" fill="#1B4D1F">Clean and Green</text>
+        <text x="220" y="130" font-family="Georgia, serif" font-size="14" letter-spacing="6" fill="#2E7D32">LAWN CARE</text>
+      </g>
+      <text x="10" y="195" font-weight="700">01 — Interlocking Blades + Serif Wordmark</text>
+    </g>
+    <!-- 02 -->
+    <g transform="translate(500,90)">
+      <rect width="460" height="200" fill="#F4F4EF" stroke="#DDD"/>
+      <circle cx="105" cy="105" r="70" fill="#2E7D32"/>
+      <circle cx="105" cy="105" r="80" fill="none" stroke="#1B4D1F" stroke-width="3"/>
+      <path d="M 105 150 Q 95 120 100 80 Q 110 70 115 80 Q 120 120 105 150 Z" fill="#A5D6A7"/>
+      <text x="200" y="95" font-family="Georgia, serif" font-size="22" font-weight="700" fill="#1B4D1F">CLEAN AND GREEN</text>
+      <text x="200" y="120" font-family="Georgia, serif" font-size="14" letter-spacing="6" fill="#2E7D32">LAWN CARE</text>
+      <text x="200" y="145" font-family="Helvetica" font-size="10" letter-spacing="2" fill="#666">EST. 2026  ·  LOCALLY OWNED</text>
+      <text x="10" y="195" font-weight="700">02 — Heritage Crest</text>
+    </g>
+    <!-- 03 -->
+    <g transform="translate(20,310)">
+      <rect width="460" height="200" fill="#F4F4EF" stroke="#DDD"/>
+      <text x="230" y="80" text-anchor="middle" font-family="Georgia, serif" font-size="38" font-weight="700" fill="#1B4D1F">CLEAN &amp; GREEN</text>
+      <rect x="50" y="100" width="360" height="12" fill="#A5D6A7"/>
+      <rect x="50" y="112" width="360" height="12" fill="#2E7D32"/>
+      <rect x="50" y="124" width="360" height="12" fill="#1B4D1F"/>
+      <text x="230" y="160" text-anchor="middle" font-family="Helvetica" font-size="13" letter-spacing="6" fill="#2C2C2C">LAWN CARE</text>
+      <text x="10" y="195" font-weight="700">03 — Mow Stripes Wordmark</text>
+    </g>
+    <!-- 04 -->
+    <g transform="translate(500,310)">
+      <rect width="460" height="200" fill="#F4F4EF" stroke="#DDD"/>
+      <path d="M 90 165 Q 50 130 75 90 Q 95 55 115 90 Q 140 130 90 165 Z" fill="#2E7D32"/>
+      <path d="M 95 90 Q 88 60 100 30 Q 110 55 105 88 Z" fill="#1B4D1F"/>
+      <text x="170" y="100" font-family="Helvetica" font-size="26" font-weight="800" fill="#1B4D1F">CLEAN+GREEN</text>
+      <text x="170" y="125" font-family="Helvetica" font-size="13" letter-spacing="5" fill="#2E7D32">LAWN CARE CO.</text>
+      <text x="10" y="195" font-weight="700">04 — Drop &amp; Blade</text>
+    </g>
+    <!-- 05 -->
+    <g transform="translate(20,530)">
+      <rect width="460" height="200" fill="#F4F4EF" stroke="#DDD"/>
+      <polygon points="105,40 165,72 165,138 105,170 45,138 45,72" fill="#2E7D32" stroke="#1B4D1F" stroke-width="3"/>
+      <text x="105" y="120" text-anchor="middle" font-family="Georgia, serif" font-size="50" font-weight="700" fill="#F4F4EF">C&amp;G</text>
+      <text x="200" y="100" font-family="Helvetica" font-size="22" font-weight="800" fill="#1B4D1F">CLEAN AND GREEN</text>
+      <text x="200" y="123" font-family="Helvetica" font-size="12" letter-spacing="5" fill="#2E7D32">LAWN CARE</text>
+      <line x1="200" y1="135" x2="280" y2="135" stroke="#FFC107" stroke-width="3"/>
+      <text x="10" y="195" font-weight="700">05 — Hex Monogram</text>
+    </g>
+    <!-- 06 -->
+    <g transform="translate(500,530)">
+      <rect width="460" height="200" fill="#F4F4EF" stroke="#DDD"/>
+      <circle cx="105" cy="110" r="36" fill="#FFC107"/>
+      <rect x="40" y="110" width="130" height="9" fill="#A5D6A7"/>
+      <rect x="40" y="119" width="130" height="9" fill="#2E7D32"/>
+      <rect x="40" y="128" width="130" height="9" fill="#1B4D1F"/>
+      <text x="195" y="100" font-family="Georgia, serif" font-size="24" font-weight="700" fill="#1B4D1F">Clean and Green</text>
+      <text x="195" y="125" font-family="Helvetica" font-size="12" letter-spacing="4" fill="#2E7D32">LAWN CARE  ·  EST. 2026</text>
+      <text x="10" y="195" font-weight="700">06 — Sun + Lawn Horizon</text>
+    </g>
+    <!-- 07 -->
+    <g transform="translate(20,750)">
+      <rect width="460" height="200" fill="#F4F4EF" stroke="#DDD"/>
+      <text x="230" y="80" text-anchor="middle" font-family="Helvetica" font-size="36" font-weight="900" fill="#1B4D1F">CLEAN AND</text>
+      <text x="230" y="125" font-family="Helvetica" font-size="54" font-weight="900" fill="#2E7D32" text-anchor="middle">GREEN</text>
+      <polygon points="120,140 350,140 340,150 110,150" fill="#A5D6A7"/>
+      <text x="230" y="170" text-anchor="middle" font-family="Helvetica" font-size="10" letter-spacing="6" fill="#2C2C2C">LAWN CARE  ·  LOCALLY OWNED</text>
+      <text x="10" y="195" font-weight="700">07 — Stacked Wordmark</text>
+    </g>
+    <!-- 08 -->
+    <g transform="translate(500,750)">
+      <rect width="460" height="200" fill="#F4F4EF" stroke="#DDD"/>
+      <path d="M 50 160 Q 45 140 52 125 Q 60 140 58 160 Z" fill="#A5D6A7"/>
+      <path d="M 80 160 Q 73 125 85 90  Q 97 125 90 160 Z" fill="#2E7D32"/>
+      <path d="M 120 160 Q 112 100 130 50 Q 145 100 132 160 Z" fill="#1B4D1F"/>
+      <line x1="35" y1="163" x2="170" y2="163" stroke="#2C2C2C" stroke-width="2"/>
+      <text x="195" y="95" font-family="Georgia, serif" font-size="26" font-weight="700" fill="#1B4D1F">Clean and Green</text>
+      <text x="195" y="120" font-family="Helvetica" font-size="12" letter-spacing="6" fill="#2E7D32">LAWN CARE</text>
+      <text x="195" y="145" font-family="Helvetica" font-style="italic" font-size="11" fill="#666">Grow it right.</text>
+      <text x="10" y="195" font-weight="700">08 — Three Blades / Growth</text>
+    </g>
+    <!-- 09 -->
+    <g transform="translate(20,970)">
+      <rect width="460" height="200" fill="#F4F4EF" stroke="#DDD"/>
+      <circle cx="105" cy="105" r="72" fill="#1B4D1F"/>
+      <circle cx="105" cy="105" r="55" fill="#2E7D32"/>
+      <path d="M 105 145 Q 92 110 100 70 Q 110 95 108 140 Z" fill="#F4F4EF"/>
+      <text x="200" y="95" font-family="Georgia, serif" font-size="22" font-weight="700" fill="#1B4D1F">Clean and Green</text>
+      <text x="200" y="118" font-family="Helvetica" font-size="12" letter-spacing="5" fill="#2E7D32">LAWN CARE</text>
+      <text x="200" y="142" font-family="Helvetica" font-size="10" letter-spacing="2" fill="#666">A CLEANER CUT  ·  A GREENER LAWN</text>
+      <text x="10" y="195" font-weight="700">09 — Round Emblem + Tagline</text>
+    </g>
+    <!-- 10 -->
+    <g transform="translate(500,970)">
+      <rect width="460" height="200" fill="#F4F4EF" stroke="#DDD"/>
+      <path d="M 30 155 A 80 80 0 0 1 185 155 Z" fill="#1B4D1F"/>
+      <path d="M 50 155 A 60 60 0 0 1 165 155 Z" fill="#2E7D32"/>
+      <path d="M 105 155 Q 105 130 107 95" stroke="#A5D6A7" stroke-width="3" fill="none"/>
+      <path d="M 105 130 Q 85 120 78 100 Q 95 105 108 125 Z" fill="#A5D6A7"/>
+      <path d="M 107 110 Q 125 95 138 80 Q 130 100 110 120 Z" fill="#A5D6A7"/>
+      <circle cx="148" cy="65" r="8" fill="#FFC107"/>
+      <text x="200" y="95" font-family="Georgia, serif" font-size="24" font-weight="700" fill="#1B4D1F">Clean and Green</text>
+      <text x="200" y="118" font-family="Helvetica" font-size="12" letter-spacing="5" fill="#2E7D32">LAWN CARE</text>
+      <text x="200" y="142" font-family="Helvetica" font-style="italic" font-size="10" fill="#666">Stewardship  ·  Craftsmanship</text>
+      <text x="10" y="195" font-weight="700">10 — Sprout from Earth</text>
+    </g>
+  </g>
+</svg>

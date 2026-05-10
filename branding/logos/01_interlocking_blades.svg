@@ -1,0 +1,11 @@
+<svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg">
+  <rect width="480" height="220" fill="#F4F4EF"/>
+  <!-- Two interlocking grass blades (C + G) -->
+  <path d="M 90 175 Q 70 100 110 55 Q 140 80 130 145 Q 125 170 90 175 Z" fill="#2E7D32"/>
+  <path d="M 135 175 Q 130 95 165 55 Q 200 95 175 150 Q 160 172 135 175 Z" fill="#1B4D1F"/>
+  <path d="M 110 175 Q 130 130 150 175 Z" fill="#A5D6A7"/>
+  <text x="225" y="105" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="700" fill="#1B4D1F">Clean and Green</text>
+  <text x="225" y="140" font-family="Georgia, 'Times New Roman', serif" font-size="18" letter-spacing="6" fill="#2E7D32">LAWN CARE</text>
+  <line x1="225" y1="150" x2="450" y2="150" stroke="#2E7D32" stroke-width="2"/>
+  <text x="225" y="170" font-family="Helvetica, Arial, sans-serif" font-size="11" letter-spacing="2" fill="#666">A CLEANER CUT.  A GREENER LAWN.</text>
+</svg>

@@ -1,0 +1,19 @@
+<svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg">
+  <rect width="480" height="220" fill="#F4F4EF"/>
+  <!-- Half-circle earth -->
+  <path d="M 30 165 A 80 80 0 0 1 190 165 Z" fill="#1B4D1F"/>
+  <!-- Earth highlight band -->
+  <path d="M 50 165 A 60 60 0 0 1 170 165 Z" fill="#2E7D32"/>
+  <!-- Sprout: stem -->
+  <path d="M 110 165 Q 110 130 112 95" stroke="#A5D6A7" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- Sprout: left leaf -->
+  <path d="M 110 130 Q 88 120 80 100 Q 100 105 112 125 Z" fill="#A5D6A7"/>
+  <!-- Sprout: right leaf -->
+  <path d="M 112 110 Q 130 95 145 75 Q 135 105 116 120 Z" fill="#A5D6A7"/>
+  <!-- Sun dot -->
+  <circle cx="155" cy="55" r="10" fill="#FFC107"/>
+  <!-- Wordmark -->
+  <text x="220" y="100" font-family="'Roboto Slab', Georgia, serif" font-size="28" font-weight="700" fill="#1B4D1F">Clean and Green</text>
+  <text x="220" y="125" font-family="Helvetica, Arial, sans-serif" font-size="13" letter-spacing="5" fill="#2E7D32">LAWN CARE</text>
+  <text x="220" y="155" font-family="Helvetica, Arial, sans-serif" font-style="italic" font-size="11" fill="#666">Stewardship · Craftsmanship · Transparency</text>
+</svg>

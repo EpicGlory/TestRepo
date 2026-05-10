@@ -1,0 +1,16 @@
+<svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg">
+  <rect width="480" height="220" fill="#F4F4EF"/>
+  <!-- Sun -->
+  <circle cx="110" cy="115" r="38" fill="#FFC107"/>
+  <!-- Lawn stripes (foreground, in front of sun lower half) -->
+  <rect x="40" y="115" width="140" height="10" fill="#A5D6A7"/>
+  <rect x="40" y="125" width="140" height="10" fill="#2E7D32"/>
+  <rect x="40" y="135" width="140" height="10" fill="#1B4D1F"/>
+  <!-- Tiny grass blades on top stripe -->
+  <path d="M 75 115 L 73 105 L 78 115 Z" fill="#1B4D1F"/>
+  <path d="M 110 115 L 108 102 L 114 115 Z" fill="#1B4D1F"/>
+  <path d="M 145 115 L 143 105 L 148 115 Z" fill="#1B4D1F"/>
+  <!-- Wordmark -->
+  <text x="205" y="105" font-family="'Roboto Slab', Georgia, serif" font-size="28" font-weight="700" fill="#1B4D1F">Clean and Green</text>
+  <text x="205" y="135" font-family="Helvetica, Arial, sans-serif" font-size="13" letter-spacing="4" fill="#2E7D32">LAWN CARE  ·  EST. 2026</text>
+</svg>

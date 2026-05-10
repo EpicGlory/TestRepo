@@ -1,0 +1,13 @@
+<svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg">
+  <rect width="480" height="220" fill="#F4F4EF"/>
+  <!-- Hexagon -->
+  <polygon points="110,40 175,75 175,145 110,180 45,145 45,75" fill="#2E7D32" stroke="#1B4D1F" stroke-width="4"/>
+  <!-- C&G monogram -->
+  <text x="110" y="130" text-anchor="middle" font-family="'Roboto Slab', Georgia, serif" font-size="60" font-weight="700" fill="#F4F4EF">C&amp;G</text>
+  <!-- Tiny grass blade accent -->
+  <path d="M 110 50 Q 107 42 112 33" stroke="#A5D6A7" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Wordmark -->
+  <text x="210" y="100" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="800" fill="#1B4D1F">CLEAN AND GREEN</text>
+  <text x="210" y="125" font-family="Helvetica, Arial, sans-serif" font-size="13" letter-spacing="5" fill="#2E7D32">LAWN CARE</text>
+  <line x1="210" y1="138" x2="290" y2="138" stroke="#FFC107" stroke-width="3"/>
+</svg>
