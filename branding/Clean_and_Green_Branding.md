@@ -91,7 +91,7 @@ Greens dominate. Yellow appears sparingly, only where attention is required.
 ### 5.3 Logo Direction (LOCKED)
 
 **Primary lockup — "Mow Stripe Wordmark"**
-Stacked Helvetica-900 wordmark — "CLEAN AND" in Deep Forest above an oversized "GREEN" in Fairway Green — anchored by a three-band mow-stripe baseline (Fresh Cut / Fairway / Deep Forest). Locked descriptor underneath: **TURF CARE AND RENOVATION**. Optional italic tagline ("A cleaner cut. A greener lawn.") sits below the descriptor and may be dropped at small sizes.
+Stacked Helvetica-900 wordmark — "CLEAN AND" in Deep Forest above an oversized "GREEN" in Fairway Green — anchored by a three-band mow-stripe baseline (Fresh Cut / Fairway / Deep Forest). Locked descriptor underneath: **TURF CARE AND RENOVATION**. Locked italic tagline below the descriptor: **"Seed. Feed. Succeed."** in Fairway Green. Tagline may be dropped at small sizes.
 
 Reference file: `branding/logos/FINAL_logo_lockup.svg`
 
@@ -118,13 +118,27 @@ Reference file: `branding/logos/FINAL_logo_lockup.svg`
 
 ---
 
-## 6. Tagline Options
+## 6. Tagline (LOCKED)
 
-1. **"A cleaner cut. A greener lawn."** *(Recommended primary)*
-2. "Turf care, done right."
-3. "Your lawn. Done properly."
-4. "The lawn your neighbors will ask about."
-5. "Science-backed. Locally owned."
+**Primary tagline:** **"Seed. Feed. Succeed."**
+
+Three-beat rhythm matches the cadence of the company name and visually mirrors the three-stripe mow band in the logo. Each word maps to a real phase of the renovation program:
+
+- **Seed** — premium Valkyrie tall fescue, applied at 10 lb / 1,000 sq ft
+- **Feed** — pro-grade starter fertilizer at planting, follow-up Milorganite at week 4-6
+- **Succeed** — visible result the customer can see and the neighbor can ask about
+
+**Why this tagline works**
+- Memorable: rhyme + three-beat = sticky
+- Honest: literally describes the program
+- Versatile: lockup, hashtag (#SeedFeedSucceed), service-tier names, blog series, signage
+- On-brand: same cadence as the company name; the brand starts to feel like one consistent voice
+- Ages well: no political baggage, no trend-bound phrasing
+
+**Secondary / situational lines** (use sparingly, never replace the primary)
+- "Turf care, done right." — for technical / B2B contexts (HOAs, property managers)
+- "The lawn your neighbors will ask about." — for word-of-mouth / referral campaigns
+- "Right product. Right rate. Right time." — when leading with stewardship
 
 ---
 
