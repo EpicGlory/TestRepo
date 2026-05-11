@@ -1,0 +1,26 @@
+<!-- PRINT-READY for recycled cream paper. No background fill; cream paper shows through. -->
+<!-- Standard US business card: 3.5 x 2 inches (700 x 400 at 200dpi). Add 1/8 inch bleed at print. -->
+<svg viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Top corner: brand mark -->
+  <g transform="translate(40,45)">
+    <text x="0" y="0" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="900" fill="#1B4D1F" letter-spacing="-0.5">CLEAN AND GREEN</text>
+    <text x="0" y="22" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2" fill="#2E7D32">TURF CARE AND RENOVATION</text>
+  </g>
+
+  <!-- Name -->
+  <text x="350" y="160" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="48" font-weight="900" fill="#1B4D1F" letter-spacing="-1">Ryan Tucker</text>
+
+  <!-- Title -->
+  <text x="350" y="190" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="6" fill="#2E7D32">OWNER</text>
+
+  <!-- Mow stripes under the name -->
+  <rect x="200" y="210" width="300" height="9" fill="#A5D6A7"/>
+  <rect x="200" y="219" width="300" height="9" fill="#2E7D32"/>
+  <rect x="200" y="228" width="300" height="9" fill="#1B4D1F"/>
+
+  <!-- Contact stack -->
+  <text x="350" y="280" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#2C2C2C" letter-spacing="2">801.358.7820</text>
+  <text x="350" y="310" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="16" fill="#2C2C2C">rptucker@gmail.com</text>
+  <text x="350" y="340" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" letter-spacing="4" fill="#666">KAYSVILLE,  UTAH</text>
+</svg>
