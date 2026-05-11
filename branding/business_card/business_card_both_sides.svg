@@ -23,7 +23,7 @@
     <rect width="700" height="400" fill="#F4F4EF" stroke="#CCC" stroke-width="2"/>
     <g transform="translate(40,45)">
       <text x="0" y="0" font-family="Helvetica" font-size="17" font-weight="900" fill="#1B4D1F" letter-spacing="-0.5">CLEAN AND GREEN</text>
-      <text x="0" y="22" font-family="Helvetica" font-size="15" font-weight="700" letter-spacing="2" fill="#2E7D32">TURF CARE AND RENOVATION</text>
+      <text x="0" y="22" font-family="Helvetica" font-size="13" font-weight="700" letter-spacing="2" fill="#2E7D32">TURF CARE AND RENOVATION</text>
     </g>
     <text x="350" y="160" text-anchor="middle" font-family="Helvetica" font-size="48" font-weight="900" fill="#1B4D1F" letter-spacing="-1">Ryan Tucker</text>
     <text x="350" y="190" text-anchor="middle" font-family="Helvetica" font-size="14" font-weight="700" letter-spacing="6" fill="#2E7D32">OWNER</text>
