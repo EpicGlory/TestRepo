@@ -1,0 +1,60 @@
+<!-- Clean and Green door hanger FRONT. 4.25 x 11 in (850 x 2200 at 200dpi). -->
+<!-- Die-cut hole: 1.5 in diameter, centered horizontally, 0.75 in from top edge. -->
+<svg viewBox="0 0 850 2200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="850" height="2200" fill="#F4F4EF"/>
+
+  <!-- Top mow-stripe band -->
+  <rect x="0" y="0" width="850" height="20" fill="#A5D6A7"/>
+  <rect x="0" y="20" width="850" height="20" fill="#2E7D32"/>
+  <rect x="0" y="40" width="850" height="20" fill="#1B4D1F"/>
+
+  <!-- Die-cut guide (faint dashed circle; printer treats as cut line) -->
+  <circle cx="425" cy="200" r="150" fill="none" stroke="#BBBBBB" stroke-width="2" stroke-dasharray="10,6"/>
+  <text x="425" y="206" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#BBBBBB" letter-spacing="2">DIE-CUT</text>
+
+  <!-- Brand mark below the die-cut -->
+  <text x="425" y="440" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="900" fill="#1B4D1F" letter-spacing="-0.5">CLEAN AND GREEN</text>
+  <text x="425" y="472" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="5" fill="#2E7D32">TURF CARE AND RENOVATION</text>
+
+  <!-- Hero headline -->
+  <text x="425" y="640" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="54" font-weight="900" fill="#1B4D1F" letter-spacing="-1">Thinking of</text>
+  <text x="425" y="700" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="54" font-weight="900" fill="#1B4D1F" letter-spacing="-1">sodding your lawn?</text>
+  <text x="425" y="800" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="72" font-weight="900" fill="#2E7D32" letter-spacing="-2">READ THIS FIRST.</text>
+
+  <!-- Before/After placeholder visual -->
+  <!-- BEFORE -->
+  <rect x="60" y="900" width="350" height="340" fill="#8B6F47"/>
+  <rect x="60" y="900" width="350" height="340" fill="none" stroke="#1B4D1F" stroke-width="3"/>
+  <text x="235" y="1085" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="38" font-weight="900" fill="#F4F4EF" letter-spacing="2">BEFORE</text>
+  <text x="235" y="1125" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#F4F4EF">Bare. Weedy. Tired.</text>
+  <text x="235" y="1175" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" font-style="italic" fill="#E0E0E0">[replace with real photo]</text>
+  <!-- AFTER -->
+  <rect x="440" y="900" width="350" height="340" fill="#2E7D32"/>
+  <rect x="440" y="900" width="350" height="340" fill="none" stroke="#1B4D1F" stroke-width="3"/>
+  <text x="615" y="1085" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="38" font-weight="900" fill="#F4F4EF" letter-spacing="2">AFTER</text>
+  <text x="615" y="1125" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#F4F4EF">8 weeks. Lush. Local.</text>
+  <text x="615" y="1175" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" font-style="italic" fill="#C8E6C9">[replace with real photo]</text>
+
+  <!-- Hook -->
+  <text x="425" y="1340" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#2C2C2C">There's a smarter, cheaper way</text>
+  <text x="425" y="1378" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#2C2C2C">to fix a bad lawn.</text>
+  <text x="425" y="1430" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-style="italic" font-size="22" fill="#666666">Most homeowners pick the wrong one.</text>
+
+  <!-- CTA block -->
+  <rect x="50" y="1530" width="750" height="320" fill="#1B4D1F"/>
+  <rect x="50" y="1530" width="750" height="6" fill="#A5D6A7"/>
+  <rect x="50" y="1844" width="750" height="6" fill="#A5D6A7"/>
+  <text x="425" y="1620" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="32" font-weight="900" fill="#F4F4EF" letter-spacing="3">FREE LAWN ASSESSMENT</text>
+  <text x="425" y="1665" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#A5D6A7">We walk your lawn. We give you the honest answer.</text>
+  <text x="425" y="1770" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="58" font-weight="900" fill="#F4F4EF">801.358.7820</text>
+  <text x="425" y="1815" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="5" fill="#A5D6A7">RYAN TUCKER  ·  OWNER</text>
+
+  <!-- Bottom mow-stripe band + tagline -->
+  <rect x="0" y="1950" width="850" height="22" fill="#A5D6A7"/>
+  <rect x="0" y="1972" width="850" height="22" fill="#2E7D32"/>
+  <rect x="0" y="1994" width="850" height="22" fill="#1B4D1F"/>
+
+  <text x="425" y="2080" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-style="italic" font-size="26" font-weight="700" letter-spacing="3" fill="#2E7D32">Seed.  Feed.  Succeed.</text>
+  <text x="425" y="2130" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" letter-spacing="4" fill="#666666">KAYSVILLE,  UTAH  ·  SERVING DAVIS COUNTY</text>
+  <text x="425" y="2170" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" font-style="italic" fill="#999999">flip for the honest seed vs sod comparison</text>
+</svg>
