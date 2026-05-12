@@ -1,0 +1,13 @@
+{
+  "name": "cleanandgreen-turf",
+  "version": "1.0.0",
+  "description": "Clean and Green Turf - static website (Cloudflare Workers + Static Assets)",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev"
+  },
+  "devDependencies": {
+    "wrangler": "^3.95.0"
+  }
+}

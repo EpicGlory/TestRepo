@@ -1,0 +1,10 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "cleanandgreen-turf",
+  "compatibility_date": "2025-01-01",
+  "assets": {
+    "directory": "./website",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "single-page-application"
+  }
+}
