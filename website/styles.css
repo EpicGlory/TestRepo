@@ -102,7 +102,7 @@ body {
   margin-bottom: 40px;
 }
 .hero-tagline {
-  font-size: 16px; color: var(--fresh); letter-spacing: 2px;
+  font-size: 21px; color: var(--white); letter-spacing: 2px; font-weight: 500;
 }
 
 /* ──────────  BUTTONS  ────────── */
@@ -245,7 +245,7 @@ body {
 .service-reno { border-top-color: var(--forest); background: var(--forest); color: var(--white); }
 .service-reno h3 { color: var(--white); }
 .service-reno .service-tag { color: var(--yellow); }
-.service-reno ul li { color: rgba(255,255,255,0.92); }
+.service-reno ul li { color: var(--white); }
 .service-reno .service-availability { color: var(--fresh); }
 
 .service-tag {
