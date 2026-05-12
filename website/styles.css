@@ -61,6 +61,24 @@ body {
   font-weight: 800 !important; color: var(--forest) !important; font-size: 15px !important;
 }
 
+/* ──────────  LOGO BANNER  ────────── */
+.logo-banner {
+  background: var(--lime);
+  padding: 36px 24px 28px;
+  text-align: center;
+  border-bottom: 1px solid #E5E5E0;
+}
+.logo-banner img {
+  max-width: 480px;
+  width: 100%;
+  height: auto;
+  display: inline-block;
+}
+@media (max-width: 600px) {
+  .logo-banner { padding: 24px 16px 20px; }
+  .logo-banner img { max-width: 320px; }
+}
+
 /* ──────────  HERO  ────────── */
 .hero {
   background:
@@ -191,6 +209,13 @@ body {
   border-radius: 4px; line-height: 1.6;
 }
 
+/* Differentiator (alt compare) section -- "What chains don't do" */
+.compare-alt { background: var(--white); }
+.differentiator-intro {
+  font-size: 17px; color: var(--char); line-height: 1.65;
+  max-width: 760px; margin: 0 auto 32px; text-align: center;
+}
+
 /* ──────────  3 REASONS  ────────── */
 .reasons { padding: 80px 0; background: var(--white); }
 .reasons-grid {
@@ -232,7 +257,7 @@ body {
 /* ──────────  SERVICES  ────────── */
 .services { padding: 80px 0; background: var(--white); }
 .services-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
   margin-top: 40px; margin-bottom: 40px;
 }
 .service {
@@ -241,6 +266,8 @@ body {
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 .service:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+.service-sprinkler { border-top-color: var(--fairway); }
+.service-sprinkler ul li strong { color: var(--forest); }
 .service-overseed { border-top-color: var(--yellow); }
 .service-reno { border-top-color: var(--forest); background: var(--forest); color: var(--white); }
 .service-reno h3 { color: var(--white); }
@@ -267,26 +294,7 @@ body {
 .service-reno ul li::before { color: var(--fresh); }
 .service-availability { font-size: 13px; font-style: italic; color: var(--fairway); }
 
-/* Sprinkler gate */
-.sprinkler-gate {
-  background: var(--forest); border-radius: 8px; padding: 4px 0;
-  position: relative; overflow: hidden;
-}
-.sprinkler-gate::before, .sprinkler-gate::after {
-  content: ""; position: absolute; left: 0; right: 0; height: 4px; background: var(--yellow);
-}
-.sprinkler-gate::before { top: 0; }
-.sprinkler-gate::after { bottom: 0; }
-.sprinkler-gate-inner {
-  padding: 24px 32px; color: var(--white);
-  display: flex; gap: 24px; align-items: center;
-}
-.sprinkler-gate-icon { font-size: 36px; flex-shrink: 0; }
-.sprinkler-gate h3 {
-  font-size: 18px; font-weight: 800; color: var(--yellow);
-  margin-bottom: 6px; letter-spacing: 1px;
-}
-.sprinkler-gate p { font-size: 14px; color: rgba(255,255,255,0.9); line-height: 1.5; }
+/* (Sprinkler-gate styles removed — sprinklers are now a top-tier service card) */
 
 /* ──────────  ABOUT  ────────── */
 .about { padding: 80px 0; background: var(--lime); }
@@ -380,9 +388,10 @@ body {
 @media (max-width: 880px) {
   .nav-links { gap: 16px; }
   .nav-links a:not(.nav-phone) { display: none; }
-  .benefits-grid, .reasons-grid, .services-grid, .about-grid, .foot-grid {
+  .benefits-grid, .reasons-grid, .about-grid, .foot-grid {
     grid-template-columns: 1fr;
   }
+  .services-grid { grid-template-columns: 1fr; }
   .ct-row { grid-template-columns: 1fr 1fr 1fr; padding: 14px 16px; }
   .ct-label { font-size: 10px; letter-spacing: 0.8px; }
   .ct-seed, .ct-sod { font-size: 14px; }
