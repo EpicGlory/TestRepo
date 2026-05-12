@@ -269,11 +269,7 @@ body {
 .service-sprinkler { border-top-color: var(--fairway); }
 .service-sprinkler ul li strong { color: var(--forest); }
 .service-overseed { border-top-color: var(--yellow); }
-.service-reno { border-top-color: var(--forest); background: var(--forest); color: var(--white); }
-.service-reno h3 { color: var(--white); }
-.service-reno .service-tag { color: var(--yellow); }
-.service-reno ul li { color: var(--white); }
-.service-reno .service-availability { color: var(--fresh); }
+.service-reno { border-top-color: var(--forest); }
 
 .service-tag {
   font-size: 11px; font-weight: 800; letter-spacing: 2px;
