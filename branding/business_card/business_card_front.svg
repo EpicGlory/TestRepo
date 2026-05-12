@@ -4,8 +4,8 @@
   <rect width="700" height="400" fill="#F4F4EF"/>
 
   <!-- Wordmark, scaled to fit card -->
-  <text x="350" y="135" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="56" font-weight="900" fill="#1B4D1F" letter-spacing="-1">CLEAN AND</text>
-  <text x="350" y="220" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="92" font-weight="900" fill="#2E7D32" letter-spacing="-2">GREEN</text>
+  <text x="350" y="130" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="50" font-weight="900" fill="#1B4D1F" letter-spacing="-1">CLEAN AND</text>
+  <text x="350" y="215" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="76" font-weight="900" fill="#2E7D32" letter-spacing="-2">GREEN TURF</text>
 
   <!-- Mow stripes -->
   <rect x="100" y="245" width="500" height="14" fill="#A5D6A7"/>
@@ -13,7 +13,7 @@
   <rect x="100" y="273" width="500" height="14" fill="#1B4D1F"/>
 
   <!-- Descriptor -->
-  <text x="350" y="320" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="6" fill="#2C2C2C">TURF CARE AND RENOVATION</text>
+  <text x="350" y="320" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="6" fill="#2C2C2C">RENOVATION AND LAWN CARE</text>
 
   <!-- Tagline -->
   <text x="350" y="355" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-style="italic" font-size="18" font-weight="700" letter-spacing="3" fill="#2E7D32">Seed.  Feed.  Succeed.</text>

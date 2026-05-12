@@ -1,11 +1,12 @@
-# Clean and Green Lawn Care
-## Brand Identity & Standards
+# Clean and Green Turf
+## Renovation and Lawn Care · Brand Identity & Standards
+*Legal entity: Clean and Green Turf, LLC · Kaysville, Utah*
 
 ---
 
 ## 1. Brand Story
 
-Clean and Green Lawn Care was founded on a simple belief: a healthy lawn is the foundation of a healthy home. We deliver visibly cleaner, deeper-green lawns through science-backed turf programs, transparent pricing, and a relentless commitment to doing the job right the first time.
+Clean and Green Turf, LLC was founded on a simple belief: a healthy lawn is the foundation of a healthy home. We deliver visibly cleaner, deeper-green lawns through science-backed turf programs, transparent pricing, and a relentless commitment to doing the job right the first time.
 
 We are not a "mow-and-blow" company. We are turf specialists. Every property gets a written plan, every product is documented, every application is logged, and every customer sees exactly what they paid for and why.
 
@@ -38,7 +39,7 @@ To be the most trusted name in turf care in our service area — the company nei
 - Customers frustrated with national chains that show up unannounced, apply unknown products, and bill on autopilot
 
 **Positioning Statement**
-For homeowners who want a lawn they are proud of, Clean and Green Lawn Care is the turf-care company that delivers visible, science-backed results with full transparency on every product, rate, and dollar — because unlike national franchises, we treat your lawn like our own.
+For homeowners who want a lawn they are proud of, Clean and Green Turf, LLC is the turf-care company that delivers visible, science-backed results with full transparency on every product, rate, and dollar — because unlike national franchises, we treat your lawn like our own.
 
 **Three things we are NOT**
 - Cheapest in town (we are not racing TruGreen to the bottom)
@@ -91,14 +92,14 @@ Greens dominate. Yellow appears sparingly, only where attention is required.
 ### 5.3 Logo Direction (LOCKED)
 
 **Primary lockup — "Mow Stripe Wordmark"**
-Stacked Helvetica-900 wordmark — "CLEAN AND" in Deep Forest above an oversized "GREEN" in Fairway Green — anchored by a three-band mow-stripe baseline (Fresh Cut / Fairway / Deep Forest). Locked descriptor underneath: **TURF CARE AND RENOVATION**. Locked italic tagline below the descriptor: **"Seed. Feed. Succeed."** in Fairway Green. Tagline may be dropped at small sizes.
+Stacked Helvetica-900 wordmark — "CLEAN AND" in Deep Forest above an oversized "GREEN TURF" in Fairway Green — anchored by a three-band mow-stripe baseline (Fresh Cut / Fairway / Deep Forest). Locked descriptor underneath: **RENOVATION AND LAWN CARE**. Locked italic tagline below the descriptor: **"Seed. Feed. Succeed."** in Fairway Green. Tagline may be dropped at small sizes.
 
 Reference file: `branding/logos/FINAL_logo_lockup.svg`
 
 **Why this lockup**
 - The mow-stripe band is an ownable, instantly readable visual cue tied directly to what we do
 - The heavy sans wordmark reads at any scale — favicon to truck wrap
-- "TURF CARE AND RENOVATION" positions us above generic "lawn guys" and makes the renovation hero service explicit on every customer touchpoint
+- "RENOVATION AND LAWN CARE" leads with the renovation hero service while keeping "Lawn Care" — the term customers actually search for — in the descriptor. "Turf" lives in the wordmark itself, positioning us above generic "lawn guys"
 - Two-tone green hierarchy uses the brand palette directly (no new colors)
 
 **Usage rules**
@@ -180,7 +181,7 @@ Three-beat rhythm matches the cadence of the company name and visually mirrors t
 
 If you can see what we did, what we used, and why we did it — and you would not be embarrassed to tell your neighbor what it cost — then we did our job.
 
-That is Clean and Green Lawn Care.
+That is Clean and Green Turf.
 
 ---
 

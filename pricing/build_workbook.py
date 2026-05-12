@@ -1,5 +1,5 @@
 """
-Builds the Clean and Green Lawn Care - Kill & Reseed pricing workbook.
+Builds the Clean and Green Turf - Kill & Reseed pricing workbook.
 
 Methodology mirrors an M&A valuation model:
 - Assumptions tab holds every driver (lawn size, markup, labor rate, hours/phase).
@@ -94,7 +94,7 @@ ws_sum.title = "Summary"
 # Tab 2: ASSUMPTIONS
 # =====================================================================
 ws_a = wb.create_sheet("Assumptions")
-title_bar(ws_a, "Assumptions  |  Clean and Green Lawn Care", span=4)
+title_bar(ws_a, "Assumptions  |  Clean and Green Turf  |  Renovation and Lawn Care", span=4)
 set_col_widths(ws_a, [38, 16, 12, 50])
 
 ws_a.cell(row=2, column=1, value="Driver").font = FONT_LABEL
@@ -570,7 +570,7 @@ c.number_format = '"$"#,##0.0000'; c.alignment = RIGHT; c.font = FONT_NOTE
 # =====================================================================
 # Tab 1 (filled in last): SUMMARY -- customer-facing
 # =====================================================================
-title_bar(ws_sum, "Clean and Green Lawn Care  |  Lawn Renovation Proposal", span=5)
+title_bar(ws_sum, "Clean and Green Turf  |  Lawn Renovation Proposal", span=5)
 set_col_widths(ws_sum, [4, 32, 20, 20, 20])
 
 # Project header
@@ -688,7 +688,7 @@ ws_sum.row_dimensions[r].height = 24
 
 # Company
 r += 2
-ws_sum.cell(row=r, column=2, value="Clean and Green Lawn Care - Authorized Representative").font = FONT_LABEL
+ws_sum.cell(row=r, column=2, value="Clean and Green Turf, LLC - Authorized Representative").font = FONT_LABEL
 ws_sum.cell(row=r, column=4, value="Date").font = FONT_LABEL
 r += 1
 for col in [2, 3]:

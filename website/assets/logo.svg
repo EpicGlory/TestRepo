@@ -1,18 +1,18 @@
 <svg viewBox="0 0 480 280" xmlns="http://www.w3.org/2000/svg">
   <rect width="480" height="280" fill="#F4F4EF"/>
 
-  <!-- Stacked wordmark, #7 typography -->
-  <text x="240" y="90" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="42" font-weight="900" fill="#1B4D1F" letter-spacing="-1">CLEAN AND</text>
-  <text x="240" y="150" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="68" font-weight="900" fill="#2E7D32" letter-spacing="-2">GREEN</text>
+  <!-- Stacked wordmark: CLEAN AND / GREEN TURF -->
+  <text x="240" y="85" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="38" font-weight="900" fill="#1B4D1F" letter-spacing="-1">CLEAN AND</text>
+  <text x="240" y="148" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="54" font-weight="900" fill="#2E7D32" letter-spacing="-2">GREEN TURF</text>
 
-  <!-- Three mow stripes baseline (from #3) -->
+  <!-- Three mow stripes baseline -->
   <rect x="60" y="172" width="360" height="11" fill="#A5D6A7"/>
   <rect x="60" y="183" width="360" height="11" fill="#2E7D32"/>
   <rect x="60" y="194" width="360" height="11" fill="#1B4D1F"/>
 
   <!-- Locked descriptor -->
-  <text x="240" y="232" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="6" fill="#2C2C2C">TURF CARE AND RENOVATION</text>
+  <text x="240" y="232" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="6" fill="#2C2C2C">RENOVATION AND LAWN CARE</text>
 
-  <!-- Locked tagline (can be dropped at small sizes) -->
+  <!-- Locked tagline -->
   <text x="240" y="258" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-style="italic" font-size="14" font-weight="700" letter-spacing="2" fill="#2E7D32">Seed.  Feed.  Succeed.</text>
 </svg>
