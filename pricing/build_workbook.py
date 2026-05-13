@@ -121,9 +121,14 @@ assumptions = [
     ("Phase 2 Mobilization Hours",      1.00,   "hours",   "Equipment pickup/return for aerator + dethatcher.", "P2Mob"),
     ("Phase 3 Mobilization Hours",      0.75,   "hours",   "Material loadout, customer walk-through.",          "P3Mob"),
     ("Phase 4 Mobilization Hours",      0.50,   "hours",   "Visit + walkthrough.",                              "P4Mob"),
-    # Summer Services labor estimates per 1,000 sqft (single application)
-    ("Single-App Labor (per 1,000 sq ft)", 0.20, "hours",  "Time per 1k sqft for a single fert/biostim/PGR/etc. application.", "AppHrs"),
-    ("Single-App Mobilization Hours",   0.40,   "hours",   "Drive, mix tank, walkthrough per single-visit service.",            "AppMob"),
+    # Summer Services: visit-based labor (the realistic model -- 5-6 visits per year
+    # with multiple products tank-mixed per visit)
+    ("Visits per Season",               6,      "visits",  "Physical visits per year for the annual program (5-6 typical).", "VisitsPerSeason"),
+    ("Visit Labor (per 1,000 sq ft)",   0.35,   "hours",   "Time per 1k sqft per physical visit (3-5 products tank-mixed).", "VisitHrs"),
+    ("Visit Mobilization Hours",        0.40,   "hours",   "Drive, mix tank, walkthrough per visit.",                        "VisitMob"),
+    # Single-app overrides (for one-off services outside the annual program)
+    ("Single-App Labor (per 1,000 sq ft)", 0.20, "hours",  "Used only for one-off service quotes outside the annual program.", "AppHrs"),
+    ("Single-App Mobilization Hours",   0.40,   "hours",   "Used only for one-off service quotes outside the annual program.",  "AppMob"),
     # Overseeding labor (lighter than full renovation)
     ("Overseeding Labor (per 1,000 sq ft)", 0.80, "hours", "Dethatch + aerate + seed + Tenacity + peat top-dress.",            "OvsHrs"),
     ("Overseeding Mobilization Hours",  1.00,   "hours",   "Equipment pickup/return + customer walk-through.",                 "OvsMob"),
@@ -546,45 +551,47 @@ build_phase(
 # Tab: SUMMER SERVICES (à la carte annual program menu)
 # =====================================================================
 ws_sm = wb.create_sheet("Summer Services")
-title_bar(ws_sm, "Summer Services  |  À la carte / annual program menu", span=8)
-set_col_widths(ws_sm, [4, 32, 16, 10, 16, 16, 16, 18])
+title_bar(ws_sm, "Summer Services  |  Annual program (5-6 bundled visits/season)", span=7)
+set_col_widths(ws_sm, [4, 36, 16, 12, 18, 18, 30])
 
-section_header(ws_sm, "Scope", 2, span=8, level=2)
+section_header(ws_sm, "Scope", 2, span=7, level=2)
 ws_sm.cell(row=3, column=1,
-           value=("Year-round application menu. Set '# Apps' per row to match the customer's "
-                  "plan (full annual program, single application, etc.). Material cost scales by "
-                  "lawn size; labor scales per application using AppHrs (field) + AppMob (per visit)."))
+           value=("Annual program. Materials are calculated per product based on apps/year (not all "
+                  "applied at once). Labor is calculated per physical visit -- ~6 visits/season with "
+                  "3-5 products tank-mixed per visit. Customer pays for visits, not per tank-mixed product. "
+                  "Adjust 'Visits per Season' on the Assumptions tab to match the customer's plan."))
 ws_sm.cell(row=3, column=1).alignment = LEFT
-ws_sm.merge_cells(start_row=3, start_column=1, end_row=3, end_column=8)
-ws_sm.row_dimensions[3].height = 50
+ws_sm.merge_cells(start_row=3, start_column=1, end_row=3, end_column=7)
+ws_sm.row_dimensions[3].height = 58
 
-# Headers
-hdr_row = 5
-hdrs = ["#", "Service", "$ / 1,000 sf", "# Apps", "Mat. cost (raw)",
-        "Mat. (w/ markup)", "Labor (total)", "Service Total"]
+# Materials menu
+section_header(ws_sm, "Material Plan (per product, scales by apps/year)", 5, span=7, level=2)
+
+hdr_row = 6
+hdrs = ["#", "Service", "$ / 1,000 sf", "# Apps", "Mat. cost (raw)", "Mat. (w/ markup)", "Notes"]
 for i, h in enumerate(hdrs, 1):
     c = ws_sm.cell(row=hdr_row, column=i, value=h)
     c.font = FONT_LABEL; c.fill = FILL_H2; c.alignment = CENTER; c.border = BORDER
 
-# Service menu (per-1000-sqft items)
-# (named_range, display label, default # apps)
+# Service menu tuned for a 6-visit annual program at 5k sqft
+# Total = ~19 product apps spread across 6 visits = ~3.2 products/visit (realistic tank mix)
 summer_services = [
-    ("PreEm",     "Pre-emergent (Prodiamine, spring + fall)", 2),
-    ("SlowFert",  "Slow-release fertilizer application",     4),
-    ("KBoost",    "Sulfate of Potash (K boost)",              1),
-    ("Iron",      "Iron / Ferromec foliar (deep green)",      3),
-    ("Humic",     "Humic + Fulvic biostimulant",              2),
-    ("Kelp",      "Liquid Kelp biostimulant",                 2),
-    ("Hydretain", "Hydretain wetting agent (UT clay)",        2),
-    ("PGR",       "PGR / Primo Maxx (less mowing)",           4),
-    ("Grub",      "Grub prevention (Imidacloprid, mid-July)", 1),
-    ("Winter",    "Fall winterizer (high-K)",                 1),
-    ("Fungicide", "Fungicide (dollar spot, brown patch)",     0),
+    ("PreEm",     "Pre-emergent (Prodiamine, spring + fall)", 2, "Visits 1 + 5"),
+    ("SlowFert",  "Slow-release fertilizer",                   4, "Visits 1, 3, 5, 6"),
+    ("KBoost",    "Sulfate of Potash (K boost)",               1, "Visit 3 -- pre-summer"),
+    ("Iron",      "Iron / Ferromec foliar (deep green)",       2, "Visits 2 + 4"),
+    ("Humic",     "Humic + Fulvic biostimulant",               2, "Visits 2 + 5"),
+    ("Kelp",      "Liquid Kelp biostimulant",                  2, "Visits 2 + 4 (tank w/ iron)"),
+    ("Hydretain", "Hydretain wetting agent",                   1, "Visit 3 -- pre-summer"),
+    ("PGR",       "PGR / Primo Maxx (less mowing)",            3, "Visits 2, 3, 4 (May-July)"),
+    ("Grub",      "Grub prevention (Imidacloprid)",            1, "Visit 4 -- mid-July"),
+    ("Winter",    "Fall winterizer (high-K)",                  1, "Visit 6 -- late Oct"),
+    ("Fungicide", "Fungicide (as-needed)",                     0, "Add 1-2 apps if disease pressure"),
 ]
 
 r = hdr_row + 1
 summer_rows = []
-for i, (nm, label, apps) in enumerate(summer_services, 1):
+for i, (nm, label, apps, note) in enumerate(summer_services, 1):
     ws_sm.cell(row=r, column=1, value=i).alignment = CENTER
     ws_sm.cell(row=r, column=2, value=label).alignment = LEFT
     c = ws_sm.cell(row=r, column=3, value=f"={nm}")
@@ -597,25 +604,61 @@ for i, (nm, label, apps) in enumerate(summer_services, 1):
     # Material w/ markup
     c = ws_sm.cell(row=r, column=6, value=f"=E{r}*(1+Markup)")
     c.number_format = '"$"#,##0.00'; c.alignment = RIGHT; c.font = FONT_LABEL
-    # Labor total = (AppHrs*(LawnSize/1000) + AppMob) * apps * LaborRate
-    c = ws_sm.cell(row=r, column=7,
-                   value=f"=(AppHrs*(LawnSize/1000)+AppMob)*D{r}*LaborRate")
-    c.number_format = '"$"#,##0.00'; c.alignment = RIGHT
-    # Service total
-    c = ws_sm.cell(row=r, column=8, value=f"=F{r}+G{r}")
-    c.number_format = '"$"#,##0.00'; c.alignment = RIGHT; c.font = FONT_LABEL
-    for col in range(1, 9):
+    ws_sm.cell(row=r, column=7, value=note).font = FONT_NOTE
+    for col in range(1, 8):
         ws_sm.cell(row=r, column=col).border = BORDER
     summer_rows.append(r)
     r += 1
 
-# Soil test flat-fee line
-section_header(ws_sm, "Diagnostic add-on (flat fee, not per-sqft)", r, span=8, level=2)
+# Material subtotal
 r += 1
-hdrs2 = ["#", "Service", "Flat fee", "Qty", "Cost (raw)", "Cost (w/ markup)", "Labor", "Service Total"]
-for i, h in enumerate(hdrs2, 1):
+ws_sm.cell(row=r, column=2, value="MATERIALS SUBTOTAL (w/ markup)").font = FONT_LABEL
+mat_sum = "+".join(f"F{x}" for x in summer_rows)
+c = ws_sm.cell(row=r, column=6, value=f"={mat_sum}")
+c.number_format = '"$"#,##0.00'; c.alignment = RIGHT
+c.font = Font(name="Calibri", size=12, bold=True, color="FFFFFF"); c.fill = FILL_TOTAL
+mat_total_cell = f"F{r}"
+
+# Visit-based labor
+r += 2
+section_header(ws_sm, "Visit-Based Labor (per Assumptions tab)", r, span=7, level=2)
+r += 1
+labor_hdrs = ["", "Component", "Calc / cell", "Value", "", "", "Notes"]
+for i, h in enumerate(labor_hdrs, 1):
     c = ws_sm.cell(row=r, column=i, value=h)
     c.font = FONT_LABEL; c.fill = FILL_H2; c.alignment = CENTER; c.border = BORDER
+r += 1
+ws_sm.cell(row=r, column=2, value="Visits per season").alignment = LEFT
+c = ws_sm.cell(row=r, column=3, value="=VisitsPerSeason"); c.alignment = CENTER
+c.number_format = "0"; c.font = FONT_LABEL
+ws_sm.cell(row=r, column=7, value="Adjust on Assumptions tab.").font = FONT_NOTE
+for col in range(1, 8): ws_sm.cell(row=r, column=col).border = BORDER
+
+r += 1
+ws_sm.cell(row=r, column=2, value="Hours per visit").alignment = LEFT
+c = ws_sm.cell(row=r, column=3, value=f"=VisitHrs*(LawnSize/1000)+VisitMob"); c.alignment = CENTER
+c.number_format = "0.00"; c.font = FONT_LABEL
+ws_sm.cell(row=r, column=7, value="= VisitHrs * (LawnSize/1000) + VisitMob").font = FONT_NOTE
+for col in range(1, 8): ws_sm.cell(row=r, column=col).border = BORDER
+hrs_per_visit_row = r
+
+r += 1
+ws_sm.cell(row=r, column=2, value="Cost per visit").alignment = LEFT
+c = ws_sm.cell(row=r, column=3, value=f"=C{hrs_per_visit_row}*LaborRate"); c.alignment = CENTER
+c.number_format = '"$"#,##0.00'; c.font = FONT_LABEL
+for col in range(1, 8): ws_sm.cell(row=r, column=col).border = BORDER
+cost_per_visit_row = r
+
+r += 1
+ws_sm.cell(row=r, column=2, value="LABOR SUBTOTAL (visits x cost/visit)").font = FONT_LABEL
+c = ws_sm.cell(row=r, column=6, value=f"=VisitsPerSeason*C{cost_per_visit_row}")
+c.number_format = '"$"#,##0.00'; c.alignment = RIGHT
+c.font = Font(name="Calibri", size=12, bold=True, color="FFFFFF"); c.fill = FILL_TOTAL
+lab_total_cell = f"F{r}"
+
+# Soil test flat-fee line
+r += 2
+section_header(ws_sm, "Diagnostic add-on (flat fee, not per-sqft)", r, span=7, level=2)
 r += 1
 soil_row = r
 ws_sm.cell(row=r, column=1, value=1).alignment = CENTER
@@ -624,35 +667,32 @@ c = ws_sm.cell(row=r, column=3, value=30.00); c.font = FONT_INPUT; c.fill = FILL
 c.number_format = '"$"#,##0.00'; c.alignment = RIGHT
 c = ws_sm.cell(row=r, column=4, value=1)
 c.font = FONT_INPUT; c.fill = FILL_INPUT; c.alignment = CENTER
-c = ws_sm.cell(row=r, column=5, value=f"=C{r}*D{r}")
-c.number_format = '"$"#,##0.00'; c.alignment = RIGHT
-c = ws_sm.cell(row=r, column=6, value=f"=E{r}")
+c = ws_sm.cell(row=r, column=6, value=f"=C{r}*D{r}")
 c.number_format = '"$"#,##0.00'; c.alignment = RIGHT; c.font = FONT_LABEL
-ws_sm.cell(row=r, column=7, value="(no labor)").alignment = CENTER
-c = ws_sm.cell(row=r, column=8, value=f"=F{r}")
-c.number_format = '"$"#,##0.00'; c.alignment = RIGHT; c.font = FONT_LABEL
-for col in range(1, 9):
-    ws_sm.cell(row=r, column=col).border = BORDER
-ws_sm.cell(row=r, column=2, value=ws_sm.cell(row=r, column=2).value).comment = None
-# Note: soil test is priced at cost ($30) since the "$60 value" framing is on the website;
-# Ryan can edit the flat fee cell to charge the $60 value if he prefers.
+ws_sm.cell(row=r, column=7, value="$30 cost = $30 to customer. Edit C to charge the '$60 value' price.").font = FONT_NOTE
+for col in range(1, 8): ws_sm.cell(row=r, column=col).border = BORDER
 
 # Summary totals
 r += 2
-ws_sm.cell(row=r, column=2, value="SUMMER SERVICES TOTAL").font = Font(
+ws_sm.cell(row=r, column=2, value="ANNUAL PROGRAM TOTAL").font = Font(
     name="Calibri", size=14, bold=True, color="FFFFFF")
 ws_sm.cell(row=r, column=2).fill = FILL_GRANDTOTAL
 ws_sm.cell(row=r, column=2).alignment = LEFT
-for col in range(3, 8):
+for col in range(3, 7):
     ws_sm.cell(row=r, column=col).fill = FILL_GRANDTOTAL
-sm_total_parts = "+".join(f"H{x}" for x in summer_rows) + f"+H{soil_row}"
-c = ws_sm.cell(row=r, column=8, value=f"={sm_total_parts}")
+c = ws_sm.cell(row=r, column=6, value=f"={mat_total_cell}+{lab_total_cell}+F{soil_row}")
 c.number_format = '"$"#,##0.00'; c.alignment = RIGHT
 c.font = Font(name="Calibri", size=14, bold=True, color="FFFFFF")
 c.fill = FILL_GRANDTOTAL
-ws_sm.row_dimensions[r].height = 26
+ws_sm.row_dimensions[r].height = 28
 wb.defined_names["Summer_Total"] = DefinedName("Summer_Total",
-                                                attr_text=f"'Summer Services'!$H${r}")
+                                                attr_text=f"'Summer Services'!$F${r}")
+
+# Per-sqft cost reference
+r += 1
+ws_sm.cell(row=r, column=2, value="Per sq ft cost (reference)").font = FONT_NOTE
+c = ws_sm.cell(row=r, column=6, value=f"=F{r-1}/LawnSize")
+c.number_format = '"$"#,##0.0000'; c.alignment = RIGHT; c.font = FONT_NOTE
 
 
 # =====================================================================
