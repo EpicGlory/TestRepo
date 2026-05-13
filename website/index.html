@@ -85,7 +85,162 @@
   </div>
 </section>
 
-<!-- ────────────  3 BENEFITS STRIP  ──────────── -->
+<!-- ────────────  FREE SPRINKLER AUDIT BANNER  ──────────── -->
+<aside class="promo-banner">
+  <div class="container promo-banner-inner">
+    <span class="promo-tag">FREE</span>
+    <span class="promo-text">Get a <strong>FREE Sprinkler Audit</strong> ($125 value) when you sign up for any service.</span>
+    <a href="#lead-form" class="promo-cta">Get Started →</a>
+  </div>
+</aside>
+
+<!-- ────────────  THREE PREMIUM SERVICE TIERS  ──────────── -->
+<section id="tiers" class="tiers">
+  <div class="container">
+    <h2 class="section-title centered">Three premium ways we transform your lawn.</h2>
+    <p class="tiers-sub">No basic programs. No cookie-cutter rotations. Three real options &mdash; pick the one that fits your lawn.</p>
+    <div class="tiers-grid">
+
+      <!-- Tier 1: Premium Lawn Care -->
+      <article class="tier tier-care">
+        <div class="tier-tag">PREMIUM LAWN CARE</div>
+        <h3>For lawns that deserve real care.</h3>
+        <ul>
+          <li>Soil test + custom fertilizer program</li>
+          <li>Biostimulants &amp; root growth stimulant (N-ext RGS)</li>
+          <li>Iron, potassium, wetting agents</li>
+          <li>Pre-emergent &amp; grub prevention</li>
+          <li>Fall winterizer</li>
+          <li><strong>FREE sprinkler audit included</strong></li>
+        </ul>
+        <div class="tier-price"><strong>From $1,285/year</strong> <span>(5,000 sq ft)</span></div>
+        <a href="#lead-form" class="tier-cta">Request Free Assessment</a>
+      </article>
+
+      <!-- Tier 2: Premium Mowing Service -->
+      <article class="tier tier-mowing">
+        <div class="tier-tag">PREMIUM MOWING SERVICE</div>
+        <h3>For lawns that need pro mowing between visits.</h3>
+        <ul>
+          <li>Mow, edge, trim, blow</li>
+          <li><strong>Stripe rollers</strong> for golf-course patterns</li>
+          <li><strong>Precision tools</strong> for tight, clean lines</li>
+          <li>Weekly or bi-weekly</li>
+          <li>Family operated &mdash; our boys, learning the business</li>
+        </ul>
+        <div class="tier-price">
+          <strong>$30/visit</strong> <span>(Premium Lawn Care customers)</span><br>
+          <strong>$40/visit</strong> <span>standalone</span>
+        </div>
+        <a href="#lead-form" class="tier-cta">Request Free Assessment</a>
+      </article>
+
+      <!-- Tier 3: Lawn Renovation -->
+      <article class="tier tier-reno">
+        <div class="tier-tag">LAWN RENOVATION</div>
+        <h3>For lawns that need a complete reset.</h3>
+        <ul>
+          <li>4-phase kill &amp; reseed program</li>
+          <li>Premium drought-tolerant tall fescue</li>
+          <li>Soil-test driven planning</li>
+          <li><strong>FREE sprinkler audit included</strong></li>
+          <li>30-day callback guarantee</li>
+        </ul>
+        <div class="tier-price">
+          <strong>$2,000-3,000</strong> <span>(5,000 sq ft)</span>
+        </div>
+        <p class="tier-availability">8 slots/season. Book by July 15.</p>
+        <a href="#lead-form" class="tier-cta">Request Free Assessment</a>
+      </article>
+
+    </div>
+    <p class="tiers-footer">
+      Need something more specific (overseeding, sprinkler repair, disease treatment)?
+      <a href="#services">See all services &darr;</a>
+    </p>
+  </div>
+</section>
+
+<!-- ────────────  LEAD CAPTURE FORM  ──────────── -->
+<section id="lead-form" class="lead-form">
+  <div class="container">
+    <h2 class="section-title centered">Get your free lawn assessment.</h2>
+    <p class="lead-form-sub">
+      Tell us about your lawn. Ryan will reach out within 24 hours to schedule an in-person visit.<br>
+      <em>We don't quote over the phone &mdash; we walk your lawn first, then give you the honest answer.</em>
+    </p>
+
+    <!-- IMPORTANT: Sign up at https://formspree.io with sales@cleanandgreenturf.com.
+         Create a form, get your form ID, and replace YOUR_FORMSPREE_ID below. -->
+    <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="lead-form-body">
+      <input type="hidden" name="_subject" value="New lead from cleanandgreenturf.com" />
+      <input type="hidden" name="_replyto" value="sales@cleanandgreenturf.com" />
+
+      <div class="form-grid">
+        <label class="form-field">
+          <span class="form-label">Your name *</span>
+          <input name="name" type="text" required autocomplete="name" />
+        </label>
+        <label class="form-field">
+          <span class="form-label">Phone *</span>
+          <input name="phone" type="tel" required autocomplete="tel" />
+        </label>
+        <label class="form-field">
+          <span class="form-label">Email *</span>
+          <input name="email" type="email" required autocomplete="email" />
+        </label>
+        <label class="form-field">
+          <span class="form-label">Property address *</span>
+          <input name="address" type="text" required placeholder="Street, City" autocomplete="street-address" />
+        </label>
+        <label class="form-field">
+          <span class="form-label">Approximate lawn size</span>
+          <select name="lawn_size">
+            <option value="Under 2,500 sq ft">Under 2,500 sq ft</option>
+            <option value="2,500-5,000 sq ft" selected>2,500-5,000 sq ft</option>
+            <option value="5,000-10,000 sq ft">5,000-10,000 sq ft</option>
+            <option value="10,000+ sq ft">10,000+ sq ft</option>
+            <option value="Not sure">Not sure &mdash; help me figure it out</option>
+          </select>
+        </label>
+        <label class="form-field">
+          <span class="form-label">How did you hear about us?</span>
+          <select name="referral">
+            <option value="Google">Google search</option>
+            <option value="Door hanger">Door hanger</option>
+            <option value="Truck/sign">Saw the truck or sign</option>
+            <option value="Referral">Friend/neighbor</option>
+            <option value="Social media">Social media</option>
+            <option value="Other">Other</option>
+          </select>
+        </label>
+      </div>
+
+      <label class="form-field form-full-width">
+        <span class="form-label">What's bothering you about your lawn? (optional)</span>
+        <textarea name="lawn_issue" rows="3" placeholder="Brown patches, weeds, dead spots, want a full overhaul, just need pro mowing&hellip;"></textarea>
+      </label>
+
+      <label class="form-field form-full-width">
+        <span class="form-label">Interested in</span>
+        <select name="service_interest">
+          <option value="Not sure" selected>Not sure &mdash; recommend the right service</option>
+          <option value="Premium Lawn Care">Premium Lawn Care (annual program)</option>
+          <option value="Premium Mowing Service">Premium Mowing Service</option>
+          <option value="Lawn Renovation">Lawn Renovation (kill &amp; reseed)</option>
+          <option value="Sprinkler Services">Sprinkler Services / Audit</option>
+          <option value="Overseeding">Fall Overseeding</option>
+          <option value="Other">Something else</option>
+        </select>
+      </label>
+
+      <button type="submit" class="btn btn-form-submit">Request Free Assessment</button>
+      <p class="form-disclaimer">
+        Or call/text Ryan directly: <a href="tel:8013587820"><strong>801.358.7820</strong></a>
+      </p>
+    </form>
+  </div>
+</section>
 <section class="benefits">
   <div class="container">
     <h2 class="section-title centered">Why we're different.</h2>

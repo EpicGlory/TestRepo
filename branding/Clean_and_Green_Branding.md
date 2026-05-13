@@ -8,7 +8,7 @@
 
 Clean and Green Turf, LLC was founded on a simple belief: a healthy lawn is the foundation of a healthy home. We deliver visibly cleaner, deeper-green lawns through science-backed turf programs, transparent pricing, and a relentless commitment to doing the job right the first time.
 
-We are not a "mow-and-blow" company. We are turf specialists. Every property gets a written plan, every product is documented, every application is logged, and every customer sees exactly what they paid for and why.
+We are turf specialists at heart — and our family team offers premium mowing too. Every property gets a written plan, every product is documented, every application is logged, and every customer sees exactly what they paid for and why.
 
 ---
 
@@ -44,7 +44,7 @@ For homeowners who want a lawn they are proud of, Clean and Green Turf, LLC is t
 **Three things we are NOT**
 - Cheapest in town (we are not racing TruGreen to the bottom)
 - A landscaping company (we don't install patios or do hardscape)
-- A mowing service (mowing is an add-on, not the headline)
+- A "mow-and-blow" outfit (our mowing service is precision, family-run, and complementary to our turf programs — not the headline)
 
 ---
 
@@ -150,7 +150,8 @@ Three-beat rhythm matches the cadence of the company name and visually mirrors t
 | Foundation | 6-step annual program | Pre-emergent, balanced fertilization, broadleaf control, grub prevention, fall feeding, winterizer |
 | Premium | 8-step + soil test | Foundation plus soil test, micronutrients, biostimulants, aeration |
 | Renovation | Kill & Reseed | Full lawn renovation per The Lawn Care Nut method (see workbook) |
-| Add-ons | Aeration, dethatching, overseeding, top-dressing, weed-spot treatments | À la carte |
+| **Premium Mowing** | **Family-team mowing** | **Mow, edge, trim, cleanup. Stripe rollers and precision tools. Weekly or bi-weekly. Tiered pricing for Annual Care customers vs standalone.** |
+| Add-ons | Aeration, dethatching, overseeding, top-dressing, weed-spot treatments, sprinkler audit | À la carte |
 
 ---
 
