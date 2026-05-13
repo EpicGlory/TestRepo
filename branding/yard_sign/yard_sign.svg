@@ -1,0 +1,42 @@
+<!-- Yard sign: 24" x 18" (landscape). Standard corrugated plastic with H-stake. -->
+<!-- Designed to be readable from 30+ feet (street view as cars drive by). -->
+<svg viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" fill="#F4F4EF"/>
+
+  <!-- Top mow-stripe band -->
+  <rect x="0" y="0" width="1200" height="22" fill="#A5D6A7"/>
+  <rect x="0" y="22" width="1200" height="22" fill="#2E7D32"/>
+  <rect x="0" y="44" width="1200" height="22" fill="#1B4D1F"/>
+
+  <!-- Brand wordmark -->
+  <text x="600" y="170" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="76" font-weight="900" fill="#1B4D1F" letter-spacing="-2">CLEAN AND</text>
+  <text x="600" y="260" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="76" font-weight="900" fill="#2E7D32" letter-spacing="-2">GREEN TURF</text>
+
+  <!-- Mid mow stripes -->
+  <rect x="200" y="290" width="800" height="14" fill="#A5D6A7"/>
+  <rect x="200" y="304" width="800" height="14" fill="#2E7D32"/>
+  <rect x="200" y="318" width="800" height="14" fill="#1B4D1F"/>
+
+  <!-- Descriptor -->
+  <text x="600" y="372" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="6" fill="#2C2C2C">RENOVATION AND LAWN CARE</text>
+
+  <!-- "This lawn renovated by:" -->
+  <text x="600" y="480" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="32" font-weight="700" font-style="italic" fill="#1B4D1F">This lawn renovated by:</text>
+
+  <!-- BIG phone (the dominant element — readable from the curb) -->
+  <text x="600" y="620" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="118" font-weight="900" fill="#1B4D1F" letter-spacing="-3">801.358.7820</text>
+
+  <!-- Website -->
+  <text x="600" y="695" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="36" font-weight="700" fill="#2E7D32">cleanandgreenturf.com</text>
+
+  <!-- Tagline -->
+  <text x="600" y="770" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-style="italic" font-size="24" font-weight="700" letter-spacing="3" fill="#2E7D32">Seed.  Feed.  Succeed.</text>
+
+  <!-- Bottom service area -->
+  <text x="600" y="822" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="5" fill="#666666">KAYSVILLE, UTAH  ·  SERVING DAVIS COUNTY</text>
+
+  <!-- Bottom mow-stripe band -->
+  <rect x="0" y="850" width="1200" height="17" fill="#A5D6A7"/>
+  <rect x="0" y="867" width="1200" height="17" fill="#2E7D32"/>
+  <rect x="0" y="884" width="1200" height="16" fill="#1B4D1F"/>
+</svg>
