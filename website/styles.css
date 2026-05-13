@@ -405,6 +405,42 @@ body {
 .form-disclaimer a { color: var(--forest); text-decoration: none; }
 .form-disclaimer a:hover { text-decoration: underline; }
 
+/* Checkbox group for 'Interested in' multi-select */
+.form-checkbox-group {
+  border: none; padding: 0; margin: 0 0 18px 0;
+}
+.form-checkbox-group legend {
+  font-size: 12px; font-weight: 700; letter-spacing: 1px;
+  text-transform: uppercase; color: var(--gray);
+  margin-bottom: 8px;
+  width: 100%; padding: 0;
+}
+.checkbox-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 6px 16px;
+  background: var(--white);
+  padding: 14px 16px;
+  border-radius: 4px;
+  border: 1.5px solid #DDDDDD;
+}
+.checkbox-option {
+  display: flex; align-items: center; gap: 10px;
+  cursor: pointer; padding: 6px 0;
+  font-size: 14px; color: var(--char);
+  transition: color 0.15s ease;
+}
+.checkbox-option:hover { color: var(--forest); }
+.checkbox-option input[type="checkbox"] {
+  width: 18px; height: 18px;
+  accent-color: var(--forest);
+  cursor: pointer;
+  flex-shrink: 0;
+  margin: 0;
+}
+.checkbox-option span { user-select: none; }
+@media (max-width: 720px) {
+  .checkbox-grid { grid-template-columns: 1fr; }
+}
+
 /* ──────────  BENEFITS STRIP  ────────── */
 .benefits { background: var(--white); padding: 64px 0; }
 .benefits-grid {
