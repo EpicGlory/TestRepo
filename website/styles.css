@@ -198,7 +198,7 @@ body {
   color: var(--fresh);
   display: block;
   font-size: clamp(28px, 5vw, 62px);
-  margin-top: 8px;
+  margin-top: 24px;
 }
 .hero-sub {
   font-size: clamp(17px, 2.2vw, 22px);
