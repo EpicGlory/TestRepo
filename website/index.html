@@ -45,14 +45,19 @@
 <!-- ────────────  NAV  ──────────── -->
 <nav class="nav">
   <div class="nav-inner">
-    <a href="#top" class="brand">
+    <a href="/" class="brand">
       <span class="brand-line1">CLEAN AND GREEN TURF</span>
       <span class="brand-line2">RENOVATION AND LAWN CARE</span>
     </a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" onclick="document.body.classList.toggle('nav-open')">
+      <span></span><span></span><span></span>
+    </button>
     <div class="nav-links">
-      <a href="#compare">Seed vs Sod</a>
-      <a href="#services">Services</a>
-      <a href="#assessment">Free Assessment</a>
+      <a href="/" class="nav-current">Home</a>
+      <a href="/services.html">Services</a>
+      <a href="/seed-vs-sod.html">Seed vs Sod</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html" class="nav-cta">Free Assessment</a>
       <a href="tel:8013587820" class="nav-phone">801.358.7820</a>
     </div>
   </div>
@@ -264,150 +269,6 @@
   </div>
 </section>
 
-<!-- ────────────  WHAT CHAINS DON'T DO  ──────────── -->
-<section id="differentiator" class="compare compare-alt">
-  <div class="container">
-    <h2 class="section-title centered">What national chains <span class="muted">don't do.</span></h2>
-    <p class="differentiator-intro">
-      Most "lawn care services" run the same playbook on every lawn:
-      blanket fertilizer, pre-emergent, post-emergent, drive away.
-      That's not lawn care &mdash; that's lawn maintenance, and your yard deserves more.
-    </p>
-
-    <div class="compare-table">
-      <div class="ct-row ct-header">
-        <div class="ct-label"></div>
-        <div class="ct-seed">Clean and Green Turf</div>
-        <div class="ct-sod">National chains</div>
-      </div>
-      <div class="ct-row">
-        <div class="ct-label">Soil testing</div>
-        <div class="ct-seed strong">$30 entry point</div>
-        <div class="ct-sod">Almost never</div>
-      </div>
-      <div class="ct-row alt">
-        <div class="ct-label">Fertilizer program</div>
-        <div class="ct-seed strong">Soil-test driven, custom per lawn</div>
-        <div class="ct-sod">Cookie-cutter blanket apps</div>
-      </div>
-      <div class="ct-row">
-        <div class="ct-label">Biostimulants (kelp, humic, fulvic)</div>
-        <div class="ct-seed strong">Standard in Summer Rescue</div>
-        <div class="ct-sod">Rarely included</div>
-      </div>
-      <div class="ct-row alt">
-        <div class="ct-label">Targeted micronutrients (iron, etc.)</div>
-        <div class="ct-seed strong">Included</div>
-        <div class="ct-sod">Charged as upsells</div>
-      </div>
-      <div class="ct-row">
-        <div class="ct-label">Potassium boost (UT K-deficient soils)</div>
-        <div class="ct-seed strong">Standard</div>
-        <div class="ct-sod">Not in standard programs</div>
-      </div>
-      <div class="ct-row alt">
-        <div class="ct-label">Root growth stimulant</div>
-        <div class="ct-seed strong">Direct root development &mdash; green in July</div>
-        <div class="ct-sod">Not offered</div>
-      </div>
-      <div class="ct-row">
-        <div class="ct-label">Service style</div>
-        <div class="ct-seed strong">Walk-the-lawn diagnosis</div>
-        <div class="ct-sod">Spray and drive</div>
-      </div>
-      <div class="ct-row alt">
-        <div class="ct-label">Sprinkler / irrigation audit</div>
-        <div class="ct-seed strong">Catch cup distribution test with written DU report</div>
-        <div class="ct-sod">Not offered &mdash; chains aren't certified</div>
-      </div>
-      <div class="ct-row">
-        <div class="ct-label">Who shows up</div>
-        <div class="ct-seed strong">Ryan, every visit</div>
-        <div class="ct-sod">Different tech each time</div>
-      </div>
-    </div>
-
-    <p class="compare-footnote">
-      <strong>Why it matters:</strong> Utah soils are notoriously potassium-deficient and alkaline.
-      The chains' standard programs are designed for east-coast or Pacific Northwest lawns &mdash; not Davis County.
-      When the heat hits in July and your neighbor's lawn looks like straw, ours stays green.
-      Because we fed it what it actually needed back in May.
-    </p>
-  </div>
-</section>
-
-<!-- ────────────  COMPARISON TABLE  ──────────── -->
-<section id="compare" class="compare">
-  <div class="container">
-    <h2 class="section-title centered">Most Utah lawns <span class="muted">don't need sod.</span></h2>
-
-    <div class="compare-table">
-      <div class="ct-row ct-header">
-        <div class="ct-label"></div>
-        <div class="ct-seed">Seeding <small>(Tall Fescue)</small></div>
-        <div class="ct-sod">Sodding</div>
-      </div>
-      <div class="ct-row">
-        <div class="ct-label">Cost (5,000 sq ft)</div>
-        <div class="ct-seed strong">$3,000-$5,000</div>
-        <div class="ct-sod">$10,000-$15,000</div>
-      </div>
-      <div class="ct-row alt">
-        <div class="ct-label">Time to lawn</div>
-        <div class="ct-seed">4-8 weeks</div>
-        <div class="ct-sod strong">Same day</div>
-      </div>
-      <div class="ct-row">
-        <div class="ct-label">Grass type</div>
-        <div class="ct-seed strong">Drought-tolerant tall fescue</div>
-        <div class="ct-sod">Mostly Kentucky bluegrass</div>
-      </div>
-      <div class="ct-row alt">
-        <div class="ct-label">Water use (long-term)</div>
-        <div class="ct-seed strong">~30% less</div>
-        <div class="ct-sod">High in Utah summers</div>
-      </div>
-      <div class="ct-row">
-        <div class="ct-label">Root depth (year 1)</div>
-        <div class="ct-seed strong">8-12 inches</div>
-        <div class="ct-sod">4-6 inches</div>
-      </div>
-      <div class="ct-row alt">
-        <div class="ct-label">Plastic netting in soil</div>
-        <div class="ct-seed strong">None</div>
-        <div class="ct-sod">Common, doesn't decompose</div>
-      </div>
-    </div>
-
-    <p class="compare-footnote">
-      <strong>When sod still wins:</strong> if you're selling your house this month, hosting an event in two weeks, or have an HOA requiring instant green, sod is the right call. For everyone else, seeding wins on cost, water, and long-term lawn health.
-    </p>
-  </div>
-</section>
-
-<!-- ────────────  3 REASONS  ──────────── -->
-<section class="reasons">
-  <div class="container">
-    <h2 class="section-title centered">3 reasons seeding wins for Utah</h2>
-    <div class="reasons-grid">
-      <div class="reason">
-        <div class="reason-icon">🌾</div>
-        <h3>Right grass.</h3>
-        <p>Specialty tall fescue is bred for hot, dry climates. The Kentucky bluegrass that fills sod farms isn't — it's a Pacific Northwest grass that drinks heavily in Utah summers.</p>
-      </div>
-      <div class="reason">
-        <div class="reason-icon">💧</div>
-        <h3>30% less water.</h3>
-        <p>Deeper roots find moisture below. Davis County has water restrictions for a reason — a properly seeded lawn works with them, not against them.</p>
-      </div>
-      <div class="reason">
-        <div class="reason-icon">🚚</div>
-        <h3>Small footprint.</h3>
-        <p>No truck. No plastic mesh buried in your yard. Seed travels in a 50-lb bag and grows in your existing soil.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ────────────  SELF-ASSESSMENT  ──────────── -->
 <section class="assess">
@@ -446,93 +307,8 @@
   </div>
 </section>
 
-<!-- ────────────  SERVICES  ──────────── -->
-<section id="services" class="services">
-  <div class="container">
-    <h2 class="section-title centered">Four ways we make your lawn the best on the block</h2>
 
-    <div class="services-grid">
-      <article class="service service-summer">
-        <div class="service-tag">SUMMER LAWN RESCUE</div>
-        <h3>For lawns that are tired, not broken.</h3>
-        <ul>
-          <li>Soil test + analysis ($30, a $60 value)</li>
-          <li>Custom fertilizer program (macro + micro)</li>
-          <li>Pre-emergent applications (spring + fall weed prevention)</li>
-          <li>Biostimulants (kelp, humic, fulvic acids)</li>
-          <li>Iron + targeted micronutrients (deep green color)</li>
-          <li>Potassium boost (critical for Utah heat tolerance)</li>
-          <li>Wetting agents for Utah's hydrophobic clay soils</li>
-          <li><strong>Root growth stimulant (N-ext RGS)</strong> &mdash; deeper roots through Utah summers</li>
-          <li>Grub prevention</li>
-          <li>Foliar weed and pest control</li>
-          <li>Fall winterizer</li>
-        </ul>
-        <p class="service-availability">Available year-round.</p>
-      </article>
-
-      <article class="service service-sprinkler">
-        <div class="service-tag">SPRINKLER SERVICES</div>
-        <h3>For lawns where the water isn't reaching where it should.</h3>
-        <ul>
-          <li><strong>Catch cup distribution test</strong> ($125) &mdash; we place calibrated cups across your lawn, run each zone, and measure exactly where water is and isn't reaching</li>
-          <li>Sprinkler head replacement &amp; repair</li>
-          <li>Coverage optimization (add zones, reposition heads)</li>
-          <li><strong>FREE B-Hyve smart controller install</strong> &mdash; you only pay for the controller</li>
-          <li>Spring start-up + fall winterization</li>
-        </ul>
-        <p class="service-availability">Available year-round.</p>
-      </article>
-
-      <article class="service service-overseed">
-        <div class="service-tag">FALL OVERSEEDING</div>
-        <h3>For lawns that are mostly healthy but thinning.</h3>
-        <ul>
-          <li>Core aeration</li>
-          <li>Tall fescue overseeding</li>
-          <li>Starter fertilizer at planting</li>
-          <li>Tenacity weed prevention</li>
-          <li>Peat moss top-dress</li>
-        </ul>
-        <p class="service-availability">August through October only.</p>
-      </article>
-
-      <article class="service service-reno">
-        <div class="service-tag">FALL RENOVATION</div>
-        <h3>For lawns that need a complete reset.</h3>
-        <ul>
-          <li>Phase 1 &mdash; Two glyphosate burn-down applications</li>
-          <li>Phase 2 &mdash; Scalp, dethatch, core aerate</li>
-          <li>Phase 3 &mdash; Premium seed + starter fert + Tenacity</li>
-          <li>Phase 4 &mdash; Establishment feeding + follow-up</li>
-          <li>30-day callback guarantee</li>
-        </ul>
-        <p class="service-availability"><strong>8 slots per season. Book by July 15.</strong></p>
-      </article>
-    </div>
-
-    <!-- Add-on services -->
-    <div class="addon-section">
-      <h3 class="addon-title">Also available as standalone services</h3>
-      <div class="addon-grid">
-        <div class="addon">
-          <strong>Core Aeration</strong>
-          <p>Standalone spring or fall aeration to relieve soil compaction, improve water and nutrient penetration, and stimulate deeper root growth. Available bundled or à la carte.</p>
-        </div>
-        <div class="addon">
-          <strong>Disease &amp; Fungus Treatment</strong>
-          <p>Diagnosis and targeted treatment of dollar spot, red thread, brown patch, leaf spot, and other turf diseases. Most chains don't diagnose &mdash; they just spray and hope.</p>
-        </div>
-        <div class="addon">
-          <strong>Event Iron Boost</strong>
-          <p>Hosting a wedding, graduation, BBQ &mdash; or selling your home? We apply chelated iron 3-5 days before your event for instant deep-green color that lasts 2-4 weeks. Same-week appointments. The "wow your guests" treatment chains can't match.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ────────────  ABOUT  ──────────── -->
+<!-- ────────────  ABOUT SNIPPET  ──────────── -->
 <section class="about">
   <div class="container about-grid">
     <div class="about-text">
@@ -546,15 +322,7 @@
         Every product is disclosed.<br />
         Every application is logged.
       </p>
-      <p>
-        We specialize in <strong>cool-season turf renovation</strong> for Davis County &mdash;
-        which means we know which grasses survive a Utah July, how to time a seeding window
-        around our climate, and which sprinkler quirks kill germination.
-      </p>
-      <p>
-        If you can see what we did, what we used, and why we did it &mdash; and you wouldn't
-        be embarrassed to tell your neighbor what it cost &mdash; we did our job.
-      </p>
+      <p><a href="/about.html" style="color:var(--fairway); font-weight:700; text-decoration:none;">Read more about Clean and Green &rarr;</a></p>
     </div>
     <div class="about-card">
       <div class="about-card-name">Ryan Tucker</div>
@@ -568,6 +336,7 @@
     </div>
   </div>
 </section>
+
 
 <!-- ────────────  FREE ASSESSMENT CTA  ──────────── -->
 <section id="assessment" class="cta">

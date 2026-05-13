@@ -43,6 +43,7 @@ body {
 .nav-inner {
   max-width: 1120px; margin: 0 auto; padding: 14px 24px;
   display: flex; align-items: center; justify-content: space-between;
+  position: relative;
 }
 .brand { text-decoration: none; display: flex; flex-direction: column; line-height: 1.05; }
 .brand-line1 {
@@ -51,7 +52,7 @@ body {
 .brand-line2 {
   font-size: 9px; font-weight: 700; color: var(--fairway); letter-spacing: 3px; margin-top: 2px;
 }
-.nav-links { display: flex; gap: 28px; align-items: center; }
+.nav-links { display: flex; gap: 24px; align-items: center; }
 .nav-links a {
   font-size: 14px; text-decoration: none; color: var(--char); font-weight: 500;
   transition: color 0.15s ease;
@@ -60,6 +61,91 @@ body {
 .nav-phone {
   font-weight: 800 !important; color: var(--forest) !important; font-size: 15px !important;
 }
+.nav-cta {
+  background: var(--forest); color: var(--white) !important;
+  padding: 9px 16px; border-radius: 4px;
+  font-weight: 700 !important;
+  transition: background 0.15s ease;
+}
+.nav-cta:hover { background: var(--char); color: var(--white) !important; }
+.nav-current { color: var(--fairway) !important; font-weight: 800 !important; }
+
+/* Hamburger button (mobile only) */
+.nav-toggle {
+  display: none;
+  background: none; border: none; cursor: pointer;
+  padding: 8px; width: 36px; height: 36px;
+  flex-direction: column; justify-content: space-around;
+  align-items: center;
+}
+.nav-toggle span {
+  display: block; width: 22px; height: 3px;
+  background: var(--forest); border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Mobile menu */
+@media (max-width: 880px) {
+  .nav-toggle { display: flex; }
+  .nav-links {
+    position: absolute; top: 100%; left: 0; right: 0;
+    background: var(--white); flex-direction: column;
+    padding: 16px 24px;
+    border-bottom: 1px solid #E0E0E0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    display: none;
+    gap: 0;
+  }
+  body.nav-open .nav-links { display: flex; }
+  .nav-links a {
+    display: block !important;
+    padding: 14px 0;
+    border-bottom: 1px solid #F0F0F0;
+    font-size: 16px;
+    width: 100%;
+  }
+  .nav-links a:last-child { border-bottom: none; }
+  .nav-links a.nav-cta {
+    text-align: center; margin-top: 10px;
+    border-bottom: none;
+    color: var(--white) !important;
+  }
+  .nav-phone {
+    display: block !important;
+    text-align: center; padding: 14px 0 !important;
+    font-size: 17px !important;
+  }
+  /* Hamburger to X */
+  body.nav-open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  body.nav-open .nav-toggle span:nth-child(2) { opacity: 0; }
+  body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+}
+
+/* ──────────  PAGE HERO (sub-pages, smaller than homepage hero)  ────────── */
+.page-hero {
+  background:
+    linear-gradient(135deg, rgba(27,77,31,0.96) 0%, rgba(46,125,50,0.92) 100%),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><defs><pattern id='g' width='6' height='6' patternUnits='userSpaceOnUse'><path d='M 6 0 L 0 6' stroke='rgba(165,214,167,0.06)' stroke-width='1'/></pattern></defs><rect width='200' height='200' fill='url(%23g)'/></svg>");
+  color: var(--white);
+  padding: 64px 24px 80px;
+  text-align: center;
+}
+.page-hero-eyebrow {
+  font-size: 11px; letter-spacing: 4px; font-weight: 700;
+  color: var(--fresh); margin-bottom: 20px;
+}
+.page-hero h1 {
+  font-size: clamp(36px, 5.5vw, 68px);
+  font-weight: 900; line-height: 1.05; letter-spacing: -1px;
+  margin-bottom: 24px;
+}
+.page-hero-accent { color: var(--fresh); display: inline; }
+.page-hero-sub {
+  font-size: clamp(16px, 2vw, 20px);
+  max-width: 720px; margin: 0 auto;
+  color: rgba(255,255,255,0.92); line-height: 1.5;
+}
+.page-hero-sub strong { color: var(--white); font-weight: 700; }
 
 /* ──────────  LOGO BANNER  ────────── */
 .logo-banner {
@@ -571,8 +657,6 @@ body {
 
 /* ──────────  RESPONSIVE  ────────── */
 @media (max-width: 880px) {
-  .nav-links { gap: 16px; }
-  .nav-links a:not(.nav-phone) { display: none; }
   .benefits-grid, .reasons-grid, .about-grid, .foot-grid {
     grid-template-columns: 1fr;
   }

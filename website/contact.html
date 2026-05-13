@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Get your free lawn assessment from Clean and Green Turf. Serving Kaysville, Layton, Farmington, and all of Davis County, Utah. Call 801.358.7820." />
+  <meta name="theme-color" content="#1B4D1F" />
+  <meta property="og:title" content="Free Lawn Assessment | Clean and Green Turf" />
+  <meta property="og:description" content="Tell us about your lawn. Ryan will reach out within 24 hours." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cleanandgreenturf.com/contact.html" />
+  <title>Free Lawn Assessment | Clean and Green Turf</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="brand">
+      <span class="brand-line1">CLEAN AND GREEN TURF</span>
+      <span class="brand-line2">RENOVATION AND LAWN CARE</span>
+    </a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" onclick="document.body.classList.toggle('nav-open')">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/services.html">Services</a>
+      <a href="/seed-vs-sod.html">Seed vs Sod</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html" class="nav-cta nav-current">Free Assessment</a>
+      <a href="tel:8013587820" class="nav-phone">801.358.7820</a>
+    </div>
+  </div>
+</nav>
+
+<div class="logo-banner">
+  <img src="assets/logo.svg" alt="Clean and Green Turf — Renovation and Lawn Care" />
+</div>
+
+<section class="page-hero">
+  <div class="container">
+    <p class="page-hero-eyebrow">FREE · NO PRESSURE · NO UPSELL</p>
+    <h1>Get your <span class="page-hero-accent">free lawn assessment.</span></h1>
+    <p class="page-hero-sub">
+      Tell us about your lawn. Ryan will reach out within 24 hours to schedule an in-person visit.
+      We don't quote over the phone &mdash; we walk your lawn first, <strong>then</strong> give you the honest answer.
+    </p>
+  </div>
+</section>
+
+<!-- ────────────  LEAD FORM  ──────────── -->
+<section class="lead-form">
+  <div class="container">
+
+    <!-- IMPORTANT: Sign up at https://formspree.io with sales@cleanandgreenturf.com.
+         Create a form, get your form ID, and replace YOUR_FORMSPREE_ID below. -->
+    <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="lead-form-body">
+      <input type="hidden" name="_subject" value="New lead from cleanandgreenturf.com (Contact page)" />
+      <input type="hidden" name="_replyto" value="sales@cleanandgreenturf.com" />
+
+      <div class="form-grid">
+        <label class="form-field">
+          <span class="form-label">Your name *</span>
+          <input name="name" type="text" required autocomplete="name" />
+        </label>
+        <label class="form-field">
+          <span class="form-label">Phone *</span>
+          <input name="phone" type="tel" required autocomplete="tel" />
+        </label>
+        <label class="form-field">
+          <span class="form-label">Email *</span>
+          <input name="email" type="email" required autocomplete="email" />
+        </label>
+        <label class="form-field">
+          <span class="form-label">Property address *</span>
+          <input name="address" type="text" required placeholder="Street, City" autocomplete="street-address" />
+        </label>
+        <label class="form-field">
+          <span class="form-label">Approximate lawn size</span>
+          <select name="lawn_size">
+            <option value="Under 2,500 sq ft">Under 2,500 sq ft</option>
+            <option value="2,500-5,000 sq ft" selected>2,500-5,000 sq ft</option>
+            <option value="5,000-10,000 sq ft">5,000-10,000 sq ft</option>
+            <option value="10,000+ sq ft">10,000+ sq ft</option>
+            <option value="Not sure">Not sure &mdash; help me figure it out</option>
+          </select>
+        </label>
+        <label class="form-field">
+          <span class="form-label">How did you hear about us?</span>
+          <select name="referral">
+            <option value="Google">Google search</option>
+            <option value="Door hanger">Door hanger</option>
+            <option value="Truck/sign">Saw the truck or sign</option>
+            <option value="Referral">Friend/neighbor</option>
+            <option value="Social media">Social media</option>
+            <option value="Other">Other</option>
+          </select>
+        </label>
+      </div>
+
+      <label class="form-field form-full-width">
+        <span class="form-label">What's bothering you about your lawn? (optional)</span>
+        <textarea name="lawn_issue" rows="3" placeholder="Brown patches, weeds, dead spots, want a full overhaul, just need pro mowing&hellip;"></textarea>
+      </label>
+
+      <label class="form-field form-full-width">
+        <span class="form-label">Interested in</span>
+        <select name="service_interest">
+          <option value="Not sure" selected>Not sure &mdash; recommend the right service</option>
+          <option value="Premium Lawn Care">Premium Lawn Care (annual program)</option>
+          <option value="Premium Mowing Service">Premium Mowing Service</option>
+          <option value="Lawn Renovation">Lawn Renovation (kill &amp; reseed)</option>
+          <option value="Sprinkler Services">Sprinkler Services / Audit</option>
+          <option value="Overseeding">Fall Overseeding</option>
+          <option value="Event Iron Boost">Event Iron Boost (special occasion green-up)</option>
+          <option value="Other">Something else</option>
+        </select>
+      </label>
+
+      <button type="submit" class="btn btn-form-submit">Request Free Assessment</button>
+      <p class="form-disclaimer">
+        Or call/text Ryan directly: <a href="tel:8013587820"><strong>801.358.7820</strong></a>
+      </p>
+    </form>
+  </div>
+</section>
+
+<!-- ────────────  DIRECT CONTACT  ──────────── -->
+<section class="reasons">
+  <div class="container">
+    <h2 class="section-title centered">Or reach us directly.</h2>
+    <div class="reasons-grid">
+      <div class="reason">
+        <div class="reason-icon">📞</div>
+        <h3>Call or text</h3>
+        <p><a href="tel:8013587820" style="font-size:22px; font-weight:900; color:var(--forest); text-decoration:none;">801.358.7820</a></p>
+        <p style="margin-top:8px;">Monday-Saturday, 7am-7pm</p>
+      </div>
+      <div class="reason">
+        <div class="reason-icon">✉️</div>
+        <h3>Email</h3>
+        <p><a href="mailto:sales@cleanandgreenturf.com" style="color:var(--fairway); text-decoration:none; font-weight:700;">sales@cleanandgreenturf.com</a></p>
+        <p style="margin-top:8px;">For new customer inquiries</p>
+      </div>
+      <div class="reason">
+        <div class="reason-icon">📍</div>
+        <h3>Service area</h3>
+        <p>Kaysville · Layton<br />Farmington · Centerville<br />Bountiful · Davis County, Utah</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container foot-grid">
+    <div>
+      <div class="foot-brand">CLEAN AND GREEN TURF</div>
+      <div class="foot-desc">RENOVATION AND LAWN CARE</div>
+      <p class="foot-tag"><em>Seed. Feed. Succeed.</em></p>
+    </div>
+    <div>
+      <h4>Pages</h4>
+      <a href="/">Home</a>
+      <a href="/services.html">Services</a>
+      <a href="/seed-vs-sod.html">Seed vs Sod</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Free Assessment</a>
+    </div>
+    <div>
+      <h4>Service area</h4>
+      <p>Kaysville · Layton · Farmington<br />Davis County, Utah</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <a href="tel:8013587820">801.358.7820</a>
+      <a href="mailto:support@cleanandgreenturf.com">support@cleanandgreenturf.com</a>
+    </div>
+  </div>
+  <div class="foot-bottom container">
+    <span>&copy; 2026 Clean and Green Turf, LLC  ·  Kaysville, Utah</span>
+    <span>Locally owned. Family operated.</span>
+  </div>
+</footer>
+
+</body>
+</html>
