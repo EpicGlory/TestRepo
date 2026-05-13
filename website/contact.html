@@ -16,6 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -109,39 +110,45 @@
         <textarea name="lawn_issue" rows="3" placeholder="Brown patches, weeds, dead spots, want a full overhaul, just need pro mowing&hellip;"></textarea>
       </label>
 
-      <fieldset class="form-checkbox-group form-full-width">
-        <legend class="form-label">Interested in (select all that apply)</legend>
-        <div class="checkbox-grid">
-          <label class="checkbox-option">
-            <input type="checkbox" name="service_interest[]" value="Premium Lawn Care" />
-            <span>Premium Lawn Care (annual program)</span>
-          </label>
-          <label class="checkbox-option">
-            <input type="checkbox" name="service_interest[]" value="Premium Mowing Service" />
-            <span>Premium Mowing Service</span>
-          </label>
-          <label class="checkbox-option">
-            <input type="checkbox" name="service_interest[]" value="Lawn Renovation" />
-            <span>Lawn Renovation (kill &amp; reseed)</span>
-          </label>
-          <label class="checkbox-option">
-            <input type="checkbox" name="service_interest[]" value="Sprinkler Services" />
-            <span>Sprinkler Services / Audit</span>
-          </label>
-          <label class="checkbox-option">
-            <input type="checkbox" name="service_interest[]" value="Fall Overseeding" />
-            <span>Fall Overseeding</span>
-          </label>
-          <label class="checkbox-option">
-            <input type="checkbox" name="service_interest[]" value="Event Iron Boost" />
-            <span>Event Iron Boost (special occasion green-up)</span>
-          </label>
-          <label class="checkbox-option">
-            <input type="checkbox" name="service_interest[]" value="Help me decide" />
-            <span>Help me decide / not sure yet</span>
-          </label>
+      <div class="form-field form-full-width">
+        <span class="form-label">Interested in (select all that apply)</span>
+        <div class="multi-select" data-multi-select>
+          <button type="button" class="multi-select-trigger">
+            <span class="multi-select-label">Click to select services</span>
+            <span class="multi-select-arrow">▾</span>
+          </button>
+          <div class="multi-select-panel">
+            <label class="multi-select-option">
+              <input type="checkbox" name="service_interest[]" value="Premium Lawn Care" />
+              <span>Premium Lawn Care (annual program)</span>
+            </label>
+            <label class="multi-select-option">
+              <input type="checkbox" name="service_interest[]" value="Premium Mowing Service" />
+              <span>Premium Mowing Service</span>
+            </label>
+            <label class="multi-select-option">
+              <input type="checkbox" name="service_interest[]" value="Lawn Renovation" />
+              <span>Lawn Renovation (kill &amp; reseed)</span>
+            </label>
+            <label class="multi-select-option">
+              <input type="checkbox" name="service_interest[]" value="Sprinkler Services" />
+              <span>Sprinkler Services / Audit</span>
+            </label>
+            <label class="multi-select-option">
+              <input type="checkbox" name="service_interest[]" value="Fall Overseeding" />
+              <span>Fall Overseeding</span>
+            </label>
+            <label class="multi-select-option">
+              <input type="checkbox" name="service_interest[]" value="Event Iron Boost" />
+              <span>Event Iron Boost (special occasion green-up)</span>
+            </label>
+            <label class="multi-select-option">
+              <input type="checkbox" name="service_interest[]" value="Help me decide" />
+              <span>Help me decide / not sure yet</span>
+            </label>
+          </div>
         </div>
-      </fieldset>
+      </div>
 
       <button type="submit" class="btn btn-form-submit">Request Free Assessment</button>
       <p class="form-disclaimer">
