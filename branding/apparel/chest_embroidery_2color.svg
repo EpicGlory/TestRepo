@@ -1,0 +1,15 @@
+<!-- Chest embroidery design for polos. 3" wide at production.
+     Designed for 2-color thread setup (Fairway Green + Deep Forest). -->
+<svg viewBox="0 0 360 130" xmlns="http://www.w3.org/2000/svg">
+  <!-- Wordmark stacked -->
+  <text x="180" y="40" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="32" font-weight="900" fill="#1B4D1F" letter-spacing="-1.5">CLEAN AND</text>
+  <text x="180" y="78" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="32" font-weight="900" fill="#2E7D32" letter-spacing="-1.5">GREEN TURF</text>
+
+  <!-- Three thin mow stripes -->
+  <rect x="60" y="90"  width="240" height="6" fill="#1B4D1F"/>
+  <rect x="60" y="98"  width="240" height="6" fill="#2E7D32"/>
+  <rect x="60" y="106" width="240" height="6" fill="#1B4D1F"/>
+
+  <!-- Descriptor (small) -->
+  <text x="180" y="126" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="9" font-weight="700" letter-spacing="3" fill="#2C2C2C">RENOVATION AND LAWN CARE</text>
+</svg>

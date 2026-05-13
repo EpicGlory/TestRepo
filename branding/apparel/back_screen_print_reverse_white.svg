@@ -1,0 +1,15 @@
+<!-- Back screen print for DARK fabric. White + Fresh Green palette. -->
+<svg viewBox="0 0 600 460" xmlns="http://www.w3.org/2000/svg">
+  <text x="300" y="100" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="76" font-weight="900" fill="#FFFFFF" letter-spacing="-2">CLEAN AND</text>
+  <text x="300" y="190" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="76" font-weight="900" fill="#A5D6A7" letter-spacing="-2">GREEN TURF</text>
+
+  <rect x="100" y="220" width="400" height="16" fill="#A5D6A7"/>
+  <rect x="100" y="236" width="400" height="16" fill="#2E7D32"/>
+  <rect x="100" y="252" width="400" height="16" fill="#1B4D1F"/>
+
+  <text x="300" y="305" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="6" fill="#A5D6A7">RENOVATION AND LAWN CARE</text>
+
+  <text x="300" y="365" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-style="italic" font-size="26" font-weight="700" letter-spacing="3" fill="#FFC107">Seed.  Feed.  Succeed.</text>
+
+  <text x="300" y="430" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="800" letter-spacing="2" fill="#FFFFFF">801.358.7820  ·  cleanandgreenturf.com</text>
+</svg>

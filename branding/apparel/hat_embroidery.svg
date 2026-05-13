@@ -1,0 +1,8 @@
+<!-- Hat front embroidery. 2.5" wide at production. Compact, readable on cap fronts. -->
+<svg viewBox="0 0 360 110" xmlns="http://www.w3.org/2000/svg">
+  <text x="180" y="40" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="32" font-weight="900" fill="#1B4D1F" letter-spacing="-1.5">CLEAN AND</text>
+  <text x="180" y="80" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="32" font-weight="900" fill="#2E7D32" letter-spacing="-1.5">GREEN TURF</text>
+
+  <!-- Single thin stripe under -->
+  <rect x="60" y="92" width="240" height="5" fill="#2E7D32"/>
+</svg>
