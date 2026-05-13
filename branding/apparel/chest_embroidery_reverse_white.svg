@@ -1,12 +1,13 @@
-<!-- Chest embroidery for DARK fabric (charcoal/forest/black polos and tees).
-     All white thread. -->
+<!-- Chest embroidery for DARK fabric (charcoal/black/heather gray polos and tees).
+     White "CLEAN AND" + Fairway Green "GREEN TURF" + Fairway Green stripes and descriptor.
+     Note: NOT recommended for forest-green fabric; Fairway Green will blend in there. -->
 <svg viewBox="0 0 360 130" xmlns="http://www.w3.org/2000/svg">
   <text x="180" y="40" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="32" font-weight="900" fill="#FFFFFF" letter-spacing="-1.5">CLEAN AND</text>
-  <text x="180" y="78" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="32" font-weight="900" fill="#A5D6A7" letter-spacing="-1.5">GREEN TURF</text>
+  <text x="180" y="78" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="32" font-weight="900" fill="#2E7D32" letter-spacing="-1.5">GREEN TURF</text>
 
-  <rect x="60" y="90"  width="240" height="6" fill="#A5D6A7"/>
-  <rect x="60" y="98"  width="240" height="6" fill="#A5D6A7"/>
-  <rect x="60" y="106" width="240" height="6" fill="#A5D6A7"/>
+  <rect x="60" y="90"  width="240" height="6" fill="#2E7D32"/>
+  <rect x="60" y="98"  width="240" height="6" fill="#2E7D32"/>
+  <rect x="60" y="106" width="240" height="6" fill="#2E7D32"/>
 
-  <text x="180" y="126" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="9" font-weight="700" letter-spacing="3" fill="#A5D6A7">RENOVATION AND LAWN CARE</text>
+  <text x="180" y="126" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="9" font-weight="700" letter-spacing="3" fill="#2E7D32">RENOVATION AND LAWN CARE</text>
 </svg>

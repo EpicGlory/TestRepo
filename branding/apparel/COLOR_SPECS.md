@@ -22,11 +22,13 @@ All RGB hex values and closest Pantone matches.
 | Garment | Recommended fabric color | Design file to use |
 |---|---|---|
 | **Polo (sales / customer-facing)** | Heather gray, cream/off-white, or limestone | `chest_embroidery_2color.svg` |
-| **Polo (premium option)** | Forest green or charcoal | `chest_embroidery_reverse_white.svg` |
-| **T-shirt (fieldwork)** | Charcoal heather or dark gray (hides stains) | `back_screen_print_reverse_white.svg` |
+| **Polo (premium dark option)** | **Charcoal / black** (NOT forest green) | `chest_embroidery_reverse_white.svg` |
+| **T-shirt (fieldwork)** | Charcoal heather or black (hides stains) | `back_screen_print_reverse_white.svg` |
 | **T-shirt (warmer weather)** | Lighter heather gray | `back_screen_print.svg` |
-| **Hat (year-round)** | Forest green or black | `hat_embroidery_reverse_white.svg` |
+| **Hat (year-round dark)** | **Black or charcoal** (NOT forest green) | `hat_embroidery_reverse_white.svg` |
 | **Hat (summer option)** | Cream or heather gray | `hat_embroidery.svg` |
+
+⚠️ **About forest-green fabric:** The reverse/dark-fabric design uses **Fairway Green `#2E7D32`** for "GREEN TURF" — which is intentionally a medium-dark green to match brand identity. **This will not contrast well on forest-green shirts or hats** (same shade). If you want a forest-green base garment, ask the embroidery shop to substitute **Fresh Cut `#A5D6A7`** for visibility — same design, brighter green thread instead.
 
 ## Design files in this folder
 
