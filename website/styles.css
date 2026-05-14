@@ -160,6 +160,42 @@ body {
 }
 .page-hero-sub strong { color: var(--white); font-weight: 700; }
 
+/* ──────────  PHOTO PLACEHOLDER (mowing page hero photo)  ────────── */
+.mow-photo { background: var(--limestone); padding: 48px 16px 16px; }
+.photo-placeholder {
+  max-width: 880px;
+  margin: 0 auto;
+  border: 3px dashed var(--fairway);
+  border-radius: 12px;
+  background: #FFFFFF;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+}
+.photo-placeholder-inner { max-width: 480px; }
+.photo-placeholder-icon { font-size: 56px; margin-bottom: 12px; opacity: 0.6; }
+.photo-placeholder-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--forest);
+  margin: 0 0 8px;
+}
+.photo-placeholder-sub {
+  font-size: 15px;
+  color: var(--charcoal);
+  opacity: 0.75;
+  margin: 0;
+  line-height: 1.5;
+}
+@media (max-width: 600px) {
+  .photo-placeholder { aspect-ratio: 4 / 3; }
+  .photo-placeholder-title { font-size: 18px; }
+  .photo-placeholder-sub { font-size: 14px; }
+}
+
 /* ──────────  LOGO BANNER  ────────── */
 .logo-banner {
   background: var(--lime);
