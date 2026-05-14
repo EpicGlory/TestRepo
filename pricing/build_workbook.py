@@ -132,6 +132,9 @@ assumptions = [
     # Overseeding labor (lighter than full renovation)
     ("Overseeding Labor (per 1,000 sq ft)", 0.80, "hours", "Dethatch + aerate + seed + Tenacity + peat top-dress.",            "OvsHrs"),
     ("Overseeding Mobilization Hours",  1.00,   "hours",   "Equipment pickup/return + customer walk-through.",                 "OvsMob"),
+    # Standalone dethatching (every few years for thatch-heavy lawns)
+    ("Dethatching Labor (per 1,000 sq ft)", 0.60, "hours", "Power dethatch + rake/haul thatch debris.",                        "DethHrs"),
+    ("Dethatching Mobilization Hours",  1.00,   "hours",   "Equipment pickup/return + customer walk-through.",                 "DethMob"),
     # Sprinkler audit / repair labor
     ("Sprinkler Audit Labor (flat)",    3.00,   "hours",   "Catch cup audit + diagnose + write DU report.",                    "SprAudHrs"),
     ("Sprinkler Repair Labor (per head)", 0.30, "hours",   "Replace a single sprinkler head incl. minor digging.",             "SprHeadHrs"),
@@ -835,6 +838,26 @@ build_phase(
 # Ryan can drop the # Apps in the Overseeding tab to 0.5 to halve the seed cost.
 
 # =====================================================================
+# Tab: DETHATCHING (standalone -- every few years, big impact on thatch-heavy lawns)
+# =====================================================================
+build_phase(
+    name="Dethatching",
+    title="Dethatching  |  Power-rake + thatch removal",
+    materials=[],
+    per_job_items=[
+        ("Dethatcher", "Power dethatcher rental (4-hr)", 1),
+    ],
+    phase_hours_name="DethHrs",
+    phase_mob_name="DethMob",
+    narrative=(
+        "Standalone power-dethatching service for thinning lawns with a thick thatch layer "
+        "(typically >1/2 inch). Power-rake removes built-up thatch so water, air, and nutrients "
+        "can reach the soil. Crew hauls all debris. Most lawns only need this every 3-5 years; "
+        "best paired with overseeding when scheduled in fall."
+    ),
+)
+
+# =====================================================================
 # Tab: PROJECT TOTAL
 # =====================================================================
 ws_t = wb.create_sheet("Project Total")
@@ -1040,7 +1063,7 @@ ws_sum.row_dimensions[r].height = 28
 
 # Reorder tabs: Summary > Assumptions > Catalog > Service menus > Renovation phases > Project Total
 order = ["Summary", "Assumptions", "Materials Catalog",
-         "Summer Services", "Sprinkler Services", "Overseeding",
+         "Summer Services", "Sprinkler Services", "Overseeding", "Dethatching",
          "Phase 1 - Kill", "Phase 2 - Prep", "Phase 3 - Seed", "Phase 4 - Establish",
          "Project Total"]
 wb._sheets = [wb[s] for s in order]
@@ -1053,6 +1076,7 @@ wb["Materials Catalog"].sheet_properties.tabColor = YELLOW
 wb["Summer Services"].sheet_properties.tabColor    = "A5D6A7"   # Fresh Green (matches website summer card)
 wb["Sprinkler Services"].sheet_properties.tabColor = "2E7D32"   # Fairway Green (matches website sprinkler card)
 wb["Overseeding"].sheet_properties.tabColor        = "FFC107"   # Sun Yellow (matches website overseeding card)
+wb["Dethatching"].sheet_properties.tabColor        = "A5D6A7"   # Fresh Green (standalone add-on)
 # Renovation phases
 for s in ["Phase 1 - Kill", "Phase 2 - Prep", "Phase 3 - Seed", "Phase 4 - Establish"]:
     wb[s].sheet_properties.tabColor = GREEN_PRIMARY
