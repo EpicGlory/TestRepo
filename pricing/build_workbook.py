@@ -129,8 +129,10 @@ assumptions = [
     # Single-app overrides (for one-off services outside the annual program)
     ("Single-App Labor (per 1,000 sq ft)", 0.20, "hours",  "Used only for one-off service quotes outside the annual program.", "AppHrs"),
     ("Single-App Mobilization Hours",   0.40,   "hours",   "Used only for one-off service quotes outside the annual program.",  "AppMob"),
-    # Overseeding labor (lighter than full renovation)
-    ("Overseeding Labor (per 1,000 sq ft)", 0.80, "hours", "Dethatch + aerate + seed + Tenacity + peat top-dress.",            "OvsHrs"),
+    # Overseeding labor (lighter than full renovation). Dethatching time is
+    # tracked separately on its own line using DethHrs so we can monitor that
+    # cost from a business strategy perspective.
+    ("Overseeding Labor (per 1,000 sq ft)", 0.20, "hours", "Aerate + seed + starter + Tenacity + peat top-dress (dethatch is a separate line).", "OvsHrs"),
     ("Overseeding Mobilization Hours",  1.00,   "hours",   "Equipment pickup/return + customer walk-through.",                 "OvsMob"),
     # Standalone dethatching (every few years for thatch-heavy lawns)
     ("Dethatching Labor (per 1,000 sq ft)", 0.60, "hours", "Power dethatch + rake/haul thatch debris.",                        "DethHrs"),
@@ -308,12 +310,15 @@ ws_m.merge_cells(start_row=row, start_column=1, end_row=row, end_column=10)
 # =====================================================================
 # Helper to build a Phase tab
 # =====================================================================
-def build_phase(name, title, materials, per_job_items, phase_hours_name, phase_mob_name, narrative):
+def build_phase(name, title, materials, per_job_items, phase_hours_name, phase_mob_name, narrative, extra_labor=None):
     """
     materials:    list of (named_range, label, apps)  -- per-1000-sqft items
     per_job_items: list of (named_range, label, qty)  -- one-time items
     phase_hours_name: defined name for hr/1000sqft labor
     phase_mob_name:   defined name for fixed mobilization hours
+    extra_labor:  optional list of (hours_named_range, label) -- additional
+                  per-1000-sqft labor lines (e.g. Dethatching bundled inside
+                  Overseeding). Each line shows separately for cost tracking.
     """
     ws = wb.create_sheet(name)
     title_bar(ws, title, span=7)
@@ -400,7 +405,7 @@ def build_phase(name, title, materials, per_job_items, phase_hours_name, phase_m
         c = ws.cell(row=r, column=i, value=h)
         c.font = FONT_LABEL; c.fill = FILL_H2; c.alignment = CENTER; c.border = BORDER
     r += 1
-    # per-1000 sqft labor
+    # per-1000 sqft labor (primary phase line)
     ws.cell(row=r, column=2, value="Field labor (per 1,000 sq ft)").alignment = LEFT
     ws.cell(row=r, column=3, value=f"={phase_hours_name} hr/1,000 sf").alignment = CENTER
     c = ws.cell(row=r, column=4, value=f"={phase_hours_name}*(LawnSize/1000)")
@@ -411,8 +416,23 @@ def build_phase(name, title, materials, per_job_items, phase_hours_name, phase_m
     c.number_format = '"$"#,##0.00'; c.alignment = RIGHT; c.font = FONT_LABEL
     for col in range(1, 8):
         ws.cell(row=r, column=col).border = BORDER
-    field_lab_row = r
+    labor_rows = [r]
     r += 1
+    # Extra labor lines (e.g. Dethatching bundled into Overseeding)
+    if extra_labor:
+        for hrs_name, label in extra_labor:
+            ws.cell(row=r, column=2, value=label).alignment = LEFT
+            ws.cell(row=r, column=3, value=f"={hrs_name} hr/1,000 sf").alignment = CENTER
+            c = ws.cell(row=r, column=4, value=f"={hrs_name}*(LawnSize/1000)")
+            c.number_format = "0.00"; c.alignment = CENTER
+            c = ws.cell(row=r, column=5, value="=LaborRate")
+            c.number_format = '"$"#,##0.00'; c.alignment = RIGHT
+            c = ws.cell(row=r, column=6, value=f"=D{r}*E{r}")
+            c.number_format = '"$"#,##0.00'; c.alignment = RIGHT; c.font = FONT_LABEL
+            for col in range(1, 8):
+                ws.cell(row=r, column=col).border = BORDER
+            labor_rows.append(r)
+            r += 1
     # Mobilization labor
     ws.cell(row=r, column=2, value="Mobilization / setup").alignment = LEFT
     ws.cell(row=r, column=3, value="Fixed hrs/job").alignment = CENTER
@@ -424,11 +444,12 @@ def build_phase(name, title, materials, per_job_items, phase_hours_name, phase_m
     c.number_format = '"$"#,##0.00'; c.alignment = RIGHT; c.font = FONT_LABEL
     for col in range(1, 8):
         ws.cell(row=r, column=col).border = BORDER
-    mob_row = r
+    labor_rows.append(r)
 
     r += 1
     ws.cell(row=r, column=2, value="LABOR SUBTOTAL").font = FONT_LABEL
-    c = ws.cell(row=r, column=6, value=f"=F{field_lab_row}+F{mob_row}")
+    labor_sum = "+".join(f"F{x}" for x in labor_rows)
+    c = ws.cell(row=r, column=6, value=f"={labor_sum}")
     c.number_format = '"$"#,##0.00'; c.alignment = RIGHT
     c.font = Font(name="Calibri", size=12, bold=True, color="FFFFFF")
     c.fill = FILL_TOTAL
@@ -815,7 +836,7 @@ wb.defined_names["Sprinkler_Total"] = DefinedName("Sprinkler_Total",
 # =====================================================================
 build_phase(
     name="Overseeding",
-    title="Fall Overseeding  |  Aerate + Overseed + Starter + Tenacity",
+    title="Fall Overseeding  |  Dethatch + Aerate + Overseed + Starter + Tenacity",
     materials=[
         ("Seed",       "Valkyrie tall fescue (overseed rate)", 1),
         ("Starter",    "Starter fertilizer (24-25-4)",         1),
@@ -824,14 +845,20 @@ build_phase(
         ("Peat",       "Peat moss top-dress (light)",           1),
     ],
     per_job_items=[
-        ("Aerator", "Core aerator rental (4-hr)", 1),
+        ("Dethatcher", "Power dethatcher rental (4-hr)", 1),
+        ("Aerator",    "Core aerator rental (4-hr)",     1),
     ],
     phase_hours_name="OvsHrs",
     phase_mob_name="OvsMob",
+    extra_labor=[
+        ("DethHrs", "Dethatching field labor (per 1,000 sq ft)"),
+    ],
     narrative=(
-        "Lighter than full renovation. Core aerate, broadcast seed at half the renovation "
-        "rate (~5 lb / 1,000 sq ft), apply starter fertilizer + Tenacity, light peat moss "
-        "top-dress. Customer's existing lawn keeps growing through germination. Aug-Oct only."
+        "Lighter than full renovation. Power-dethatch first, then core aerate, broadcast "
+        "seed at half the renovation rate (~5 lb / 1,000 sq ft), apply starter fertilizer "
+        "+ Tenacity, light peat moss top-dress. Customer's existing lawn keeps growing "
+        "through germination. Aug-Oct only. Dethatching is broken out as its own labor "
+        "line + equipment rental so we can track that revenue separately."
     ),
 )
 # Override seed rate by editing the catalog row in-place won't work mid-build; instead
