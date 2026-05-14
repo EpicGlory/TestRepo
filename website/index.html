@@ -197,10 +197,6 @@
           <input name="email" type="email" required autocomplete="email" />
         </label>
         <label class="form-field">
-          <span class="form-label">Property address *</span>
-          <input name="address" type="text" required placeholder="Street, City" autocomplete="street-address" />
-        </label>
-        <label class="form-field">
           <span class="form-label">Approximate lawn size</span>
           <select name="lawn_size">
             <option value="Under 2,500 sq ft">Under 2,500 sq ft</option>
@@ -210,18 +206,39 @@
             <option value="Not sure">Not sure &mdash; help me figure it out</option>
           </select>
         </label>
+      </div>
+
+      <label class="form-field form-full-width">
+        <span class="form-label">Street address *</span>
+        <input name="street_address" type="text" required placeholder="123 Main St" autocomplete="street-address" />
+      </label>
+
+      <div class="form-address-row form-full-width">
         <label class="form-field">
-          <span class="form-label">How did you hear about us?</span>
-          <select name="referral">
-            <option value="Google">Google search</option>
-            <option value="Door hanger">Door hanger</option>
-            <option value="Truck/sign">Saw the truck or sign</option>
-            <option value="Referral">Friend/neighbor</option>
-            <option value="Social media">Social media</option>
-            <option value="Other">Other</option>
-          </select>
+          <span class="form-label">City *</span>
+          <input name="city" type="text" required autocomplete="address-level2" placeholder="Kaysville" />
+        </label>
+        <label class="form-field">
+          <span class="form-label">State *</span>
+          <input name="state" type="text" required value="UT" autocomplete="address-level1" maxlength="2" />
+        </label>
+        <label class="form-field">
+          <span class="form-label">Zip code *</span>
+          <input name="zip" type="text" required pattern="[0-9]{5}" maxlength="5" autocomplete="postal-code" placeholder="84037" />
         </label>
       </div>
+
+      <label class="form-field form-full-width">
+        <span class="form-label">How did you hear about us?</span>
+        <select name="referral">
+          <option value="Google">Google search</option>
+          <option value="Door hanger">Door hanger</option>
+          <option value="Truck/sign">Saw the truck or sign</option>
+          <option value="Referral">Friend/neighbor</option>
+          <option value="Social media">Social media</option>
+          <option value="Other">Other</option>
+        </select>
+      </label>
 
       <label class="form-field form-full-width">
         <span class="form-label">What's bothering you about your lawn? (optional)</span>
