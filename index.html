@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cosmic Pig Smoke Co. — Handcrafted BBQ Rubs</title>
+<meta name="description" content="Cosmic Pig Smoke Co. — small-batch, handcrafted BBQ rubs built over years of backyard fire and competition-grade flavor. Out-of-this-world smoke." />
+
+<!--
+  =============================================================
+  COSMIC PIG SMOKE CO. — one-page site (single self-contained file)
+  =============================================================
+  ASSET SLOTS (drop files in, no code changes needed elsewhere):
+    - Logo:          assets/logo.png            (hero + footer)
+    - Flavor labels: assets/labels/<name>.png   (one per rub)
+  Until those files exist, styled placeholders show in their place.
+  Search this file for  data-asset  to find every slot.
+  =============================================================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --space-0: #07040f;
+    --space-1: #0d0820;
+    --space-2: #16102e;
+    --purple:  #9d5cff;
+    --purple-deep: #5a2e9e;
+    --cyan:    #2bc4ff;
+    --pink:    #ff3fb4;
+    --ember:   #ff6b1a;
+    --ember-bright: #ff9d2f;
+    --cream:   #f6efe6;
+    --muted:   #b3a8c4;
+    --line:    rgba(255,255,255,0.10);
+    --maxw: 1100px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--space-0);
+    color: var(--cream);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .display {
+    font-family: 'Bebas Neue', 'Inter', Impact, sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    line-height: 1.02;
+  }
+
+  a { color: var(--ember-bright); text-decoration: none; }
+  a:hover { color: var(--cream); }
+
+  .wrap { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+  .eyebrow {
+    font-size: 0.78rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--purple);
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+
+  /* ---------- starfield + nebula backdrop ---------- */
+  .sky {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background:
+      radial-gradient(1100px 700px at 78% -8%, rgba(157,92,255,0.22), transparent 60%),
+      radial-gradient(900px 600px at 12% 8%, rgba(255,107,26,0.14), transparent 55%),
+      linear-gradient(180deg, var(--space-1) 0%, var(--space-0) 55%, #050309 100%);
+  }
+  .stars {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-repeat: repeat;
+    background-image:
+      radial-gradient(1.4px 1.4px at 20px 30px, #fff, transparent),
+      radial-gradient(1.2px 1.2px at 140px 90px, #cdbff7, transparent),
+      radial-gradient(1px 1px at 80px 160px, #fff, transparent),
+      radial-gradient(1.6px 1.6px at 200px 50px, #ffd9b0, transparent),
+      radial-gradient(1px 1px at 260px 200px, #fff, transparent);
+    background-size: 300px 300px;
+    opacity: 0.55;
+    animation: drift 140s linear infinite;
+  }
+  @keyframes drift { from { background-position: 0 0; } to { background-position: 300px 600px; } }
+
+  /* ---------- nav ---------- */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(10px);
+    background: rgba(7,4,15,0.66);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 66px; }
+  .brand-mark { display: flex; align-items: center; gap: 12px; font-family: 'Bebas Neue', sans-serif; font-size: 1.45rem; letter-spacing: 0.06em; color: var(--cream); }
+  .brand-mark .dot { width: 11px; height: 11px; border-radius: 50%; background: radial-gradient(circle at 30% 30%, var(--cyan), var(--pink) 70%); box-shadow: 0 0 14px rgba(255,63,180,0.7); }
+  .nav nav { display: flex; gap: 28px; }
+  .nav nav a { color: var(--muted); font-size: 0.9rem; letter-spacing: 0.04em; font-weight: 500; }
+  .nav nav a:hover { color: var(--cream); }
+  @media (max-width: 720px) { .nav nav { display: none; } }
+
+  /* ---------- buttons ---------- */
+  .btn {
+    display: inline-block;
+    padding: 14px 30px;
+    border-radius: 999px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    font-size: 0.92rem;
+    transition: transform 0.15s ease, box-shadow 0.2s ease;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--ember-bright), var(--ember));
+    color: #1a0a00;
+    box-shadow: 0 8px 30px rgba(255,107,26,0.35);
+  }
+  .btn-primary:hover { transform: translateY(-2px); color: #1a0a00; box-shadow: 0 12px 38px rgba(255,107,26,0.5); }
+  .btn-ghost { border: 1px solid var(--line); color: var(--cream); }
+  .btn-ghost:hover { border-color: var(--purple); color: var(--cream); }
+
+  /* ---------- hero ---------- */
+  .hero { text-align: center; padding: 88px 0 96px; position: relative; }
+  .hero .logo-slot { margin: 0 auto 30px; }
+  .hero h1 {
+    font-size: clamp(3.2rem, 10vw, 7rem);
+    background: linear-gradient(100deg, var(--cyan) 0%, #ffffff 46%, var(--pink) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 6px;
+  }
+  .hero .tag { font-size: clamp(1rem, 2.4vw, 1.35rem); color: var(--muted); letter-spacing: 0.32em; text-transform: uppercase; margin-bottom: 30px; }
+  .hero p.lede { max-width: 620px; margin: 0 auto 38px; font-size: 1.08rem; color: #d8cee4; }
+  .hero .cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+  .smoke {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 480px;
+    height: 200px;
+    background: radial-gradient(ellipse at center, rgba(157,92,255,0.20), transparent 70%);
+    filter: blur(28px);
+    animation: breathe 7s ease-in-out infinite;
+    pointer-events: none;
+  }
+  @keyframes breathe { 0%,100% { opacity: 0.5; transform: translateX(-50%) scale(1); } 50% { opacity: 0.85; transform: translateX(-50%) scale(1.12); } }
+
+  /* ---------- generic section ---------- */
+  section { padding: 86px 0; position: relative; }
+  .section-head { max-width: 680px; margin-bottom: 52px; }
+  .section-head h2 { font-size: clamp(2.4rem, 6vw, 3.8rem); margin-bottom: 14px; }
+  .section-head p { color: var(--muted); font-size: 1.05rem; }
+
+  /* ---------- story ---------- */
+  .story-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: center; }
+  @media (max-width: 860px) { .story-grid { grid-template-columns: 1fr; gap: 36px; } }
+  .story-grid p { color: #d8cee4; margin-bottom: 18px; }
+  .story-card {
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 34px;
+    background: linear-gradient(160deg, rgba(157,92,255,0.10), rgba(255,107,26,0.06));
+  }
+  .story-card .stat { font-family: 'Bebas Neue', sans-serif; font-size: 3.4rem; color: var(--ember-bright); line-height: 1; }
+  .story-card .stat + span { color: var(--muted); display: block; margin-bottom: 26px; letter-spacing: 0.05em; }
+
+  /* ---------- endorsement ---------- */
+  .quote {
+    border-left: 3px solid var(--ember);
+    padding: 8px 0 8px 30px;
+    margin: 0 auto;
+    max-width: 760px;
+  }
+  .quote blockquote { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.8rem, 4.5vw, 3rem); line-height: 1.12; color: var(--cream); letter-spacing: 0.02em; }
+  .quote cite { display: block; margin-top: 20px; font-style: normal; color: var(--muted); font-size: 0.95rem; letter-spacing: 0.06em; }
+  .badges { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; margin-top: 46px; }
+  .badge {
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 10px 22px;
+    font-size: 0.86rem;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    background: rgba(255,255,255,0.03);
+  }
+  .badge strong { color: var(--cream); }
+
+  /* ---------- flavors ---------- */
+  .flavors-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr)); gap: 30px; }
+  .flavor {
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgba(255,255,255,0.025);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  .flavor:hover { transform: translateY(-6px); border-color: var(--purple); }
+  .flavor .label-slot { aspect-ratio: 3 / 2; background: #000; }
+  .flavor .body { padding: 24px 24px 28px; }
+  .flavor .type { color: var(--cyan); font-size: 0.74rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; margin-bottom: 8px; }
+  .flavor h3 { font-size: 1.9rem; color: var(--cream); margin-bottom: 8px; }
+  .flavor .notes { color: var(--muted); font-size: 0.94rem; }
+  .flavor .goodon { margin-top: 16px; font-size: 0.82rem; color: var(--muted); letter-spacing: 0.03em; }
+  .flavor .goodon b { color: var(--cream); font-weight: 600; }
+  .flavor .pill { display: inline-block; margin-top: 18px; font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ember-bright); border: 1px solid rgba(255,157,47,0.45); border-radius: 999px; padding: 5px 13px; }
+
+  /* ---------- asset placeholders ---------- */
+  .asset {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+  .placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+    padding: 18px;
+    border: 1.5px dashed rgba(157,92,255,0.55);
+    border-radius: 16px;
+    background: repeating-linear-gradient(45deg, rgba(157,92,255,0.05) 0 12px, transparent 12px 24px);
+    color: var(--muted);
+  }
+  .placeholder .ph-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; letter-spacing: 0.1em; color: var(--purple); }
+  .placeholder code { font-size: 0.74rem; color: var(--ember-bright); background: rgba(255,107,26,0.10); padding: 3px 8px; border-radius: 6px; }
+  .logo-slot { width: clamp(220px, 36vw, 320px); aspect-ratio: 1 / 1; filter: drop-shadow(0 0 46px rgba(157,92,255,0.45)); }
+
+  /* ---------- contact ---------- */
+  .contact { text-align: center; }
+  .contact h2 { font-size: clamp(2.4rem, 6vw, 4rem); margin-bottom: 16px; }
+  .contact p { color: var(--muted); max-width: 560px; margin: 0 auto 34px; }
+  .contact .channels { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+  /* ---------- footer ---------- */
+  footer { border-top: 1px solid var(--line); padding: 50px 0; }
+  .foot { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 18px; }
+  .foot .brand-mark { font-size: 1.2rem; }
+  .foot small { color: var(--muted); letter-spacing: 0.04em; }
+
+  .divider { height: 1px; background: var(--line); border: 0; }
+</style>
+</head>
+<body>
+
+<div class="sky" aria-hidden="true"></div>
+<div class="stars" aria-hidden="true"></div>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand-mark"><span class="dot"></span> COSMIC PIG SMOKE CO.</div>
+    <nav>
+      <a href="#story">Story</a>
+      <a href="#proof">The Proof</a>
+      <a href="#flavors">Flavors</a>
+      <a href="#contact">Get Some</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============================ HERO ============================ -->
+<section class="hero">
+  <div class="wrap">
+    <!-- ASSET SLOT: logo  ->  assets/logo.png -->
+    <div class="logo-slot" data-asset="logo">
+      <div class="placeholder">
+        <span class="ph-title">LOGO</span>
+        <code>assets/logo.png</code>
+      </div>
+    </div>
+
+    <h1>COSMIC PIG<br />SMOKE CO.</h1>
+    <p class="tag">Out-of-this-world smoke</p>
+    <p class="lede">Small-batch BBQ rubs, built over years of live fire and stubborn tinkering — until the flavor was good enough to bet on. Now it's leaving the backyard.</p>
+    <div class="cta">
+      <a href="#flavors" class="btn btn-primary">See the Rubs</a>
+      <a href="#story" class="btn btn-ghost">Our Story</a>
+    </div>
+  </div>
+  <div class="smoke" aria-hidden="true"></div>
+</section>
+
+<hr class="divider" />
+
+<!-- ============================ STORY ============================ -->
+<section id="story">
+  <div class="wrap story-grid">
+    <div>
+      <p class="eyebrow">The Origin</p>
+      <h2 class="display" style="font-size:clamp(2.4rem,6vw,3.8rem);margin-bottom:18px;">Years of fire. One stubborn cook.</h2>
+      <p>Cosmic Pig didn't start as a company — it started as a habit. Years of weekends spent over smoke, tweaking a rub blend one ingredient at a time, cooking for anyone who'd hold out a plate.</p>
+      <p>The goal was never complicated: make something people remember after the first bite, and again on the drive home. Enough people kept asking for the recipe that hiding it stopped making sense.</p>
+      <p>So here it is — the same blend, the same small batches, now with a name and a label.</p>
+    </div>
+    <div class="story-card">
+      <div class="stat">100%</div>
+      <span>hand-blended, small batch</span>
+      <div class="stat">0</div>
+      <span>filler, junk, or shortcuts</span>
+      <div class="stat">∞</div>
+      <span>backyard test cooks (and counting)</span>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- ======================= ENDORSEMENT / PROOF ======================= -->
+<section id="proof">
+  <div class="wrap" style="text-align:center;">
+    <p class="eyebrow">The Proof</p>
+    <div class="quote">
+      <blockquote>"I like yours better."</blockquote>
+      <cite>— Owner of BBQ Pitstop, 20-year national BBQ competitor, tasting Cosmic Pig head-to-head against a top-selling pro rub</cite>
+    </div>
+    <div class="badges">
+      <span class="badge">Stocked at <strong>BBQ Pitstop</strong></span>
+      <span class="badge">Featured on the smoker at a <strong>Rec Tec</strong> showcase event</span>
+      <span class="badge">Tasted against the pros — <strong>and preferred</strong></span>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- ============================ FLAVORS ============================ -->
+<section id="flavors">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">The Lineup</p>
+      <h2>The Rubs</h2>
+      <p>One blend started it. Four more followed. Five rubs, each built for a different cook — all of them out of this world.</p>
+    </div>
+
+    <div class="flavors-grid">
+
+      <!-- FLAVOR CARD — one per rub. Label image -> assets/labels/<name>.png -->
+      <article class="flavor">
+        <div class="label-slot" data-asset="label">
+          <div class="placeholder">
+            <span class="ph-title">LABEL</span>
+            <code>assets/labels/solar-flare.png</code>
+          </div>
+        </div>
+        <div class="body">
+          <p class="type">Sweet Heat BBQ Rub</p>
+          <h3>Solar Flare</h3>
+          <p class="notes">A blazing fusion of honey sweetness, savory depth, and smoky heat — built for anything worthy of cosmic flavor.</p>
+          <p class="goodon"><b>Great on:</b> Pork · Chicken · Wings · Ribs · Turkey</p>
+          <span class="pill">Flagship</span>
+        </div>
+      </article>
+
+      <article class="flavor">
+        <div class="label-slot" data-asset="label">
+          <div class="placeholder">
+            <span class="ph-title">LABEL</span>
+            <code>assets/labels/cosmic-wingman.png</code>
+          </div>
+        </div>
+        <div class="body">
+          <p class="type">Citrus Chile Chicken Rub</p>
+          <h3>Cosmic Wingman</h3>
+          <p class="notes">Zesty lime, warm chile, and savory garlic in perfect balance. Bright, bold, and built to keep you coming back.</p>
+          <p class="goodon"><b>Great on:</b> Wings · Thighs · Chicken · Tacos · Shrimp</p>
+          <span class="pill">Citrus &amp; Heat</span>
+        </div>
+      </article>
+
+      <article class="flavor">
+        <div class="label-slot" data-asset="label">
+          <div class="placeholder">
+            <span class="ph-title">LABEL</span>
+            <code>assets/labels/black-hole-brisket.png</code>
+          </div>
+        </div>
+        <div class="body">
+          <p class="type">Texas-Style Brisket Rub</p>
+          <h3>Black Hole Brisket</h3>
+          <p class="notes">Pepper-forward and built for bark. Just coarse salt, cracked pepper, garlic, and onion — the way brisket was meant to be.</p>
+          <p class="goodon"><b>Great on:</b> Brisket · Beef Ribs · Prime Rib · Steak · Tri-Tip</p>
+          <span class="pill">Texas Style</span>
+        </div>
+      </article>
+
+      <article class="flavor">
+        <div class="label-slot" data-asset="label">
+          <div class="placeholder">
+            <span class="ph-title">LABEL</span>
+            <code>assets/labels/moo-nar-landing.png</code>
+          </div>
+        </div>
+        <div class="body">
+          <p class="type">Premium Beef Rub</p>
+          <h3>Moo-Nar Landing</h3>
+          <p class="notes">A bold, savory balance of herbs, spices, and depth that brings out the best in every bite. From the moon to your grill — beef, elevated.</p>
+          <p class="goodon"><b>Great on:</b> Steak · Burgers · Brisket · Roasts · Tri-Tip</p>
+          <span class="pill">Beef</span>
+        </div>
+      </article>
+
+      <article class="flavor">
+        <div class="label-slot" data-asset="label">
+          <div class="placeholder">
+            <span class="ph-title">LABEL</span>
+            <code>assets/labels/dark-matter.png</code>
+          </div>
+        </div>
+        <div class="body">
+          <p class="type">Activated Charcoal Beef Rub</p>
+          <h3>Dark Matter</h3>
+          <p class="notes">A deep, savory rub with a bold dark crust that locks in moisture. Smoked paprika, garlic, and black garlic — gravity for your taste buds.</p>
+          <p class="goodon"><b>Great on:</b> Brisket · Beef Ribs · Prime Rib · Steak · Tri-Tip</p>
+          <span class="pill">Dark Crust</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- ============================ CONTACT ============================ -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <p class="eyebrow">Get Some</p>
+    <h2>Want the rub?</h2>
+    <p>Find it at BBQ Pitstop, or reach out directly about a jar, a case, or stocking it on your shelf.</p>
+    <div class="channels">
+      <!-- Update this address when the real one is ready -->
+      <a href="mailto:hello@cosmicpigsmoke.co" class="btn btn-primary">Email Cosmic Pig</a>
+      <a href="#flavors" class="btn btn-ghost">Back to the Rubs</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div class="brand-mark"><span class="dot"></span> COSMIC PIG SMOKE CO.</div>
+    <small>Out-of-this-world smoke · Hand-blended, small batch</small>
+    <small id="yr"></small>
+  </div>
+</footer>
+
+<script>
+  // Year stamp
+  document.getElementById('yr').textContent = '© ' + new Date().getFullYear();
+
+  // Asset auto-wiring: if an image exists at the expected path, swap the
+  // placeholder for it automatically — no markup changes needed when files land.
+  document.querySelectorAll('[data-asset]').forEach(function (slot) {
+    var code = slot.querySelector('code');
+    if (!code) return;
+    var src = code.textContent.trim();
+    var probe = new Image();
+    probe.onload = function () {
+      slot.innerHTML = '';
+      var img = document.createElement('img');
+      img.src = src;
+      img.alt = 'Cosmic Pig Smoke Co.';
+      img.className = 'asset';
+      slot.appendChild(img);
+    };
+    probe.src = src;
+  });
+</script>
+
+</body>
+</html>
