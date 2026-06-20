@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – Cosmic Pig BBQ</title>
+  <meta name="description" content="Get in touch with Cosmic Pig BBQ — for wholesale inquiries, media, or just to talk BBQ." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐷</text></svg>" />
+</head>
+<body>
+
+<canvas id="stars-canvas" aria-hidden="true"></canvas>
+
+<div class="page-content">
+
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Main navigation">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">🐷</span>
+          <span><span class="cosmic">Cosmic</span> <span class="pig">Pig</span> BBQ</span>
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Our Rubs</a></li>
+          <li><a href="find-us.html">Find Us</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="nav-cta">Contact</a></li>
+        </ul>
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="page-header">
+      <div class="container">
+        <span class="section-label">Get in Touch</span>
+        <h1>Let's Talk BBQ</h1>
+        <p>Wholesale inquiries, media requests, event opportunities — or just want to tell us how your cook went. We're all ears.</p>
+      </div>
+    </div>
+
+    <section>
+      <div class="container">
+        <div class="contact-layout">
+
+          <!-- Left: info -->
+          <div class="reveal">
+            <h3>How Can We Help?</h3>
+            <p>Whether you're a retailer interested in carrying our rubs, a media outlet looking for a story, or a BBQ enthusiast with questions, reach out using the form or the contact info below.</p>
+
+            <div class="contact-item">
+              <div class="contact-icon">📦</div>
+              <div>
+                <h4>Wholesale & Retail</h4>
+                <p>Interested in stocking Cosmic Pig BBQ rubs? We work with BBQ shops, butchers, and specialty food retailers.</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">📸</div>
+              <div>
+                <h4>Media & Press</h4>
+                <p>Journalists, food bloggers, and content creators — we're happy to provide samples, stories, and media kits.</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">🎉</div>
+              <div>
+                <h4>Events & Competitions</h4>
+                <p>We love BBQ competitions and community events. Ask about sponsorships, demos, and festival appearances.</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">✉️</div>
+              <div>
+                <h4>Email</h4>
+                <a href="mailto:hello@cosmicpigbbq.com">hello@cosmicpigbbq.com</a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right: form -->
+          <div class="form-card reveal">
+            <form id="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="first-name">First Name</label>
+                  <input type="text" id="first-name" name="first_name" placeholder="John" required />
+                </div>
+                <div class="form-group">
+                  <label for="last-name">Last Name</label>
+                  <input type="text" id="last-name" name="last_name" placeholder="Smith" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required />
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject">
+                  <option value="">Select a topic…</option>
+                  <option value="wholesale">Wholesale / Retail Inquiry</option>
+                  <option value="media">Media / Press</option>
+                  <option value="events">Events &amp; Competitions</option>
+                  <option value="general">General Question</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Tell us what's on your mind…" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+                Send Message 🚀
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <span class="logo-icon">🐷</span>
+            <span><span class="cosmic">Cosmic</span> <span class="pig">Pig</span> BBQ</span>
+          </a>
+          <p>Small-batch BBQ rubs crafted in Utah for pitmasters who demand out-of-this-world flavor.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram">📸</a>
+            <a href="#" class="social-link" aria-label="Facebook">👍</a>
+            <a href="#" class="social-link" aria-label="TikTok">🎵</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="products.html">Cosmic Dust</a></li>
+            <li><a href="products.html">Nebula Blend</a></li>
+            <li><a href="products.html">Solar Flare</a></li>
+            <li><a href="products.html">Dark Matter</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="find-us.html">Find Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Retailers</h4>
+          <ul>
+            <li><a href="find-us.html">BBQ Pitstop – Layton</a></li>
+            <li><a href="find-us.html">BBQ Pitstop – Lehi</a></li>
+            <li><a href="contact.html">Wholesale Inquiries</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Cosmic Pig BBQ. All rights reserved.</p>
+        <p>cosmicpigbbq.com</p>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
