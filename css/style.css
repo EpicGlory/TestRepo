@@ -815,6 +815,32 @@ section { padding: 5rem 0; }
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 }
 
+.product-label-wrap {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+  border: 1px solid var(--border);
+  line-height: 0;
+}
+
+.product-label-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-label-wrap img { transform: scale(1.03); }
+
+.product-size {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+  font-family: var(--font-display);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .product-card-full .product-detail {
   margin-top: 1.25rem;
   padding-top: 1.25rem;
