@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pre-Order – Cosmic Pig BBQ</title>
+  <meta name="description" content="Reserve your Cosmic Pig BBQ rubs before the next batch ships. No charge now — we'll reach out when your order is ready." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐷</text></svg>" />
+</head>
+<body>
+
+<canvas id="stars-canvas" aria-hidden="true"></canvas>
+
+<div class="page-content">
+
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Main navigation">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">🐷</span>
+          <span><span class="cosmic">Cosmic</span> <span class="pig">Pig</span> BBQ</span>
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Our Rubs</a></li>
+          <li><a href="find-us.html">Find Us</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="preorder.html" class="nav-cta">Pre-Order</a></li>
+        </ul>
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="page-header">
+      <div class="container">
+        <span class="section-label">🚀 Reserve Your Rubs</span>
+        <h1>Pre-Order</h1>
+        <p>
+          Cosmic Pig BBQ rubs are made in small batches. Submit your interest below
+          and we'll reach out when your order is ready to ship.
+        </p>
+      </div>
+    </div>
+
+    <section>
+      <div class="container" style="max-width:860px;">
+
+        <!-- What to expect -->
+        <div class="preorder-intro reveal">
+          <span class="preorder-intro-icon">ℹ️</span>
+          <div>
+            <h3>How Pre-Orders Work</h3>
+            <p>
+              <strong style="color:var(--text);">No payment is collected today.</strong>
+              Fill out this form and we'll email you once your batch is ready with
+              a payment link and shipping options. You're not locked in — if plans
+              change, just let us know. We just want to know how much to make!
+            </p>
+          </div>
+        </div>
+
+        <!--
+          =====================================================
+          SETUP INSTRUCTIONS (remove this comment before going live)
+          =====================================================
+          1. Go to https://formspree.io and create a FREE account
+          2. Click "New Form", name it "Cosmic Pig Pre-Orders"
+          3. Copy your form endpoint — it looks like:
+             https://formspree.io/f/abcdefgh
+          4. Replace YOUR_FORMSPREE_ID below with your actual ID
+          5. Add your email in Formspree dashboard so submissions
+             are delivered to you
+          6. Optional: In Formspree, connect a Google Sheet under
+             Integrations → Google Sheets for a live order spreadsheet
+          =====================================================
+        -->
+        <form
+          id="preorder-form"
+          action="https://formspree.io/f/YOUR_FORMSPREE_ID"
+          method="POST"
+          class="form-card reveal"
+        >
+
+          <!-- Hidden field to tag the source -->
+          <input type="hidden" name="_subject" value="New Cosmic Pig BBQ Pre-Order Request" />
+          <input type="hidden" name="_next" value="preorder-thanks.html" />
+
+          <!-- Section 1: Contact -->
+          <h3 style="margin-bottom:1.5rem;font-size:1.3rem;">
+            <span style="color:var(--fire-orange);">01</span> &nbsp;Your Info
+          </h3>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first-name">First Name *</label>
+              <input type="text" id="first-name" name="first_name" placeholder="John" required />
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last Name *</label>
+              <input type="text" id="last-name" name="last_name" placeholder="Smith" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone (optional)</label>
+              <input type="tel" id="phone" name="phone" placeholder="(801) 555-0100" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="city-state">City &amp; State</label>
+            <input type="text" id="city-state" name="city_state" placeholder="Salt Lake City, UT" />
+          </div>
+
+          <hr style="border:none;border-top:1px solid var(--border);margin:2rem 0;" />
+
+          <!-- Section 2: Rub Selection -->
+          <h3 style="margin-bottom:0.5rem;font-size:1.3rem;">
+            <span style="color:var(--fire-orange);">02</span> &nbsp;Which Rubs? *
+          </h3>
+          <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:1.25rem;">Select all that you're interested in.</p>
+
+          <div class="form-group">
+            <div class="rub-checkboxes">
+
+              <div class="rub-option">
+                <input type="checkbox" id="rub-cosmic-dust" name="rubs" value="Cosmic Dust (Mild)" />
+                <label for="rub-cosmic-dust" class="rub-label">
+                  <span class="rub-check">✓</span>
+                  <span class="rub-label-text">
+                    <strong>✨ Cosmic Dust</strong>
+                    <span>Mild · All-Purpose</span>
+                  </span>
+                </label>
+              </div>
+
+              <div class="rub-option">
+                <input type="checkbox" id="rub-nebula" name="rubs" value="Nebula Blend (Medium)" />
+                <label for="rub-nebula" class="rub-label">
+                  <span class="rub-check">✓</span>
+                  <span class="rub-label-text">
+                    <strong>⭐ Nebula Blend</strong>
+                    <span>Medium · Sweet &amp; Smoky</span>
+                  </span>
+                </label>
+              </div>
+
+              <div class="rub-option">
+                <input type="checkbox" id="rub-solar" name="rubs" value="Solar Flare (Hot)" />
+                <label for="rub-solar" class="rub-label">
+                  <span class="rub-check">✓</span>
+                  <span class="rub-label-text">
+                    <strong>🌟 Solar Flare</strong>
+                    <span>Hot · Spicy &amp; Smoky</span>
+                  </span>
+                </label>
+              </div>
+
+              <div class="rub-option">
+                <input type="checkbox" id="rub-dark" name="rubs" value="Dark Matter (Bold)" />
+                <label for="rub-dark" class="rub-label">
+                  <span class="rub-check">✓</span>
+                  <span class="rub-label-text">
+                    <strong>🌑 Dark Matter</strong>
+                    <span>Bold · Coffee &amp; Cocoa</span>
+                  </span>
+                </label>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Quantity -->
+          <div class="form-group" style="margin-top:1.5rem;">
+            <label>How many jars total? *</label>
+            <div class="qty-options" style="margin-top:0.6rem;">
+              <div class="qty-option">
+                <input type="radio" id="qty-1" name="quantity" value="1–2 jars" required />
+                <label for="qty-1" class="qty-label">1–2 jars</label>
+              </div>
+              <div class="qty-option">
+                <input type="radio" id="qty-3" name="quantity" value="3–5 jars" />
+                <label for="qty-3" class="qty-label">3–5 jars</label>
+              </div>
+              <div class="qty-option">
+                <input type="radio" id="qty-6" name="quantity" value="6–11 jars" />
+                <label for="qty-6" class="qty-label">6–11 jars</label>
+              </div>
+              <div class="qty-option">
+                <input type="radio" id="qty-12" name="quantity" value="12+ jars (wholesale)" />
+                <label for="qty-12" class="qty-label">12+ jars</label>
+              </div>
+            </div>
+          </div>
+
+          <hr style="border:none;border-top:1px solid var(--border);margin:2rem 0;" />
+
+          <!-- Section 3: More Info -->
+          <h3 style="margin-bottom:1.5rem;font-size:1.3rem;">
+            <span style="color:var(--fire-orange);">03</span> &nbsp;A Bit More
+          </h3>
+
+          <div class="form-group">
+            <label for="source">How did you hear about us?</label>
+            <select id="source" name="source">
+              <option value="">Select one…</option>
+              <option value="BBQ Pitstop – Layton">BBQ Pitstop – Layton</option>
+              <option value="BBQ Pitstop – Lehi">BBQ Pitstop – Lehi</option>
+              <option value="Instagram">Instagram</option>
+              <option value="Facebook">Facebook</option>
+              <option value="TikTok">TikTok</option>
+              <option value="Friend or Family">Friend or Family</option>
+              <option value="Google Search">Google Search</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="notes">Questions or special requests? (optional)</label>
+            <textarea id="notes" name="notes" placeholder="Any dietary questions, gift orders, event catering interest, etc."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;font-size:1.1rem;padding:1rem;">
+            Submit Pre-Order Interest 🚀
+          </button>
+
+          <p style="color:var(--text-muted);font-size:0.82rem;text-align:center;margin-top:1rem;">
+            No payment required. We'll email you when your batch is ready.
+          </p>
+
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <span class="logo-icon">🐷</span>
+            <span><span class="cosmic">Cosmic</span> <span class="pig">Pig</span> BBQ</span>
+          </a>
+          <p>Small-batch BBQ rubs crafted in Utah for pitmasters who demand out-of-this-world flavor.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram">📸</a>
+            <a href="#" class="social-link" aria-label="Facebook">👍</a>
+            <a href="#" class="social-link" aria-label="TikTok">🎵</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="products.html">Cosmic Dust</a></li>
+            <li><a href="products.html">Nebula Blend</a></li>
+            <li><a href="products.html">Solar Flare</a></li>
+            <li><a href="products.html">Dark Matter</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="find-us.html">Find Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Retailers</h4>
+          <ul>
+            <li><a href="find-us.html">BBQ Pitstop – Layton</a></li>
+            <li><a href="find-us.html">BBQ Pitstop – Lehi</a></li>
+            <li><a href="contact.html">Wholesale Inquiries</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Cosmic Pig BBQ. All rights reserved.</p>
+        <p>cosmicpigbbq.com</p>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
