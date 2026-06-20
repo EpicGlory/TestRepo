@@ -3,19 +3,19 @@
    ============================================= */
 
 :root {
-  --bg-deep: #08080f;
-  --bg-dark: #0f0f1a;
-  --bg-card: #141424;
-  --bg-card-hover: #1a1a30;
-  --border: #2a2a45;
-  --fire-orange: #ff6b35;
-  --fire-red: #e63946;
-  --gold: #ffd166;
-  --smoke: #8d8fa8;
+  --bg-deep: #000005;
+  --bg-dark: #06060f;
+  --bg-card: #0d0d1e;
+  --bg-card-hover: #13132a;
+  --border: #1a1a38;
+  --fire-orange: #00CFFF;
+  --fire-red: #BB44FF;
+  --gold: #FF0066;
+  --smoke: #8090b0;
   --text: #f0f0f8;
-  --text-muted: #9090b0;
-  --glow-orange: rgba(255, 107, 53, 0.3);
-  --glow-gold: rgba(255, 209, 102, 0.25);
+  --text-muted: #8890b8;
+  --glow-orange: rgba(0, 207, 255, 0.3);
+  --glow-gold: rgba(255, 0, 102, 0.2);
   --font-display: 'Barlow Condensed', 'Impact', sans-serif;
   --font-body: 'Barlow', 'Segoe UI', sans-serif;
   --radius: 12px;
@@ -267,6 +267,23 @@ section { padding: 5rem 0; }
   line-height: 1;
 }
 
+.hero-image-wrap {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto 2rem;
+  animation: fadeUp 0.8s ease both;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow:
+    0 0 60px rgba(0, 207, 255, 0.25),
+    0 0 120px rgba(187, 68, 255, 0.15),
+    0 0 6px rgba(255, 0, 102, 0.2);
+}
+
 .smoke-divider {
   position: absolute;
   bottom: 0;
@@ -353,7 +370,7 @@ section { padding: 5rem 0; }
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 3px;
-  background: linear-gradient(to right, var(--fire-orange), var(--fire-red));
+  background: linear-gradient(to right, var(--fire-orange), var(--fire-red), var(--gold));
   transform: scaleX(0);
   transition: transform var(--transition);
   transform-origin: left;
