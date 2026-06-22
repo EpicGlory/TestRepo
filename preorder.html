@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pre-Order – Cosmic Pig BBQ</title>
   <meta name="description" content="Reserve your Cosmic Pig BBQ rubs before the next batch ships. No charge now — we'll reach out when your order is ready." />
-  <!-- Cloudflare Web Analytics: paste your beacon script here from Cloudflare Dashboard → Analytics → Web Analytics -->
-  <!-- <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "YOUR_CF_ANALYTICS_TOKEN"}'></script> -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
@@ -29,7 +27,9 @@
         <ul class="nav-links" role="list">
           <li><a href="index.html">Home</a></li>
           <li><a href="products.html">Our Rubs</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
           <li><a href="find-us.html">Find Us</a></li>
+          <li><a href="wholesale.html">Wholesale</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="preorder.html" class="nav-cta">Pre-Order</a></li>
@@ -129,6 +129,25 @@
             <input type="text" id="city-state" name="city_state" placeholder="Salt Lake City, UT" />
           </div>
 
+          <!-- Pickup/Shipping Preference -->
+          <div class="form-group" style="margin-top:1rem;">
+            <label>Pickup / Shipping Preference</label>
+            <div class="qty-options" style="margin-top:0.6rem;">
+              <div class="qty-option">
+                <input type="radio" id="pref-pickup" name="delivery_preference" value="Local Pickup" />
+                <label for="pref-pickup" class="qty-label">Local Pickup</label>
+              </div>
+              <div class="qty-option">
+                <input type="radio" id="pref-shipping" name="delivery_preference" value="Shipping" />
+                <label for="pref-shipping" class="qty-label">Shipping</label>
+              </div>
+              <div class="qty-option">
+                <input type="radio" id="pref-notsure" name="delivery_preference" value="Not Sure Yet" />
+                <label for="pref-notsure" class="qty-label">Not Sure Yet</label>
+              </div>
+            </div>
+          </div>
+
           <hr style="border:none;border-top:1px solid var(--border);margin:2rem 0;" />
 
           <!-- Section 2: Rub Selection -->
@@ -168,7 +187,7 @@
                   <span class="rub-check">✓</span>
                   <span class="rub-label-text">
                     <strong>💥 Supernova</strong>
-                    <span>Explosive Heat BBQ Rub</span>
+                    <span>Scorching BBQ Rub</span>
                   </span>
                 </label>
               </div>
@@ -190,7 +209,7 @@
                   <span class="rub-check">✓</span>
                   <span class="rub-label-text">
                     <strong>🌑 Dark Matter</strong>
-                    <span>Activated Charcoal Beef Rub</span>
+                    <span>Black Garlic Beef Rub</span>
                   </span>
                 </label>
               </div>
@@ -274,8 +293,12 @@
             Submit Pre-Order Interest 🚀
           </button>
 
-          <p style="color:var(--text-muted);font-size:0.82rem;text-align:center;margin-top:1rem;">
-            No payment required. We'll email you when your batch is ready.
+          <p style="color:var(--text-muted);font-size:0.88rem;text-align:center;margin-top:1rem;line-height:1.5;">
+            Pre-orders are subject to availability. We will contact you to confirm pickup, shipping options, payment, and delivery timing.
+          </p>
+
+          <p style="color:var(--text-muted);font-size:0.82rem;text-align:center;margin-top:0.5rem;">
+            No payment required today. We'll email you when your batch is ready.
           </p>
 
         </form>
@@ -294,6 +317,7 @@
             <span><span class="cosmic">Cosmic</span> <span class="pig">Pig</span> BBQ</span>
           </a>
           <p>Small-batch BBQ rubs &amp; seasonings crafted in Kaysville, Utah. Shake it. Rub it. Love it.</p>
+          <p>@COSMICPIGBBQ · Kaysville, Utah</p>
           <div class="social-links">
             <a href="#" class="social-link" aria-label="Instagram">📸</a>
             <a href="#" class="social-link" aria-label="Facebook">👍</a>
@@ -316,21 +340,23 @@
           <h4>Company</h4>
           <ul>
             <li><a href="about.html">About Us</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
             <li><a href="find-us.html">Find Us</a></li>
+            <li><a href="wholesale.html">Wholesale</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Retailers</h4>
           <ul>
-            <li><a href="find-us.html">BBQ Pitstop – Layton</a></li>
-            <li><a href="find-us.html">BBQ Pitstop – Lehi</a></li>
-            <li><a href="contact.html">Wholesale Inquiries</a></li>
+            <li><a href="find-us.html">BBQ Pit Stop – Layton</a></li>
+            <li><a href="find-us.html">BBQ Pit Stop – Lehi</a></li>
+            <li><a href="wholesale.html">Wholesale Inquiries</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2025 Cosmic Pig BBQ. All rights reserved.</p>
+        <p>&copy; 2026 Cosmic Pig BBQ. All rights reserved.</p>
         <p>cosmicpigbbq.com</p>
       </div>
     </div>
