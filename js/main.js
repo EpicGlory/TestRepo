@@ -113,24 +113,29 @@
   els.forEach(el => io.observe(el));
 })();
 
-// ---- Contact form ----
+// ---- Contact form (Formspree — real action set on form element) ----
+// The form uses action="https://formspree.io/f/..." so it submits natively.
+// JS handler kept only for UX feedback if JS is available and form has no action.
 (function contactForm() {
   const form = document.getElementById('contact-form');
   if (!form) return;
-
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    const btn = form.querySelector('button[type="submit"]');
-    btn.textContent = 'Message Sent! 🚀';
-    btn.disabled = true;
-    btn.style.background = 'rgba(100,200,100,0.2)';
-    btn.style.borderColor = '#6cc26c';
-    btn.style.color = '#6cc26c';
-    form.reset();
-    setTimeout(() => {
-      btn.textContent = 'Send Message';
-      btn.disabled = false;
-      btn.style = '';
-    }, 4000);
-  });
+  // Only intercept if no real Formspree ID is set yet
+  const action = form.getAttribute('action') || '';
+  if (action.includes('YOUR_CONTACT_FORM_ID')) {
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const btn = form.querySelector('button[type="submit"]');
+      btn.textContent = 'Message Sent! 🚀';
+      btn.disabled = true;
+      btn.style.background = 'rgba(100,200,100,0.2)';
+      btn.style.borderColor = '#6cc26c';
+      btn.style.color = '#6cc26c';
+      form.reset();
+      setTimeout(() => {
+        btn.textContent = 'Send Message 🚀';
+        btn.disabled = false;
+        btn.style = '';
+      }, 4000);
+    });
+  }
 })();
