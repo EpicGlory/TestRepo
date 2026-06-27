@@ -1739,6 +1739,51 @@ section { padding: 5rem 0; }
   gap: 0.4rem;
 }
 
+/* ---- Recipe Image Placeholder: Bacon variant ---- */
+.recipe-img-placeholder--bacon {
+  background: linear-gradient(135deg, #0a0a1e 0%, #1a1005 50%, #0a0a1e 100%);
+  border-bottom: 1px solid rgba(255,140,0,0.2);
+  box-shadow: inset 0 0 30px rgba(255,140,0,0.05), 0 0 0 1px rgba(255,140,0,0.1);
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+/* ---- Recipe Image Placeholder: Meatballs variant ---- */
+.recipe-img-placeholder--meatballs {
+  background: linear-gradient(135deg, #0a0a1e 0%, #150d0d 50%, #0a0a1e 100%);
+  border-bottom: 1px solid rgba(187,68,255,0.2);
+  box-shadow: inset 0 0 30px rgba(187,68,255,0.05), 0 0 0 1px rgba(187,68,255,0.1);
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+/* ---- Recipe Image Placeholder: Dip variant ---- */
+.recipe-img-placeholder--dip {
+  background: linear-gradient(135deg, #0a0a1e 0%, #14120a 50%, #0a0a1e 100%);
+  border-bottom: 1px solid rgba(255,200,0,0.2);
+  box-shadow: inset 0 0 30px rgba(255,200,0,0.05), 0 0 0 1px rgba(255,200,0,0.1);
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+/* ---- Recipe Image Placeholder: Sweet Potato variant ---- */
+.recipe-img-placeholder--sweetpotato {
+  background: linear-gradient(135deg, #0a0a1e 0%, #1a0e05 50%, #0a0a1e 100%);
+  border-bottom: 1px solid rgba(255,100,0,0.2);
+  box-shadow: inset 0 0 30px rgba(255,100,0,0.05), 0 0 0 1px rgba(255,100,0,0.1);
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+/* ---- Recipe Image Placeholder: Beans variant ---- */
+.recipe-img-placeholder--beans {
+  background: linear-gradient(135deg, #0a0a1e 0%, #1a0d0d 50%, #0a0a1e 100%);
+  border-bottom: 1px solid rgba(200,80,0,0.2);
+  box-shadow: inset 0 0 30px rgba(200,80,0,0.05), 0 0 0 1px rgba(200,80,0,0.1);
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
 /* ---- Recipe badge row (primary + secondary badges) ---- */
 .recipe-badge-row {
   display: flex;
