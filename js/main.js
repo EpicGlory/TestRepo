@@ -2,6 +2,30 @@
 // COSMIC PIG BBQ - Main JS
 // =============================================
 
+// ---- Recipe details: auto-open when hash link is clicked or page loads with hash ----
+(function initRecipeToggle() {
+  function openRecipeDetails(hash) {
+    if (!hash) return;
+    var target = document.getElementById(hash.replace('#', ''));
+    if (!target) return;
+    var details = target.querySelector('.full-recipe-details');
+    if (details) {
+      details.open = true;
+      setTimeout(function() { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 50);
+    }
+  }
+
+  // On page load with a hash
+  if (window.location.hash) openRecipeDetails(window.location.hash);
+
+  // On recipe card "View Recipe" clicks
+  document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+    link.addEventListener('click', function() {
+      openRecipeDetails(this.getAttribute('href'));
+    });
+  });
+})();
+
 // ---- Starfield ----
 (function initStars() {
   const canvas = document.getElementById('stars-canvas');

@@ -1604,10 +1604,9 @@ section { padding: 5rem 0; }
 }
 
 .recipe-steps li {
-  display: grid;
-  grid-template-columns: 2rem 1fr;
-  gap: 0.75rem;
-  align-items: start;
+  position: relative;
+  padding-left: 2.75rem;
+  display: block;
   font-size: 0.95rem;
   color: var(--text);
   line-height: 1.6;
@@ -1616,6 +1615,9 @@ section { padding: 5rem 0; }
 
 .recipe-steps li::before {
   content: counter(step-counter);
+  position: absolute;
+  left: 0;
+  top: 0.05rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1628,8 +1630,6 @@ section { padding: 5rem 0; }
   font-size: 0.9rem;
   font-weight: 700;
   color: var(--fire-orange);
-  flex-shrink: 0;
-  margin-top: 0.1rem;
 }
 
 .step-title {
@@ -1913,8 +1913,7 @@ section { padding: 5rem 0; }
 
 @media (max-width: 600px) {
   .recipe-steps li {
-    grid-template-columns: 1.75rem 1fr;
-    gap: 0.5rem;
+    padding-left: 2.25rem;
   }
 
   .recipe-steps li::before {
@@ -1925,6 +1924,56 @@ section { padding: 5rem 0; }
 
   .full-recipe-meta {
     gap: 1rem;
+  }
+}
+
+/* ---- Full Recipe Toggle (details/summary) ---- */
+.full-recipe-details {
+  border-top: 1px solid var(--border);
+}
+
+.full-recipe-details > summary {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--fire-orange);
+  list-style: none;
+  user-select: none;
+  transition: background var(--transition), color var(--transition);
+}
+
+.full-recipe-details > summary::-webkit-details-marker { display: none; }
+.full-recipe-details > summary::marker { display: none; }
+
+.full-recipe-details > summary:hover {
+  background: rgba(0,207,255,0.05);
+  color: var(--text);
+}
+
+.full-recipe-details > summary .toggle-icon {
+  display: inline-block;
+  transition: transform 0.25s ease;
+  font-style: normal;
+}
+
+.full-recipe-details[open] > summary .toggle-icon {
+  transform: rotate(180deg);
+}
+
+.full-recipe-details[open] > summary {
+  border-bottom: 1px solid var(--border);
+}
+
+@media (max-width: 900px) {
+  .full-recipe-details > summary {
+    padding: 0.85rem 1.5rem;
   }
 }
 
