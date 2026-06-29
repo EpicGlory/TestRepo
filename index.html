@@ -3,17 +3,61 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cosmic Pig BBQ | Small-Batch BBQ Rubs Made in Utah</title>
-  <meta name="description" content="Cosmic Pig BBQ makes small-batch BBQ rubs and seasonings in Kaysville, Utah. Find bold rubs for brisket, ribs, wings, chicken, burgers, tacos, pork, vegetables, and backyard BBQ." />
-  <meta property="og:title" content="Cosmic Pig BBQ | Small-Batch BBQ Rubs Made in Utah" />
-  <meta property="og:description" content="Cosmic Pig BBQ makes small-batch BBQ rubs and seasonings in Kaysville, Utah. Big Bang Flavor for your BBQ." />
+  <title>Cosmic Pig BBQ | Utah BBQ Rubs & Seasonings — Big Bang Flavor</title>
+  <meta name="description" content="Shop small-batch BBQ rubs and seasonings made in Utah. Cosmic Pig BBQ rubs for brisket, wings, ribs, chicken, burgers, steak, pork, and backyard BBQ. Available at BBQ Pit Stop in Layton and Lehi." />
+  <meta property="og:title" content="Cosmic Pig BBQ | Utah BBQ Rubs & Seasonings" />
+  <meta property="og:description" content="Small-batch BBQ rubs and seasonings made in Kaysville, Utah. Big Bang Flavor for brisket, wings, ribs, chicken, burgers, steak, and backyard BBQ." />
   <meta property="og:image" content="images/hero.png" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Cosmic Pig BBQ | Small-Batch BBQ Rubs Made in Utah" />
-  <meta name="twitter:description" content="Small-batch BBQ rubs made in Kaysville, Utah. Big Bang Flavor for your BBQ." />
+  <meta name="twitter:title" content="Cosmic Pig BBQ | Utah BBQ Rubs & Seasonings" />
+  <meta name="twitter:description" content="Small-batch BBQ rubs made in Kaysville, Utah. Big Bang Flavor for brisket, wings, ribs, chicken, burgers, steak, and backyard BBQ." />
   <!-- Cloudflare Web Analytics: paste your beacon script here from Cloudflare Dashboard → Analytics → Web Analytics -->
   <!-- <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "YOUR_CF_ANALYTICS_TOKEN"}'></script> -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "Cosmic Pig BBQ",
+        "url": "https://cosmicpigbbq.com",
+        "logo": "https://cosmicpigbbq.com/images/hero.png",
+        "description": "Cosmic Pig BBQ is a family-owned Utah BBQ rub and seasoning company making small-batch rubs for brisket, wings, ribs, chicken, burgers, steak, pork, and backyard BBQ.",
+        "slogan": "Big Bang Flavor for Your BBQ",
+        "foundingLocation": "Kaysville, Utah",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Kaysville",
+          "addressRegion": "UT",
+          "addressCountry": "US"
+        },
+        "email": "support@cosmicpigbbq.com",
+        "sameAs": [
+          "https://www.instagram.com/cosmicpigbbq",
+          "https://www.facebook.com/cosmicpigbbq",
+          "https://www.tiktok.com/@cosmicpigbbq"
+        ]
+      },
+      {
+        "@type": "LocalBusiness",
+        "name": "Cosmic Pig BBQ",
+        "description": "Family-owned small-batch BBQ rub and seasoning company in Kaysville, Utah.",
+        "url": "https://cosmicpigbbq.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Kaysville",
+          "addressRegion": "UT",
+          "postalCode": "84037",
+          "addressCountry": "US"
+        },
+        "email": "support@cosmicpigbbq.com",
+        "priceRange": "$",
+        "servesCuisine": "BBQ"
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
@@ -35,8 +79,9 @@
           <span><span class="cosmic">Cosmic</span> <span class="pig">Pig</span> BBQ</span>
         </a>
         <ul class="nav-links" role="list">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
           <li><a href="products.html">Our Rubs</a></li>
+          <li><a href="find-your-flavor.html">Find Your Flavor</a></li>
           <li><a href="recipes.html">Recipes</a></li>
           <li><a href="find-us.html">Find Us</a></li>
           <li><a href="wholesale.html">Wholesale</a></li>
@@ -63,11 +108,11 @@
           </div>
           <h1>Small-Batch BBQ Rubs Made in Kaysville, Utah</h1>
           <p class="hero-sub">
-            Big Bang Flavor for brisket, ribs, wings, burgers, tacos, chicken, pork, vegetables, and backyard BBQ.
+            Big Bang Flavor for brisket, ribs, wings, burgers, steak, chicken, pork, vegetables, and backyard BBQ. Seven rubs — one for every cook.
           </p>
           <div class="hero-actions">
-            <a href="preorder.html" class="btn btn-primary">Pre-Order Rubs &rarr;</a>
-            <a href="find-us.html" class="btn btn-outline">Find Us at BBQ Pitstop</a>
+            <a href="find-your-flavor.html" class="btn btn-primary">Find Your Flavor &rarr;</a>
+            <a href="find-us.html" class="btn btn-outline">Find Us at BBQ Pit Stop</a>
           </div>
         </div>
       </div>
@@ -127,6 +172,62 @@
         </div>
       </div>
     </div>
+
+    <!-- SHOP BY WHAT YOU'RE COOKING -->
+    <section class="shop-by-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Find the Right Rub</span>
+          <h2>Shop by What You're Cooking</h2>
+          <p>Not sure which rub to pick? Start here.</p>
+        </div>
+        <div class="cooking-grid reveal">
+          <a href="products.html#black-hole-brisket" class="cooking-card">
+            <span class="cooking-card-icon">🥩</span>
+            <span class="cooking-card-label">Brisket</span>
+            <span class="cooking-card-rubs">Black Hole Brisket · Dark Matter · Moo-nar Landing</span>
+          </a>
+          <a href="products.html#cosmic-wingman" class="cooking-card">
+            <span class="cooking-card-icon">🍗</span>
+            <span class="cooking-card-label">Wings</span>
+            <span class="cooking-card-rubs">Cosmic Wingman · Solar Flare · Supernova</span>
+          </a>
+          <a href="products.html#solar-flare" class="cooking-card">
+            <span class="cooking-card-icon">🍖</span>
+            <span class="cooking-card-label">Ribs</span>
+            <span class="cooking-card-rubs">Solar Flare · Supernova · Cosmic Dust</span>
+          </a>
+          <a href="products.html#dark-matter" class="cooking-card">
+            <span class="cooking-card-icon">🍔</span>
+            <span class="cooking-card-label">Burgers</span>
+            <span class="cooking-card-rubs">Dark Matter · Moo-nar Landing · Cosmic Dust</span>
+          </a>
+          <a href="products.html#dark-matter" class="cooking-card">
+            <span class="cooking-card-icon">🥩</span>
+            <span class="cooking-card-label">Steak</span>
+            <span class="cooking-card-rubs">Dark Matter · Moo-nar Landing · Black Hole Brisket</span>
+          </a>
+          <a href="products.html#cosmic-wingman" class="cooking-card">
+            <span class="cooking-card-icon">🐔</span>
+            <span class="cooking-card-label">Chicken</span>
+            <span class="cooking-card-rubs">Cosmic Wingman · Solar Flare · Cosmic Dust</span>
+          </a>
+          <a href="products.html#cosmic-dust" class="cooking-card">
+            <span class="cooking-card-icon">🥦</span>
+            <span class="cooking-card-label">Veggies &amp; Sides</span>
+            <span class="cooking-card-rubs">Cosmic Dust · Cosmic Wingman · Solar Flare</span>
+          </a>
+          <a href="find-your-flavor.html?filter=nosuggar" class="cooking-card">
+            <span class="cooking-card-icon" style="color:#00d97a;">✓</span>
+            <span class="cooking-card-label">No Sugar</span>
+            <span class="cooking-card-rubs">Black Hole Brisket · Dark Matter · Moo-nar Landing</span>
+          </a>
+        </div>
+        <div style="text-align:center;margin-top:1.5rem;" class="reveal">
+          <a href="find-your-flavor.html" class="btn btn-outline">Full Flavor Finder &rarr;</a>
+        </div>
+      </div>
+    </section>
 
     <!-- FEATURED RUBS -->
     <section>
@@ -287,6 +388,9 @@
               on real pits, and dialed in to work for backyard pitmasters and competition
               cooks alike.
             </p>
+            <p>
+              Cosmic Pig BBQ is a family-owned Utah BBQ rub and seasoning company bringing Big Bang Flavor to backyard cooks, smokers, grillers, and BBQ lovers across Northern Utah and beyond.
+            </p>
             <a href="about.html" class="btn btn-outline" style="margin-top:0.5rem;">Read Our Story &rarr;</a>
           </div>
         </div>
@@ -303,63 +407,81 @@
         </div>
         <div class="recipe-grid">
 
-          <article class="recipe-card reveal">
-            <div class="recipe-img-placeholder">🔥</div>
+          <article class="recipe-card reveal recipe-card--live">
+            <div class="recipe-img-placeholder recipe-img-placeholder--corn">
+              <span class="recipe-placeholder-emoji">🌽</span>
+              <span class="recipe-placeholder-text">Photo coming soon</span>
+            </div>
             <div class="recipe-card-body">
               <span class="recipe-rub-badge">Cosmic Wingman</span>
-              <h3>Cosmic Wingman Mexican Street Corn</h3>
-              <p>Citrus chile seasoning meets grilled street corn</p>
-              <a href="recipes.html" class="btn btn-outline btn-sm btn-disabled" aria-disabled="true">Coming Soon</a>
+              <h3>Mexican Street Corn Cups</h3>
+              <p>Citrus chile seasoning meets charred corn in a creamy cotija sauce. Ready in 15 minutes.</p>
+              <a href="recipes.html#mexican-street-corn" class="btn btn-sm">View Recipe &darr;</a>
             </div>
           </article>
 
-          <article class="recipe-card reveal">
-            <div class="recipe-img-placeholder">🔥</div>
+          <article class="recipe-card reveal recipe-card--live">
+            <div class="recipe-img-placeholder recipe-img-placeholder--mac">
+              <span class="recipe-placeholder-emoji">🧀</span>
+              <span class="recipe-placeholder-text">Photo coming soon</span>
+            </div>
             <div class="recipe-card-body">
               <span class="recipe-rub-badge">Solar Flare</span>
-              <h3>Solar Flare Loaded Mac &amp; Cheese</h3>
-              <p>Sweet heat chipotle rub stirred into creamy mac</p>
-              <a href="recipes.html" class="btn btn-outline btn-sm btn-disabled" aria-disabled="true">Coming Soon</a>
+              <h3>Loaded Mac &amp; Cheese</h3>
+              <p>Sweet heat chipotle rub stirred into rich, creamy, bacon-loaded mac. One pan. Zero leftovers.</p>
+              <a href="recipes.html#loaded-mac" class="btn btn-sm">View Recipe &darr;</a>
             </div>
           </article>
 
-          <article class="recipe-card reveal">
-            <div class="recipe-img-placeholder">🔥</div>
-            <div class="recipe-card-body">
-              <span class="recipe-rub-badge">Black Hole Brisket</span>
-              <h3>Black Hole Brisket Burgers</h3>
-              <p>Texas-style seasoned smash burgers</p>
-              <a href="recipes.html" class="btn btn-outline btn-sm btn-disabled" aria-disabled="true">Coming Soon</a>
+          <article class="recipe-card reveal recipe-card--live">
+            <div class="recipe-img-placeholder recipe-img-placeholder--bacon">
+              <span class="recipe-placeholder-emoji">🥓</span>
+              <span class="recipe-placeholder-text">Photo coming soon</span>
             </div>
-          </article>
-
-          <article class="recipe-card reveal">
-            <div class="recipe-img-placeholder">🔥</div>
-            <div class="recipe-card-body">
-              <span class="recipe-rub-badge">Cosmic Wingman</span>
-              <h3>Cosmic Wingman Wings</h3>
-              <p>Crispy wings with citrus chile kick</p>
-              <a href="recipes.html" class="btn btn-outline btn-sm btn-disabled" aria-disabled="true">Coming Soon</a>
-            </div>
-          </article>
-
-          <article class="recipe-card reveal">
-            <div class="recipe-img-placeholder">🔥</div>
-            <div class="recipe-card-body">
-              <span class="recipe-rub-badge">Dark Matter</span>
-              <h3>Dark Matter Steak Bites</h3>
-              <p>Black garlic crusted beef bites</p>
-              <a href="recipes.html" class="btn btn-outline btn-sm btn-disabled" aria-disabled="true">Coming Soon</a>
-            </div>
-          </article>
-
-          <article class="recipe-card reveal">
-            <div class="recipe-img-placeholder">🔥</div>
             <div class="recipe-card-body">
               <span class="recipe-rub-badge">Solar Flare</span>
-              <h3>Solar Flare Ribs</h3>
-              <p>Sweet smoky chipotle pork ribs</p>
-              <a href="recipes.html" class="btn btn-outline btn-sm btn-disabled" aria-disabled="true">Coming Soon</a>
+              <h3>Solar Flare Candied Bacon</h3>
+              <p>Thick-cut bacon glazed in brown sugar and Solar Flare. Sweet, sticky, and dangerously addictive.</p>
+              <a href="recipes.html#candied-bacon" class="btn btn-sm">View Recipe &darr;</a>
+            </div>
+          </article>
+
+          <article class="recipe-card reveal recipe-card--live">
+            <div class="recipe-img-placeholder recipe-img-placeholder--meatballs">
+              <span class="recipe-placeholder-emoji">🍖</span>
+              <span class="recipe-placeholder-text">Photo coming soon</span>
+            </div>
+            <div class="recipe-card-body">
+              <span class="recipe-rub-badge">Solar Flare</span>
+              <h3>Solar Flare BBQ Meatballs</h3>
+              <p>Frozen meatballs in a sweet heat Solar Flare glaze. The easiest party food you'll ever make.</p>
+              <a href="recipes.html#bbq-meatballs" class="btn btn-sm">View Recipe &darr;</a>
+            </div>
+          </article>
+
+          <article class="recipe-card reveal recipe-card--live">
+            <div class="recipe-img-placeholder recipe-img-placeholder--dip">
+              <span class="recipe-placeholder-emoji">🧀</span>
+              <span class="recipe-placeholder-text">Photo coming soon</span>
+            </div>
+            <div class="recipe-card-body">
+              <span class="recipe-rub-badge">Solar Flare</span>
+              <h3>Sweet Heat Cream Cheese Dip</h3>
+              <p>Warm, bubbly cream cheese dip with a sweet chipotle kick. Serve with crackers, chips, or pretzels.</p>
+              <a href="recipes.html#cream-cheese-dip" class="btn btn-sm">View Recipe &darr;</a>
+            </div>
+          </article>
+
+          <article class="recipe-card reveal recipe-card--live">
+            <div class="recipe-img-placeholder recipe-img-placeholder--beans">
+              <span class="recipe-placeholder-emoji">🫘</span>
+              <span class="recipe-placeholder-text">Photo coming soon</span>
+            </div>
+            <div class="recipe-card-body">
+              <span class="recipe-rub-badge">Solar Flare</span>
+              <h3>Solar Flare BBQ Baked Beans</h3>
+              <p>Thick smoky baked beans loaded with bacon and Solar Flare. The ultimate BBQ side dish.</p>
+              <a href="recipes.html#bbq-baked-beans" class="btn btn-sm">View Recipe &darr;</a>
             </div>
           </article>
 
@@ -444,19 +566,20 @@
         <div class="footer-col">
           <h4>Products</h4>
           <ul>
-            <li><a href="products.html">Cosmic Dust</a></li>
-            <li><a href="products.html">Solar Flare</a></li>
-            <li><a href="products.html">Supernova</a></li>
-            <li><a href="products.html">Moo-Nar Landing</a></li>
-            <li><a href="products.html">Dark Matter</a></li>
-            <li><a href="products.html">Cosmic Wingman</a></li>
-            <li><a href="products.html">Black Hole Brisket</a></li>
+            <li><a href="products.html#cosmic-dust">Cosmic Dust</a></li>
+            <li><a href="products.html#cosmic-wingman">Cosmic Wingman</a></li>
+            <li><a href="products.html#solar-flare">Solar Flare</a></li>
+            <li><a href="products.html#supernova">Supernova</a></li>
+            <li><a href="products.html#black-hole-brisket">Black Hole Brisket</a></li>
+            <li><a href="products.html#dark-matter">Dark Matter</a></li>
+            <li><a href="products.html#moonar-landing">Moo-Nar Landing</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Company</h4>
           <ul>
             <li><a href="about.html">About Us</a></li>
+            <li><a href="find-your-flavor.html">Find Your Flavor</a></li>
             <li><a href="recipes.html">Recipes</a></li>
             <li><a href="find-us.html">Find Us</a></li>
             <li><a href="wholesale.html">Wholesale</a></li>
