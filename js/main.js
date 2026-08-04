@@ -137,6 +137,51 @@
   els.forEach(el => io.observe(el));
 })();
 
+// ---- Pre-order form → Google Apps Script → Google Sheet ----
+(function preorderForm() {
+  const form = document.getElementById('preorder-form');
+  if (!form) return;
+
+  // Paste your Apps Script Web App URL here after deploying scripts/preorder-sheet.gs
+  const PREORDER_SCRIPT_URL = 'YOUR_APPS_SCRIPT_URL';
+
+  const btn = form.querySelector('button[type="submit"]');
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    // Collect all fields; handle multi-value checkboxes (rubs)
+    const fd = new FormData(form);
+    const data = {};
+    fd.forEach(function(val, key) {
+      if (key === 'rubs') {
+        data.rubs = data.rubs ? data.rubs + ', ' + val : val;
+      } else {
+        data[key] = val;
+      }
+    });
+
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+
+    if (PREORDER_SCRIPT_URL !== 'YOUR_APPS_SCRIPT_URL') {
+      try {
+        // no-cors: request is sent, response is opaque — data still writes to sheet
+        await fetch(PREORDER_SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain' },
+          body: JSON.stringify(data)
+        });
+      } catch (_) {
+        // fetch may throw on opaque response; submission still succeeded
+      }
+    }
+
+    window.location.href = 'preorder-thanks.html';
+  });
+})();
+
 // ---- Contact form (Formspree — real action set on form element) ----
 // The form uses action="https://formspree.io/f/..." so it submits natively.
 // JS handler kept only for UX feedback if JS is available and form has no action.
