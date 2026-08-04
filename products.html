@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop BBQ Rubs & Seasonings | Cosmic Pig BBQ — Made in Utah</title>
+  <meta name="description" content="Shop small-batch BBQ rubs for brisket, wings, ribs, chicken, burgers, steak, and pork. Seven rubs and seasonings made in Utah by Cosmic Pig BBQ. Available at BBQ Pit Stop Layton and Lehi." />
+  <meta property="og:title" content="Shop BBQ Rubs & Seasonings | Cosmic Pig BBQ" />
+  <meta property="og:description" content="Seven small-batch BBQ rubs and seasonings for brisket, wings, ribs, chicken, burgers, steak, and pork. Made in Utah." />
+  <meta property="og:image" content="images/hero.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Shop BBQ Rubs & Seasonings | Cosmic Pig BBQ" />
+  <meta name="twitter:description" content="Seven small-batch BBQ rubs for brisket, wings, ribs, chicken, burgers, steak, and pork. Made in Utah." />
+  <!-- Cloudflare Web Analytics: paste your beacon script here from Cloudflare Dashboard → Analytics → Web Analytics -->
+  <!-- <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "YOUR_CF_ANALYTICS_TOKEN"}'></script> -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "Cosmic Pig BBQ",
+        "url": "https://cosmicpigbbq.com",
+        "logo": "https://cosmicpigbbq.com/images/hero.png",
+        "description": "Small-batch BBQ rubs and seasonings made in Kaysville, Utah.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Kaysville",
+          "addressRegion": "UT",
+          "addressCountry": "US"
+        },
+        "email": "support@cosmicpigbbq.com"
+      },
+      {
+        "@type": "ItemList",
+        "name": "Cosmic Pig BBQ Rubs & Seasonings",
+        "description": "Small-batch BBQ rubs and seasonings made in Utah",
+        "url": "https://cosmicpigbbq.com/products.html",
+        "itemListElement": [
+          {"@type": "ListItem","position": 1,"name": "Cosmic Dust — All-Purpose SPG+ Seasoning","url": "https://cosmicpigbbq.com/products.html#cosmic-dust"},
+          {"@type": "ListItem","position": 2,"name": "Cosmic Wingman — Citrus Chile Chicken Rub","url": "https://cosmicpigbbq.com/products.html#cosmic-wingman"},
+          {"@type": "ListItem","position": 3,"name": "Solar Flare — Sweet Heat BBQ Rub","url": "https://cosmicpigbbq.com/products.html#solar-flare"},
+          {"@type": "ListItem","position": 4,"name": "Black Hole Brisket — Texas Style Brisket Rub","url": "https://cosmicpigbbq.com/products.html#black-hole-brisket"},
+          {"@type": "ListItem","position": 5,"name": "Dark Matter — Black Garlic Beef Rub","url": "https://cosmicpigbbq.com/products.html#dark-matter"},
+          {"@type": "ListItem","position": 6,"name": "Moo-nar Landing — Savory Beef Rub","url": "https://cosmicpigbbq.com/products.html#moonar-landing"},
+          {"@type": "ListItem","position": 7,"name": "Supernova — Hot & Sweet BBQ Rub","url": "https://cosmicpigbbq.com/products.html#supernova"}
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐷</text></svg>" />
+</head>
+<body>
+
+<canvas id="stars-canvas" aria-hidden="true"></canvas>
+
+<div class="page-content">
+
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Main navigation">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">🐷</span>
+          <span><span class="cosmic">Cosmic</span> <span class="pig">Pig</span> BBQ</span>
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html" class="active">Our Rubs</a></li>
+          <li><a href="find-your-flavor.html">Find Your Flavor</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="find-us.html">Find Us</a></li>
+          <li><a href="wholesale.html">Wholesale</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="preorder.html" class="nav-cta">Pre-Order</a></li>
+        </ul>
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="page-header">
+      <div class="container">
+        <span class="section-label">The Lineup</span>
+        <h1>BBQ Rubs &amp; Seasonings</h1>
+        <p>Seven small-batch rubs made in Utah — for brisket, wings, ribs, burgers, steak, chicken, pork, vegetables, and everyday cooking. <a href="find-your-flavor.html" style="color:var(--fire-orange);">Not sure which to choose? Find Your Flavor &rarr;</a></p>
+      </div>
+    </div>
+
+    <!-- WHERE TO GET THEM -->
+    <section style="padding:2rem 0 0;">
+      <div class="container">
+        <div class="preorder-intro reveal">
+          <span class="preorder-intro-icon">🏪</span>
+          <div>
+            <h3>Where to Get Them</h3>
+            <p>10–11 oz jars available at <a href="find-us.html">BBQ Pit Stop in Layton and Lehi, Utah</a>. Pre-orders available for local pickup and shipping inquiries.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="products-full">
+      <div class="container">
+        <div class="products-grid">
+
+          <!-- Cosmic Dust -->
+          <article id="cosmic-dust" class="product-card product-card-full reveal">
+            <div class="product-label-wrap">
+              <img src="images/labels/cosmic_dust_preview.png" alt="Cosmic Dust All-Purpose SPG+ Seasoning label — Cosmic Pig BBQ" loading="lazy" />
+            </div>
+            <span class="product-size">11 oz (312g)</span>
+            <span class="product-badge badge-mild">All-Purpose SPG+</span>
+            <h3>Cosmic Dust</h3>
+            <p>Cosmic Dust is our all-purpose SPG+ seasoning built for everyday cooking. A garlic-forward blend of salt, pepper, onion, herbs, and smoky seasoning that works on almost anything — from chicken and pork to eggs, fries, and backyard burgers.</p>
+            <div class="heat-level">
+              <span>Heat: Mild</span>
+              <div class="heat-dots">
+                <span class="heat-dot active"></span>
+                <span class="heat-dot"></span>
+                <span class="heat-dot"></span>
+                <span class="heat-dot"></span>
+                <span class="heat-dot"></span>
+              </div>
+            </div>
+            <div class="product-uses">
+              <span class="use-tag">Chicken</span>
+              <span class="use-tag">Pork</span>
+              <span class="use-tag">Burgers</span>
+              <span class="use-tag">Vegetables</span>
+              <span class="use-tag">Potatoes</span>
+              <span class="use-tag">Eggs</span>
+              <span class="use-tag">Fries</span>
+            </div>
+            <div class="product-detail">
+              <p><strong style="color:var(--text);">Flavor Profile:</strong> Savory, garlic-forward, balanced, all-purpose</p>
+              <p><strong style="color:var(--text);">Best On:</strong> Chicken, pork, burgers, vegetables, potatoes, eggs, fries, and everyday cooking</p>
+            </div>
+            <div class="product-also-try">
+              <span class="also-try-label">Also pair with:</span>
+              <a href="#cosmic-wingman" class="also-try-link">Cosmic Wingman</a>
+              <a href="#solar-flare" class="also-try-link">Solar Flare</a>
+            </div>
+            <div class="product-card-ctas">
+              <a href="preorder.html" class="btn btn-primary btn-sm">Pre-Order</a>
+              <a href="find-us.html" class="btn btn-outline btn-sm">Where to Buy</a>
+              <a href="wholesale.html" class="btn btn-outline btn-sm">Wholesale</a>
+            </div>
+          </article>
+
+          <!-- Cosmic Wingman -->
+          <article id="cosmic-wingman" class="product-card product-card-full reveal">
+            <div class="product-label-wrap">
+              <img src="images/labels/cosmic_wingman_preview.png" alt="Cosmic Wingman Citrus Chile Chicken Rub label — Cosmic Pig BBQ" loading="lazy" />
+            </div>
+            <span class="product-size">11 oz (312g)</span>
+            <span class="product-badge badge-mild">Citrus Chile Chicken Rub</span>
+            <h3>Cosmic Wingman</h3>
+            <p>Cosmic Wingman is a citrus chile chicken rub made for wings, grilled chicken, smoked thighs, tacos, shrimp, corn, and vegetables. Bright lime flavor, chile warmth, garlic, and BBQ-friendly seasoning make it a go-to for chicken night and wing night.</p>
+            <div class="heat-level">
+              <span>Heat: Mild–Medium</span>
+              <div class="heat-dots">
+                <span class="heat-dot active"></span>
+                <span class="heat-dot active"></span>
+                <span class="heat-dot"></span>
+                <span class="heat-dot"></span>
+                <span class="heat-dot"></span>
+              </div>
+            </div>
+            <div class="product-uses">
+              <span class="use-tag">Wings</span>
+              <span class="use-tag">Chicken</span>
+              <span class="use-tag">Thighs</span>
+              <span class="use-tag">Tacos</span>
+              <span class="use-tag">Shrimp</span>
+              <span class="use-tag">Street Corn</span>
+              <span class="use-tag">Vegetables</span>
+            </div>
+            <div class="product-detail">
+              <p><strong style="color:var(--text);">Flavor Profile:</strong> Citrus chile, savory, bright, lightly smoky</p>
+              <p><strong style="color:var(--text);">Best On:</strong> Wings, chicken thighs, tacos, shrimp, corn, vegetables, sour cream dip</p>
+            </div>
+            <div class="product-recipe-links">
+              <p>Recipe Ideas:</p>
+              <a href="recipes.html#mexican-street-corn">Mexican Street Corn Cups &rarr;</a>
+            </div>
+            <div class="product-also-try">
+              <span class="also-try-label">Also pair with:</span>
+              <a href="#solar-flare" class="also-try-link">Solar Flare</a>
+              <a href="#supernova" class="also-try-link">Supernova (for hotter wings)</a>
+            </div>
+            <div class="product-card-ctas">
+              <a href="preorder.html" class="btn btn-primary btn-sm">Pre-Order</a>
+              <a href="find-us.html" class="btn btn-outline btn-sm">Where to Buy</a>
+              <a href="wholesale.html" class="btn btn-outline btn-sm">Wholesale</a>
+            </div>
+          </article>
+
+          <!-- Solar Flare -->
+          <article id="solar-flare" class="product-card product-card-full reveal">
+            <div class="product-label-wrap">
+              <img src="images/labels/solar_flare_preview.png" alt="Solar Flare Sweet Heat BBQ Rub label — Cosmic Pig BBQ" loading="lazy" />
+            </div>
+            <span class="product-size">11 oz (312g)</span>
+            <span class="product-badge badge-medium">Sweet Heat BBQ Rub</span>
+            <h3>Solar Flare</h3>
+            <p>Solar Flare is a sweet heat BBQ rub with smoky paprika, chipotle, ancho chile, garlic, onion, and brown sugar. Built for ribs, pork, chicken, burgers, and BBQ sides when you want a sweet, smoky rub with just enough heat to keep things interesting.</p>
+            <div class="heat-level">
+              <span>Heat: Medium</span>
+              <div class="heat-dots">
+                <span class="heat-dot active"></span>
+                <span class="heat-dot active"></span>
+                <span class="heat-dot active"></span>
+                <span class="heat-dot"></span>
+                <span class="heat-dot"></span>
+              </div>
+            </div>
+            <div class="product-uses">
+              <span class="use-tag">Ribs</span>
+              <span class="use-tag">Pork</span>
+              <span class="use-tag">Chicken</span>
+              <span class="use-tag">Wings</span>
+              <span class="use-tag">Burgers</span>
+              <span class="use-tag">Mac &amp; Cheese</span>
+              <span class="use-tag">BBQ Sides</span>
+            </div>
+            <div class="product-detail">
+              <p><strong style="color:var(--text);">Flavor Profile:</strong> Sweet, smoky, chipotle, ancho, mild-to-medium heat</p>
+              <p><strong style="color:var(--text);">Best On:</strong> Ribs, pork, chicken, burgers, loaded mac and cheese, BBQ sides</p>
+            </div>
+            <div class="product-recipe-links">
+              <p>Recipe Ideas:</p>
+              <a href="recipes.html#loaded-mac">Loaded Mac &amp; Cheese &rarr;</a>
+              <a href="recipes.html#candied-bacon">Candied Bacon &rarr;</a>
+              <a href="recipes.html#bbq-meatballs">BBQ Meatballs &rarr;</a>
+              <a href="recipes.html#cream-cheese-dip">Sweet Heat Dip &rarr;</a>
+              <a href="recipes.html#roasted-sweet-potatoes">Roasted Sweet Potatoes &rarr;</a>
+              <a href="recipes.html#bbq-baked-beans">BBQ Baked Beans &rarr;</a>
+            </div>
+            <div class="product-also-try">
+              <span class="also-try-label">Also pair with:</span>
+              <a href="#supernova" class="also-try-link">Supernova (more heat)</a>
+              <a href="#cosmic-dust" class="also-try-link">Cosmic Dust</a>
+            </div>
+            <div class="product-card-ctas">
+              <a href="preorder.html" class="btn btn-primary btn-sm">Pre-Order</a>
+              <a href="find-us.html" class="btn btn-outline btn-sm">Where to Buy</a>
+              <a href="wholesale.html" class="btn btn-outline btn-sm">Wholesale</a>
+            </div>
+          </article>
+
+          <!-- Black Hole Brisket -->
+          <article id="black-hole-brisket" class="product-card product-card-full reveal">
+            <div class="product-label-wrap">
+              <img src="images/labels/black_hole_brisket_preview.png" alt="Black Hole Brisket Texas Style Brisket Rub label — Cosmic Pig BBQ" loading="lazy" />
+            </div>
+            <span class="product-size">10 oz (283g)</span>
+            <span class="product-badge badge-medium">Texas-Style Brisket Rub</span>
+            <h3>Black Hole Brisket</h3>
+            <p>Black Hole Brisket is a Texas-style brisket rub built around coarse kosher salt, coarse black pepper, garlic, and onion. Made for brisket bark, beef ribs, chuck roast, burgers, steak, and serious smoker sessions.</p>
+            <div class="heat-level">
+              <span>Heat: Mild</span>
+              <div class="heat-dots">
+                <span class="heat-dot active"></span>
+                <span class="heat-dot"></span>
+                <span class="heat-dot"></span>
+                <span class="heat-dot"></span>
+                <span class="heat-dot"></span>
+              </div>
+            </div>
+            <div class="product-uses">
+              <span class="use-tag">Brisket</span>
+              <span class="use-tag">Beef Ribs</span>
+              <span class="use-tag">Burgers</span>
+              <span class="use-tag">Steak</span>
+              <span class="use-tag">Chuck Roast</span>
+              <span class="use-tag use-tag--nosuggar">No Sugar</span>
+            </div>
+            <div class="product-detail">
+              <p><strong style="color:var(--text);">Flavor Profile:</strong> Texas style, peppery, savory, garlic-forward</p>
+              <p><strong style="color:var(--text);">Best On:</strong> Brisket, beef ribs, chuck roast, burgers, steak, and low-and-slow smoker cooks</p>
+            </div>
+            <div class="product-also-try">
+              <span class="also-try-label">Also pair with:</span>
+              <a href="#dark-matter" class="also-try-link">Dark Matter</a>
+              <a href="#moonar-landing" class="also-try-link">Moo-nar Landing</a>
+            </div>
+            <div class="product-card-ctas">
+              <a href="preorder.html" class="btn btn-primary btn-sm">Pre-Order</a>
+              <a href="find-us.html" class="btn btn-outline btn-sm">Where to Buy</a>
+              <a href="wholesale.html" class="btn btn-outline btn-sm">Wholesale</a>
+            </div>
+          </article>
+
+          <!-- Dark Matter -->
+          <article id="dark-matter" class="product-card product-card-full reveal">
+            <div class="product-label-wrap">
+              <img src="images/labels/dark_matter_preview.png" alt="Dark Matter Black Garlic Beef Rub label — Cosmic Pig BBQ" loading="lazy" />
+            </div>
+            <span class="product-size">11 oz (312g)</span>
+            <span class="product-badge badge-bold">Black Garlic Beef Rub</span>
+            <h3>Dark Matter</h3>
+            <p>Dark Matter is a black garlic beef rub made for deep savory flavor. Black garlic, pepper, onion, garlic, beefy umami, and bold seasoning built for steak, burgers, brisket, beef ribs, roasts, and mushrooms.</p>
+            <div class="heat-level">
+              <span>Heat: Mild–Medium</span>
+              <div class="heat-dots">
+                <span class="heat-dot active"></span>
+                <span class="heat-dot active"></span>
+                <span class="heat-dot"></span>
+                <span class="heat-dot"></span>
+                <span class="heat-dot"></span>
+              </div>
+            </div>
+            <div class="product-uses">
+              <span class="use-tag">Steak</span>
+              <span class="use-tag">Burgers</span>
+              <span class="use-tag">Brisket</span>
+              <span class="use-tag">Beef Ribs</span>
+              <span class="use-tag">Roast</span>
+              <span class="use-tag">Mushrooms</span>
+              <span class="use-tag use-tag--nosuggar">No Sugar</span>
+            </div>
+            <div class="product-detail">
+              <p><strong style="color:var(--text);">Flavor Profile:</strong> Black garlic, savory, umami, bold beef flavor</p>
+              <p><strong style="color:var(--text);">Best On:</strong> Steak, burgers, brisket, beef ribs, roast, mushrooms, and tri-tip</p>
+            </div>
+            <div class="product-also-try">
+              <span class="also-try-label">Also pair with:</span>
+              <a href="#black-hole-brisket" class="also-try-link">Black Hole Brisket</a>
+              <a href="#moonar-landing" class="also-try-link">Moo-nar Landing</a>
+            </div>
+            <div class="product-card-ctas">
+              <a href="preorder.html" class="btn btn-primary btn-sm">Pre-Order</a>
+              <a href="find-us.html" class="btn btn-outline btn-sm">Where to Buy</a>
+              <a href="wholesale.html" class="btn btn-outline btn-sm">Wholesale</a>
+            </div>
+          </article>
+
+          <!-- Moo-Nar Landing -->
+          <article id="moonar-landing" class="product-card product-card-full reveal">
+            <div class="product-label-wrap">
+              <img src="images/labels/moonar_landing_preview.png" alt="Moo-nar Landing Savory Beef Rub label — Cosmic Pig BBQ" loading="lazy" />
+            </div>
+            <span class="product-size">10 oz (283g)</span>
+            <span class="product-badge badge-medium">Savory Beef Rub</span>
+            <h3>Moo-Nar Landing</h3>
+            <p>Moo-nar Landing is a savory beef rub for steak, burgers, roasts, beef ribs, and grilled meats. Designed for beef-forward flavor without a sweet BBQ profile — bold, herbaceous, and built for the pit.</p>
+            <div class="heat-level">
+              <span>Heat: Mild</span>
+              <div class="heat-dots">
+                <span class="heat-dot active"></span>
+                <span class="heat-dot"></span>
+                <span class="heat-dot"></span>
+                <span class="heat-dot"></span>
+                <span class="heat-dot"></span>
+              </div>
+            </div>
+            <div class="product-uses">
+              <span class="use-tag">Steak</span>
+              <span class="use-tag">Burgers</span>
+              <span class="use-tag">Roasts</span>
+              <span class="use-tag">Beef Ribs</span>
+              <span class="use-tag">Grilled Meats</span>
+              <span class="use-tag use-tag--nosuggar">No Sugar</span>
+            </div>
+            <div class="product-detail">
+              <p><strong style="color:var(--text);">Flavor Profile:</strong> Savory, beefy, herbaceous, balanced, no sweet BBQ profile</p>
+              <p><strong style="color:var(--text);">Best On:</strong> Steak, burgers, roasts, beef ribs, and grilled meats</p>
+            </div>
+            <div class="product-also-try">
+              <span class="also-try-label">Also pair with:</span>
+              <a href="#dark-matter" class="also-try-link">Dark Matter</a>
+              <a href="#black-hole-brisket" class="also-try-link">Black Hole Brisket</a>
+            </div>
+            <div class="product-card-ctas">
+              <a href="preorder.html" class="btn btn-primary btn-sm">Pre-Order</a>
+              <a href="find-us.html" class="btn btn-outline btn-sm">Where to Buy</a>
+              <a href="wholesale.html" class="btn btn-outline btn-sm">Wholesale</a>
+            </div>
+          </article>
+
+          <!-- Supernova -->
+          <article id="supernova" class="product-card product-card-full reveal">
+            <div class="product-label-wrap">
+              <img src="images/labels/supernova_preview.png" alt="Supernova Hot and Sweet BBQ Rub label — Cosmic Pig BBQ" loading="lazy" />
+            </div>
+            <span class="product-size">11 oz (312g)</span>
+            <span class="product-badge badge-hot">Hot &amp; Sweet BBQ Rub</span>
+            <h3>Supernova</h3>
+            <p>Supernova is our hot and sweet BBQ rub for people who want bigger heat. It starts with the sweet, smoky BBQ flavor people love, then turns up the spice — built for wings, ribs, pork, chicken, and anyone who wants serious heat on their BBQ.</p>
+            <div class="heat-level">
+              <span>Heat: Hot 🔥🔥🔥</span>
+              <div class="heat-dots">
+                <span class="heat-dot active"></span>
+                <span class="heat-dot active"></span>
+                <span class="heat-dot active"></span>
+                <span class="heat-dot active"></span>
+                <span class="heat-dot active"></span>
+              </div>
+            </div>
+            <div class="product-uses">
+              <span class="use-tag">Wings</span>
+              <span class="use-tag">Ribs</span>
+              <span class="use-tag">Pork</span>
+              <span class="use-tag">Chicken</span>
+              <span class="use-tag">Spicy BBQ</span>
+            </div>
+            <div class="product-detail">
+              <p><strong style="color:var(--text);">Flavor Profile:</strong> Hot, sweet, smoky, chile-forward, cayenne, habanero</p>
+              <p><strong style="color:var(--text);">Best On:</strong> Wings, ribs, pork, chicken, and spicy BBQ recipes</p>
+            </div>
+            <div class="product-also-try">
+              <span class="also-try-label">Also pair with:</span>
+              <a href="#solar-flare" class="also-try-link">Solar Flare (less heat)</a>
+              <a href="#cosmic-wingman" class="also-try-link">Cosmic Wingman (citrus wings)</a>
+            </div>
+            <div class="product-card-ctas">
+              <a href="preorder.html" class="btn btn-primary btn-sm">Pre-Order</a>
+              <a href="find-us.html" class="btn btn-outline btn-sm">Where to Buy</a>
+              <a href="wholesale.html" class="btn btn-outline btn-sm">Wholesale</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW TO USE -->
+    <section style="background: var(--bg-dark); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Pitmaster Tips</span>
+          <h2>How to Apply BBQ Rub</h2>
+          <p>Getting the most out of your Cosmic Pig rubs is easy when you follow a few key principles.</p>
+        </div>
+        <div class="values-grid">
+          <div class="value-card reveal">
+            <span class="icon">⏱️</span>
+            <h3>Apply Early</h3>
+            <p>For maximum flavor, apply your rub 1–12 hours before cooking. Overnight is ideal for larger cuts like brisket and pork butt.</p>
+          </div>
+          <div class="value-card reveal">
+            <span class="icon">🖐️</span>
+            <h3>Be Generous</h3>
+            <p>Don't be shy — coat all surfaces evenly, pressing the rub in so it adheres. A generous coat builds that signature crust.</p>
+          </div>
+          <div class="value-card reveal">
+            <span class="icon">🌡️</span>
+            <h3>Let It Ride</h3>
+            <p>Patience is the secret ingredient. Trust the process — low and slow smoke lets the rub caramelize into a perfect bark.</p>
+          </div>
+          <div class="value-card reveal">
+            <span class="icon">🧪</span>
+            <h3>Mix &amp; Layer</h3>
+            <p>Don't be afraid to combine rubs. A base coat of Cosmic Dust + a top layer of Solar Flare = otherworldly wings.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Common Questions</span>
+          <h2>BBQ Rub FAQ</h2>
+          <p>Everything you need to pick the right rub and get the most out of every cook.</p>
+        </div>
+        <div class="faq-list">
+
+          <details class="faq-item reveal">
+            <summary>Which Cosmic Pig BBQ rub should I start with?</summary>
+            <p>Start with <a href="#cosmic-dust">Cosmic Dust</a> for an all-purpose everyday seasoning that works on almost anything. If you're cooking brisket or beef, go with <a href="#black-hole-brisket">Black Hole Brisket</a>. For chicken and wings, try <a href="#cosmic-wingman">Cosmic Wingman</a>. For sweet heat BBQ flavor, start with <a href="#solar-flare">Solar Flare</a>.</p>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>Which rub is best for brisket?</summary>
+            <p><a href="#black-hole-brisket">Black Hole Brisket</a> is the classic Texas-style choice — coarse salt, pepper, garlic, and onion built for bark. <a href="#dark-matter">Dark Matter</a> and <a href="#moonar-landing">Moo-nar Landing</a> are also excellent on brisket, steak, burgers, and roasts.</p>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>Which rub is best for chicken wings?</summary>
+            <p><a href="#cosmic-wingman">Cosmic Wingman</a> is built specifically for wings and chicken — citrus chile flavor that shines on smoked, grilled, and air-fried wings. <a href="#solar-flare">Solar Flare</a> is great for sweet heat wings, and <a href="#supernova">Supernova</a> is the choice for serious heat.</p>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>Which rub is best for ribs?</summary>
+            <p><a href="#solar-flare">Solar Flare</a> is our top choice for ribs — sweet, smoky, chipotle flavor that caramelizes beautifully low-and-slow. For spicier ribs, try <a href="#supernova">Supernova</a>. <a href="#cosmic-dust">Cosmic Dust</a> also works well as a base coat on pork ribs.</p>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>Do you have no-sugar BBQ rubs?</summary>
+            <p>Yes. <a href="#black-hole-brisket">Black Hole Brisket</a>, <a href="#dark-matter">Dark Matter</a>, and <a href="#moonar-landing">Moo-nar Landing</a> are no-sugar rubs. They are built for beef, brisket, steak, burgers, and roasts without any sweet BBQ profile. Check the product labels to confirm ingredient details.</p>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>Which rub is the hottest?</summary>
+            <p><a href="#supernova">Supernova</a> is the hottest Cosmic Pig BBQ rub — five heat dots, hot and sweet chile-forward flavor with cayenne and habanero. If you want something in the middle, <a href="#solar-flare">Solar Flare</a> is a medium-heat sweet heat rub. <a href="#cosmic-dust">Cosmic Dust</a> and <a href="#black-hole-brisket">Black Hole Brisket</a> are mild.</p>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>Which rub is best for beginners?</summary>
+            <p><a href="#cosmic-dust">Cosmic Dust</a> is the easiest starting point — a garlic-forward all-purpose SPG+ seasoning that works on chicken, pork, burgers, vegetables, potatoes, eggs, and everyday cooking. Hard to go wrong with it.</p>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>Can I use BBQ rub for more than just meat?</summary>
+            <p>Absolutely. <a href="#cosmic-dust">Cosmic Dust</a> is excellent on roasted vegetables, potatoes, eggs, and fries. <a href="#cosmic-wingman">Cosmic Wingman</a> is great on street corn, shrimp, and tacos. <a href="#solar-flare">Solar Flare</a> works beautifully in loaded mac and cheese, baked beans, and candied bacon. <a href="#dark-matter">Dark Matter</a> is excellent on mushrooms.</p>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>Where can I buy Cosmic Pig BBQ rubs?</summary>
+            <p>Our rubs are available at <a href="find-us.html">BBQ Pit Stop in Layton and Lehi, Utah</a>. You can also <a href="preorder.html">pre-order online</a> for local pickup or shipping inquiries. For retail and wholesale opportunities, visit our <a href="wholesale.html">wholesale page</a>.</p>
+          </details>
+
+        </div>
+        <div style="text-align:center;margin-top:2rem;" class="reveal">
+          <a href="find-your-flavor.html" class="btn btn-outline">Not Sure Which to Pick? Find Your Flavor &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section>
+      <div class="container">
+        <div class="cta-banner reveal">
+          <h2>Pick Up a Tin Today</h2>
+          <p>Find Cosmic Pig BBQ rubs at BBQ Pit Stop locations in Layton and Lehi, Utah. Or pre-order online for the next batch.</p>
+          <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+            <a href="find-us.html" class="btn btn-primary">Find a Store Near You &rarr;</a>
+            <a href="preorder.html" class="btn btn-outline">Pre-Order Online</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <span class="logo-icon">🐷</span>
+            <span><span class="cosmic">Cosmic</span> <span class="pig">Pig</span> BBQ</span>
+          </a>
+          <p>Small-batch BBQ rubs &amp; seasonings crafted in Kaysville, Utah. Shake it. Rub it. Love it.</p>
+          <p>@COSMICPIGBBQ · Kaysville, Utah</p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/cosmicpigbbq" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">📸</a>
+            <a href="https://www.facebook.com/cosmicpigbbq" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">👍</a>
+            <a href="https://www.tiktok.com/@cosmicpigbbq" class="social-link" aria-label="TikTok" target="_blank" rel="noopener noreferrer">🎵</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="products.html#cosmic-dust">Cosmic Dust</a></li>
+            <li><a href="products.html#cosmic-wingman">Cosmic Wingman</a></li>
+            <li><a href="products.html#solar-flare">Solar Flare</a></li>
+            <li><a href="products.html#supernova">Supernova</a></li>
+            <li><a href="products.html#black-hole-brisket">Black Hole Brisket</a></li>
+            <li><a href="products.html#dark-matter">Dark Matter</a></li>
+            <li><a href="products.html#moonar-landing">Moo-Nar Landing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="find-your-flavor.html">Find Your Flavor</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="find-us.html">Find Us</a></li>
+            <li><a href="wholesale.html">Wholesale</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Retailers</h4>
+          <ul>
+            <li><a href="find-us.html">BBQ Pit Stop – Layton</a></li>
+            <li><a href="find-us.html">BBQ Pit Stop – Lehi</a></li>
+            <li><a href="wholesale.html">Wholesale Inquiries</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Cosmic Pig BBQ. All rights reserved.</p>
+        <p>cosmicpigbbq.com</p>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

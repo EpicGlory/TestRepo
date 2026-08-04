@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find Your Flavor | Which Cosmic Pig BBQ Rub Should I Use?</title>
+  <meta name="description" content="Not sure which BBQ rub to buy? Answer a few quick questions and we'll match you with the right Cosmic Pig BBQ rub for brisket, wings, ribs, chicken, burgers, steak, or anything you're cooking." />
+  <meta property="og:title" content="Find Your Flavor | Cosmic Pig BBQ Rub Finder" />
+  <meta property="og:description" content="Which Cosmic Pig BBQ rub should you use? Find your match by what you're cooking, flavor preference, and heat level." />
+  <meta property="og:image" content="images/hero.png" />
+  <meta property="og:type" content="website" />
+  <!-- Cloudflare Web Analytics: paste your beacon script here from Cloudflare Dashboard → Analytics → Web Analytics -->
+  <!-- <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "YOUR_CF_ANALYTICS_TOKEN"}'></script> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐷</text></svg>" />
+</head>
+<body>
+
+<canvas id="stars-canvas" aria-hidden="true"></canvas>
+
+<div class="page-content">
+
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Main navigation">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">🐷</span>
+          <span><span class="cosmic">Cosmic</span> <span class="pig">Pig</span> BBQ</span>
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Our Rubs</a></li>
+          <li><a href="find-your-flavor.html" class="active">Find Your Flavor</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="find-us.html">Find Us</a></li>
+          <li><a href="wholesale.html">Wholesale</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="preorder.html" class="nav-cta">Pre-Order</a></li>
+        </ul>
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="page-header">
+      <div class="container">
+        <span class="section-label">Mission Control Flavor Finder</span>
+        <h1>Find Your Flavor</h1>
+        <p>Pick what you're cooking, your flavor preference, or your heat level — and we'll show you the right rub.</p>
+      </div>
+    </div>
+
+    <section class="flavor-finder-section">
+      <div class="container">
+
+        <!-- FILTER CATEGORIES -->
+        <div style="margin-bottom:2.5rem;">
+
+          <div style="margin-bottom:1.5rem;">
+            <p style="font-size:0.8rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">What are you cooking?</p>
+            <div class="flavor-filter-bar" id="cooking-filters">
+              <button class="flavor-filter-btn active" data-filter="all">All Rubs</button>
+              <button class="flavor-filter-btn" data-filter="brisket">Brisket</button>
+              <button class="flavor-filter-btn" data-filter="steak">Steak</button>
+              <button class="flavor-filter-btn" data-filter="burgers">Burgers</button>
+              <button class="flavor-filter-btn" data-filter="ribs">Ribs</button>
+              <button class="flavor-filter-btn" data-filter="pork">Pork</button>
+              <button class="flavor-filter-btn" data-filter="chicken">Chicken</button>
+              <button class="flavor-filter-btn" data-filter="wings">Wings</button>
+              <button class="flavor-filter-btn" data-filter="shrimp">Shrimp</button>
+              <button class="flavor-filter-btn" data-filter="vegetables">Vegetables</button>
+              <button class="flavor-filter-btn" data-filter="mac">Mac &amp; Cheese</button>
+              <button class="flavor-filter-btn" data-filter="tacos">Tacos</button>
+              <button class="flavor-filter-btn" data-filter="everyday">Everyday Cooking</button>
+            </div>
+          </div>
+
+          <div style="margin-bottom:1.5rem;">
+            <p style="font-size:0.8rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Flavor preference</p>
+            <div class="flavor-filter-bar" id="flavor-filters">
+              <button class="flavor-filter-btn" data-filter="sweet-heat">Sweet Heat</button>
+              <button class="flavor-filter-btn" data-filter="savory">Savory</button>
+              <button class="flavor-filter-btn" data-filter="citrus">Citrus Chile</button>
+              <button class="flavor-filter-btn" data-filter="texas">Texas Style</button>
+              <button class="flavor-filter-btn" data-filter="umami">Black Garlic / Umami</button>
+              <button class="flavor-filter-btn" data-filter="allpurpose">All-Purpose</button>
+            </div>
+          </div>
+
+          <div>
+            <p style="font-size:0.8rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Heat level &amp; preferences</p>
+            <div class="flavor-filter-bar" id="pref-filters">
+              <button class="flavor-filter-btn" data-filter="mild">Mild</button>
+              <button class="flavor-filter-btn" data-filter="medium">Medium Heat</button>
+              <button class="flavor-filter-btn" data-filter="hot">Hot</button>
+              <button class="flavor-filter-btn" data-filter="nosuggar">No Sugar</button>
+              <button class="flavor-filter-btn" data-filter="beginner">Best for Beginners</button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RESULTS GRID -->
+        <div class="flavor-results-grid" id="flavor-results">
+
+          <!-- Cosmic Dust -->
+          <div class="flavor-result-card reveal"
+               data-tags="all allpurpose mild savory everyday chicken pork burgers vegetables">
+            <span class="recipe-rub-badge">All-Purpose SPG+</span>
+            <p class="flavor-result-name">Cosmic Dust</p>
+            <p class="flavor-result-subtitle">The Everyday Essential</p>
+            <p class="flavor-result-desc">A garlic-forward SPG+ seasoning that works on almost anything. The easiest starting point for any cook.</p>
+            <div class="flavor-result-tags">
+              <span class="flavor-result-tag">Mild</span>
+              <span class="flavor-result-tag">All-Purpose</span>
+              <span class="flavor-result-tag">Garlic-Forward</span>
+              <span class="flavor-result-tag">Beginner Friendly</span>
+            </div>
+            <p class="flavor-match-label">Great on:</p>
+            <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:0.75rem;">Chicken · Pork · Burgers · Vegetables · Eggs · Fries · Potatoes</p>
+            <div class="flavor-result-ctas">
+              <a href="products.html#cosmic-dust" class="btn btn-primary btn-sm">View Product &rarr;</a>
+              <a href="preorder.html" class="btn btn-outline btn-sm">Pre-Order</a>
+            </div>
+          </div>
+
+          <!-- Cosmic Wingman -->
+          <div class="flavor-result-card reveal"
+               data-tags="all citrus mild chicken wings shrimp tacos vegetables everyday beginner">
+            <span class="recipe-rub-badge">Citrus Chile Chicken Rub</span>
+            <p class="flavor-result-name">Cosmic Wingman</p>
+            <p class="flavor-result-subtitle">Wing Night Ready</p>
+            <p class="flavor-result-desc">Bright citrus chile flavor built for wings, smoked chicken, tacos, shrimp, and corn. A go-to for chicken night.</p>
+            <div class="flavor-result-tags">
+              <span class="flavor-result-tag">Mild–Medium</span>
+              <span class="flavor-result-tag">Citrus Chile</span>
+              <span class="flavor-result-tag">Bright</span>
+              <span class="flavor-result-tag">Chicken Specialist</span>
+            </div>
+            <p class="flavor-match-label">Great on:</p>
+            <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:0.75rem;">Wings · Chicken Thighs · Tacos · Shrimp · Street Corn · Vegetables</p>
+            <div class="flavor-result-ctas">
+              <a href="products.html#cosmic-wingman" class="btn btn-primary btn-sm">View Product &rarr;</a>
+              <a href="recipes.html#mexican-street-corn" class="btn btn-outline btn-sm">See a Recipe</a>
+            </div>
+          </div>
+
+          <!-- Solar Flare -->
+          <div class="flavor-result-card reveal"
+               data-tags="all sweet-heat medium ribs pork chicken wings burgers mac everyday">
+            <span class="recipe-rub-badge">Sweet Heat BBQ Rub</span>
+            <p class="flavor-result-name">Solar Flare</p>
+            <p class="flavor-result-subtitle">The Crowd-Pleasing Sweet Heat</p>
+            <p class="flavor-result-desc">Sweet, smoky chipotle/ancho BBQ rub with just enough heat to keep things interesting. The all-around BBQ crowd pleaser.</p>
+            <div class="flavor-result-tags">
+              <span class="flavor-result-tag">Medium Heat</span>
+              <span class="flavor-result-tag">Sweet Heat</span>
+              <span class="flavor-result-tag">Smoky</span>
+              <span class="flavor-result-tag">Chipotle</span>
+            </div>
+            <p class="flavor-match-label">Great on:</p>
+            <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:0.75rem;">Ribs · Pork · Chicken · Wings · Burgers · Mac &amp; Cheese · BBQ Sides</p>
+            <div class="flavor-result-ctas">
+              <a href="products.html#solar-flare" class="btn btn-primary btn-sm">View Product &rarr;</a>
+              <a href="recipes.html#loaded-mac" class="btn btn-outline btn-sm">See a Recipe</a>
+            </div>
+          </div>
+
+          <!-- Black Hole Brisket -->
+          <div class="flavor-result-card reveal"
+               data-tags="all texas mild nosuggar brisket steak burgers ribs pork">
+            <span class="recipe-rub-badge">Texas-Style Brisket Rub</span>
+            <p class="flavor-result-name">Black Hole Brisket</p>
+            <p class="flavor-result-subtitle">Built for Bark</p>
+            <p class="flavor-result-desc">A classic Texas brisket rub — coarse salt, pepper, garlic, and onion. No sugar. Pure, no-nonsense BBQ bark.</p>
+            <div class="flavor-result-tags">
+              <span class="flavor-result-tag">Mild</span>
+              <span class="flavor-result-tag">Texas Style</span>
+              <span class="flavor-result-tag">Peppery</span>
+              <span class="flavor-result-tag" style="color:#00d97a;border-color:rgba(0,255,140,0.3);">No Sugar</span>
+            </div>
+            <p class="flavor-match-label">Great on:</p>
+            <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:0.75rem;">Brisket · Beef Ribs · Chuck Roast · Steak · Burgers</p>
+            <div class="flavor-result-ctas">
+              <a href="products.html#black-hole-brisket" class="btn btn-primary btn-sm">View Product &rarr;</a>
+              <a href="preorder.html" class="btn btn-outline btn-sm">Pre-Order</a>
+            </div>
+          </div>
+
+          <!-- Dark Matter -->
+          <div class="flavor-result-card reveal"
+               data-tags="all umami medium nosuggar brisket steak burgers ribs">
+            <span class="recipe-rub-badge">Black Garlic Beef Rub</span>
+            <p class="flavor-result-name">Dark Matter</p>
+            <p class="flavor-result-subtitle">Deep Savory. Bold Bark.</p>
+            <p class="flavor-result-desc">Black garlic, pepper, onion, and bold umami seasoning for deep savory flavor on steak, burgers, brisket, and roasts. No sugar.</p>
+            <div class="flavor-result-tags">
+              <span class="flavor-result-tag">Mild–Medium</span>
+              <span class="flavor-result-tag">Black Garlic</span>
+              <span class="flavor-result-tag">Umami</span>
+              <span class="flavor-result-tag" style="color:#00d97a;border-color:rgba(0,255,140,0.3);">No Sugar</span>
+            </div>
+            <p class="flavor-match-label">Great on:</p>
+            <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:0.75rem;">Steak · Burgers · Brisket · Beef Ribs · Roast · Mushrooms</p>
+            <div class="flavor-result-ctas">
+              <a href="products.html#dark-matter" class="btn btn-primary btn-sm">View Product &rarr;</a>
+              <a href="preorder.html" class="btn btn-outline btn-sm">Pre-Order</a>
+            </div>
+          </div>
+
+          <!-- Moo-nar Landing -->
+          <div class="flavor-result-card reveal"
+               data-tags="all savory mild nosuggar brisket steak burgers ribs">
+            <span class="recipe-rub-badge">Savory Beef Rub</span>
+            <p class="flavor-result-name">Moo-Nar Landing</p>
+            <p class="flavor-result-subtitle">Bold Beef. No Sweet Profile.</p>
+            <p class="flavor-result-desc">A savory, herbaceous beef rub for steak, burgers, roasts, and beef ribs. Bold beef-forward flavor without any sweet BBQ profile. No sugar.</p>
+            <div class="flavor-result-tags">
+              <span class="flavor-result-tag">Mild</span>
+              <span class="flavor-result-tag">Savory</span>
+              <span class="flavor-result-tag">Herbaceous</span>
+              <span class="flavor-result-tag" style="color:#00d97a;border-color:rgba(0,255,140,0.3);">No Sugar</span>
+            </div>
+            <p class="flavor-match-label">Great on:</p>
+            <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:0.75rem;">Steak · Burgers · Roasts · Beef Ribs · Grilled Meats</p>
+            <div class="flavor-result-ctas">
+              <a href="products.html#moonar-landing" class="btn btn-primary btn-sm">View Product &rarr;</a>
+              <a href="preorder.html" class="btn btn-outline btn-sm">Pre-Order</a>
+            </div>
+          </div>
+
+          <!-- Supernova -->
+          <div class="flavor-result-card reveal"
+               data-tags="all sweet-heat hot wings ribs pork chicken">
+            <span class="recipe-rub-badge recipe-rub-badge--hot" style="background:rgba(255,0,102,0.12);color:var(--gold);border-color:rgba(255,0,102,0.25);">Hot &amp; Sweet BBQ Rub</span>
+            <p class="flavor-result-name">Supernova</p>
+            <p class="flavor-result-subtitle">For People Who Want the Heat</p>
+            <p class="flavor-result-desc">Hot and sweet BBQ rub that starts with the flavor you love and cranks up the spice. Built for wings, ribs, pork, and spicy BBQ.</p>
+            <div class="flavor-result-tags">
+              <span class="flavor-result-tag" style="color:var(--gold);border-color:rgba(255,0,102,0.3);">Hot 🔥🔥🔥</span>
+              <span class="flavor-result-tag">Sweet Heat</span>
+              <span class="flavor-result-tag">Smoky</span>
+              <span class="flavor-result-tag">Chile-Forward</span>
+            </div>
+            <p class="flavor-match-label">Great on:</p>
+            <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:0.75rem;">Wings · Ribs · Pork · Chicken · Spicy BBQ Recipes</p>
+            <div class="flavor-result-ctas">
+              <a href="products.html#supernova" class="btn btn-primary btn-sm">View Product &rarr;</a>
+              <a href="preorder.html" class="btn btn-outline btn-sm">Pre-Order</a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="no-results-msg" id="no-results">
+          <p>No exact match — but one of our rubs will work. <a href="products.html">View all rubs &rarr;</a></p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BUNDLE IDEAS -->
+    <section style="padding:0 0 3rem;">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Can't Pick Just One?</span>
+          <h2>Bundle Recommendations</h2>
+          <p>These rub combinations cover all the bases for serious BBQ cooks and great gift ideas.</p>
+        </div>
+        <div class="values-grid">
+          <div class="value-card reveal">
+            <span class="icon">🥩</span>
+            <h3>Brisket &amp; Beef Pack</h3>
+            <p>Black Hole Brisket + Dark Matter + Moo-nar Landing. Three no-sugar beef rubs covering every beef cook from brisket to burgers.</p>
+            <a href="preorder.html" class="btn btn-outline btn-sm" style="margin-top:0.75rem;">Pre-Order</a>
+          </div>
+          <div class="value-card reveal">
+            <span class="icon">🍗</span>
+            <h3>Wing Night Pack</h3>
+            <p>Cosmic Wingman + Solar Flare + Supernova. Citrus chile, sweet heat, and scorching hot — wing night covered at every heat level.</p>
+            <a href="preorder.html" class="btn btn-outline btn-sm" style="margin-top:0.75rem;">Pre-Order</a>
+          </div>
+          <div class="value-card reveal">
+            <span class="icon">🔥</span>
+            <h3>Backyard BBQ Pack</h3>
+            <p>Cosmic Dust + Solar Flare + Cosmic Wingman. The all-purpose everyday trio — ribs, wings, burgers, chicken, and everything in between.</p>
+            <a href="preorder.html" class="btn btn-outline btn-sm" style="margin-top:0.75rem;">Pre-Order</a>
+          </div>
+          <div class="value-card reveal">
+            <span class="icon">✨</span>
+            <h3>Big Bang Sampler Pack</h3>
+            <p>All seven rubs. The complete Cosmic Pig BBQ lineup — perfect for the serious backyard pitmaster or as a gift set.</p>
+            <a href="preorder.html" class="btn btn-outline btn-sm" style="margin-top:0.75rem;">Pre-Order</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="cta-banner reveal">
+          <h2>Still Have Questions?</h2>
+          <p>We're happy to help you find the right rub for your next cook. Reach out any time.</p>
+          <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+            <a href="contact.html" class="btn btn-primary">Contact Us &rarr;</a>
+            <a href="products.html" class="btn btn-outline">View All Rubs</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <span class="logo-icon">🐷</span>
+            <span><span class="cosmic">Cosmic</span> <span class="pig">Pig</span> BBQ</span>
+          </a>
+          <p>Small-batch BBQ rubs &amp; seasonings crafted in Kaysville, Utah. Shake it. Rub it. Love it.</p>
+          <p>@COSMICPIGBBQ · Kaysville, Utah</p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/cosmicpigbbq" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">📸</a>
+            <a href="https://www.facebook.com/cosmicpigbbq" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">👍</a>
+            <a href="https://www.tiktok.com/@cosmicpigbbq" class="social-link" aria-label="TikTok" target="_blank" rel="noopener noreferrer">🎵</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="products.html#cosmic-dust">Cosmic Dust</a></li>
+            <li><a href="products.html#cosmic-wingman">Cosmic Wingman</a></li>
+            <li><a href="products.html#solar-flare">Solar Flare</a></li>
+            <li><a href="products.html#supernova">Supernova</a></li>
+            <li><a href="products.html#black-hole-brisket">Black Hole Brisket</a></li>
+            <li><a href="products.html#dark-matter">Dark Matter</a></li>
+            <li><a href="products.html#moonar-landing">Moo-Nar Landing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="find-your-flavor.html">Find Your Flavor</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="find-us.html">Find Us</a></li>
+            <li><a href="wholesale.html">Wholesale</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Retailers</h4>
+          <ul>
+            <li><a href="find-us.html">BBQ Pit Stop – Layton</a></li>
+            <li><a href="find-us.html">BBQ Pit Stop – Lehi</a></li>
+            <li><a href="wholesale.html">Wholesale Inquiries</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Cosmic Pig BBQ. All rights reserved.</p>
+        <p>cosmicpigbbq.com</p>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="js/main.js"></script>
+<script>
+  (function() {
+    var allBtns = document.querySelectorAll('.flavor-filter-btn');
+    var cards = document.querySelectorAll('.flavor-result-card');
+    var noResults = document.getElementById('no-results');
+    var activeFilter = 'all';
+
+    allBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        allBtns.forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        activeFilter = btn.getAttribute('data-filter');
+
+        var visibleCount = 0;
+        cards.forEach(function(card) {
+          var tags = (card.getAttribute('data-tags') || '').split(' ');
+          if (activeFilter === 'all' || tags.indexOf(activeFilter) !== -1) {
+            card.classList.remove('hidden');
+            visibleCount++;
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+
+        if (visibleCount === 0) {
+          noResults.classList.add('visible');
+        } else {
+          noResults.classList.remove('visible');
+        }
+      });
+    });
+  })();
+</script>
+</body>
+</html>
