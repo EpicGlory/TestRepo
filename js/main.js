@@ -137,13 +137,29 @@
   els.forEach(el => io.observe(el));
 })();
 
-// ---- Pre-order form → Google Apps Script → Google Sheet ----
+// ---- All forms → Google Apps Script → Google Sheet ----
+// After deploying scripts/preorder-sheet.gs, paste your Web App URL here:
+const FORMS_SCRIPT_URL = 'YOUR_APPS_SCRIPT_URL';
+
+async function sendToSheet(data) {
+  if (FORMS_SCRIPT_URL === 'YOUR_APPS_SCRIPT_URL') return;
+  try {
+    await fetch(FORMS_SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain' },
+      body: JSON.stringify(data)
+    });
+  } catch (_) {
+    // no-cors fetch may throw on opaque response; submission still sent
+  }
+}
+
 (function preorderForm() {
   const form = document.getElementById('preorder-form');
   if (!form) return;
 
-  // Paste your Apps Script Web App URL here after deploying scripts/preorder-sheet.gs
-  const PREORDER_SCRIPT_URL = 'YOUR_APPS_SCRIPT_URL';
+  const PREORDER_SCRIPT_URL = FORMS_SCRIPT_URL; // kept for backward compat
 
   const btn = form.querySelector('button[type="submit"]');
 
@@ -164,47 +180,67 @@
     btn.textContent = 'Sending…';
     btn.disabled = true;
 
-    if (PREORDER_SCRIPT_URL !== 'YOUR_APPS_SCRIPT_URL') {
-      try {
-        // no-cors: request is sent, response is opaque — data still writes to sheet
-        await fetch(PREORDER_SCRIPT_URL, {
-          method: 'POST',
-          mode: 'no-cors',
-          headers: { 'Content-Type': 'text/plain' },
-          body: JSON.stringify(data)
-        });
-      } catch (_) {
-        // fetch may throw on opaque response; submission still succeeded
-      }
-    }
+    data.form_type = 'preorder';
+    await sendToSheet(data);
 
     window.location.href = 'preorder-thanks.html';
   });
 })();
 
-// ---- Contact form (Formspree — real action set on form element) ----
-// The form uses action="https://formspree.io/f/..." so it submits natively.
-// JS handler kept only for UX feedback if JS is available and form has no action.
+// ---- Contact form → Google Sheet ----
 (function contactForm() {
   const form = document.getElementById('contact-form');
   if (!form) return;
-  // Only intercept if no real Formspree ID is set yet
-  const action = form.getAttribute('action') || '';
-  if (action.includes('YOUR_CONTACT_FORM_ID')) {
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      const btn = form.querySelector('button[type="submit"]');
-      btn.textContent = 'Message Sent! 🚀';
-      btn.disabled = true;
-      btn.style.background = 'rgba(100,200,100,0.2)';
-      btn.style.borderColor = '#6cc26c';
-      btn.style.color = '#6cc26c';
-      form.reset();
-      setTimeout(() => {
-        btn.textContent = 'Send Message 🚀';
-        btn.disabled = false;
-        btn.style = '';
-      }, 4000);
-    });
-  }
+  const btn = form.querySelector('button[type="submit"]');
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+
+    const fd = new FormData(form);
+    const data = { form_type: 'contact' };
+    fd.forEach(function(val, key) { data[key] = val; });
+
+    await sendToSheet(data);
+
+    btn.textContent = 'Message Sent! 🚀';
+    btn.style.background   = 'rgba(100,200,100,0.2)';
+    btn.style.borderColor  = '#6cc26c';
+    btn.style.color        = '#6cc26c';
+    form.reset();
+    setTimeout(function() {
+      btn.textContent = 'Send Message 🚀';
+      btn.disabled = false;
+      btn.style.background  = '';
+      btn.style.borderColor = '';
+      btn.style.color       = '';
+    }, 4000);
+  });
+})();
+
+// ---- Email signup form → Google Sheet ----
+(function signupForm() {
+  const form = document.getElementById('signup-form');
+  if (!form) return;
+  const btn = form.querySelector('button[type="submit"]');
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+
+    const fd = new FormData(form);
+    const data = { form_type: 'signup' };
+    fd.forEach(function(val, key) { data[key] = val; });
+
+    await sendToSheet(data);
+
+    btn.textContent = 'You\'re in! 🚀';
+    form.reset();
+    setTimeout(function() {
+      btn.textContent = 'Join the Crew 🚀';
+      btn.disabled = false;
+    }, 4000);
+  });
 })();
