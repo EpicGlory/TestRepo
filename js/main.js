@@ -125,6 +125,11 @@
   const els = document.querySelectorAll('.reveal');
   if (!els.length) return;
 
+  if (!window.IntersectionObserver) {
+    els.forEach(el => el.classList.add('visible'));
+    return;
+  }
+
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (e.isIntersecting) {
@@ -155,18 +160,15 @@ async function sendToSheet(data) {
   }
 }
 
-(function preorderForm() {
+try { (function preorderForm() {
   const form = document.getElementById('preorder-form');
   if (!form) return;
-
-  const PREORDER_SCRIPT_URL = FORMS_SCRIPT_URL; // kept for backward compat
 
   const btn = form.querySelector('button[type="submit"]');
 
   form.addEventListener('submit', async function(e) {
     e.preventDefault();
 
-    // Collect all fields; handle multi-value checkboxes (rubs)
     const fd = new FormData(form);
     const data = {};
     fd.forEach(function(val, key) {
@@ -185,10 +187,10 @@ async function sendToSheet(data) {
 
     window.location.href = 'preorder-thanks.html';
   });
-})();
+})(); } catch (_) {}
 
 // ---- Contact form → Google Sheet ----
-(function contactForm() {
+try { (function contactForm() {
   const form = document.getElementById('contact-form');
   if (!form) return;
   const btn = form.querySelector('button[type="submit"]');
@@ -217,10 +219,10 @@ async function sendToSheet(data) {
       btn.style.color       = '';
     }, 4000);
   });
-})();
+})(); } catch (_) {}
 
 // ---- Email signup form → Google Sheet ----
-(function signupForm() {
+try { (function signupForm() {
   const form = document.getElementById('signup-form');
   if (!form) return;
   const btn = form.querySelector('button[type="submit"]');
@@ -243,4 +245,4 @@ async function sendToSheet(data) {
       btn.disabled = false;
     }, 4000);
   });
-})();
+})(); } catch (_) {}
