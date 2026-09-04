@@ -144,7 +144,7 @@
 
 // ---- All forms → Google Apps Script → Google Sheet ----
 // After deploying scripts/preorder-sheet.gs, paste your Web App URL here:
-const FORMS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxTezN1di2XZHe4SDC20xF6vIcVTTATe6C2AzpQ3YEorM5G39sW1ItnYMpLwpgzwkR6/exec';
+const FORMS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxHVV-B7341LHNMolpLIvO0RrfvFqdGZi59AWkhhm7WYudYOTtd8YIX1Dc8kVMXurHH/exec';
 
 async function sendToSheet(data) {
   if (FORMS_SCRIPT_URL === 'YOUR_APPS_SCRIPT_URL') return;
