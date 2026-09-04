@@ -58,20 +58,21 @@ function ts() {
 function handlePreorder(data) {
   var sheet = getOrCreateSheet('Pre-Orders', [
     'Timestamp', 'First Name', 'Last Name', 'Email', 'Phone',
-    'City/State', 'Delivery Preference', 'Rubs', 'Quantity', 'Source', 'Notes'
+    'City', 'State', 'Delivery Preference', 'Rubs', 'Quantity', 'Source', 'Notes'
   ]);
   sheet.appendRow([
     ts(),
-    data.first_name         || '',
-    data.last_name          || '',
-    data.email              || '',
-    data.phone              || '',
-    data.city_state         || '',
+    data.first_name          || '',
+    data.last_name           || '',
+    data.email               || '',
+    data.phone               || '',
+    data.city                || '',
+    data.state               || '',
     data.delivery_preference || '',
-    data.rubs               || '',
-    data.quantity           || '',
-    data.source             || '',
-    data.notes              || ''
+    data.rubs                || '',
+    data.quantity            || '',
+    data.source              || '',
+    data.notes               || ''
   ]);
   if (NOTIFY_EMAIL) {
     MailApp.sendEmail({
@@ -81,7 +82,8 @@ function handlePreorder(data) {
         'Name:     ' + (data.first_name || '') + ' ' + (data.last_name || '') + '\n' +
         'Email:    ' + (data.email || '') + '\n' +
         'Phone:    ' + (data.phone || 'not provided') + '\n' +
-        'Location: ' + (data.city_state || 'not provided') + '\n' +
+        'City:     ' + (data.city || 'not provided') + '\n' +
+        'State:    ' + (data.state || 'not provided') + '\n' +
         'Rubs:     ' + (data.rubs || 'none selected') + '\n' +
         'Quantity: ' + (data.quantity || 'not specified') + '\n' +
         'Delivery: ' + (data.delivery_preference || 'not specified') + '\n' +

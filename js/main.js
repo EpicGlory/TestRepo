@@ -166,6 +166,19 @@ try { (function preorderForm() {
 
   const btn = form.querySelector('button[type="submit"]');
 
+  // Phone auto-format → (801) 358-7820
+  const phoneInput = form.querySelector('input[name="phone"]');
+  if (phoneInput) {
+    phoneInput.addEventListener('input', function() {
+      const digits = this.value.replace(/\D/g, '').slice(0, 10);
+      let fmt = '';
+      if (digits.length > 0) fmt = '(' + digits.slice(0, 3);
+      if (digits.length >= 4) fmt += ') ' + digits.slice(3, 6);
+      if (digits.length >= 7) fmt += '-' + digits.slice(6);
+      this.value = fmt;
+    });
+  }
+
   form.addEventListener('submit', async function(e) {
     e.preventDefault();
 
